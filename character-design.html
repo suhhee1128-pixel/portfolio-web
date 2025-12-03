@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Design Project - Seohee Kim</title>
+    <link rel="stylesheet" href="character-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">SEOHEE KIM</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html#skills">Skills & Technologies</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#about">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-content-wrapper">
+                <div class="hero-left">
+                    <h1 class="hero-title">Building New Foundations for APOC Studio</h1>
+                    <div class="hero-tags">
+                        <span class="hero-tag">UX/UI Design</span>
+                        <span class="hero-tag">Information Architecture</span>
+                        <span class="hero-tag">Product Design</span>
+                    </div>
+                    <p class="hero-description">
+                        I designed two new pages within the APOC platform—a discovery-driven Studio Template Page for browsing AR/3D assets, and a B2B Case Study Detail Page for showcasing large-scale brand collaborations.
+                    </p>
+                    <p class="hero-description">
+                        Both pages were created from scratch to improve clarity, enhance storytelling, and provide scalable templates that support future content expansion.
+                    </p>
+                    <div class="hero-section-divider"></div>
+                    <div class="hero-info-group">
+                        <div class="hero-info-item">
+                            <h3 class="info-label">Tools</h3>
+                            <div class="hero-tools">
+                                <div class="tool-icon figma-icon">
+                                    <img src="https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png" alt="Figma" width="50" height="50">
+                                </div>
+                                <div class="tool-icon ai-icon">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/512px-Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Illustrator" width="50" height="50">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-info-item">
+                            <h3 class="info-label">Role</h3>
+                            <p class="info-text">UI/UX Intern</p>
+                        </div>
+                        <div class="hero-info-item">
+                            <h3 class="info-label">Period</h3>
+                            <p class="info-text">2025.03-05</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-container">
+                        <img src="Group 1707481251.png" alt="Character Design Project Preview" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 1: Studio Discovery Page -->
+        <section class="case-study">
+            <div class="case-study-container">
+                <div class="case-study-number-header">
+                    <span class="case-number">1.</span>
+                    <h2 class="case-title-inline">Studio Discovery Page</h2>
+                </div>
+                
+                <!-- Overview -->
+                <div class="content-section">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="body-text">
+                        The Studio platform hosts a wide range of AR filters, 3D templates, and event-themed assets—but it lacked a dedicated page for browsing and discovering them. I designed the first-ever Studio discovery page, defining the information architecture, section flow, and UI system from the ground up.
+                    </p>
+                    <p class="body-text">
+                        The goal was to create a page where users could:
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Understand what types of templates exist</li>
+                        <li>Discover popular or relevant content quickly</li>
+                        <li>Browse diverse asset categories with minimal cognitive load</li>
+                    </ul>
+                </div>
+
+                <!-- Challenge -->
+                <div class="content-section highlight-section">
+                    <h3 class="section-heading">Challenge</h3>
+                    
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">1. Many asset types, no structure</h4>
+                        <p class="body-text">
+                            Studio's content had grown into multiple categories—AR filters, DL templates, event bundles, seasonal assets—but there was no cohesive IA to guide exploration.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">2. A true "discovery flow" had to be created from scratch</h4>
+                        <p class="body-text">
+                            Unlike typical listing pages, this one needed to surface content contextually as the user scrolls, balancing variety with clarity.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">3. New components required, without breaking the existing brand</h4>
+                        <p class="body-text">
+                            The brand uses soft gradients, rounded modules, and a clean white canvas. The challenge was to introduce new UI modules and grid structures while keeping the design consistent with the existing visual language.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution -->
+                <div class="content-section">
+                    <h3 class="section-heading">Solution</h3>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">1. A scroll-based discovery structure</h4>
+                        <p class="body-text">
+                            I organized the entire page as a "narrative flow" of content modules:
+                        </p>
+                        <ul class="bullet-list">
+                            <li>Top categories</li>
+                            <li>Trending templates</li>
+                            <li>Most-used templates</li>
+                            <li>Student-favorite sections</li>
+                            <li>Seasonal / situational recommendations</li>
+                            <li>Creator-focused sections</li>
+                            <li>Social media / YouTube templates</li>
+                        </ul>
+                        <p class="body-text">
+                            Each section is built with a consistent card-based grid system, allowing users to scan quickly and dive deeper seamlessly.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">2. Large visual category modules</h4>
+                        <p class="body-text">
+                            At the top, I designed large category cards showcasing:
+                        </p>
+                        <ul class="bullet-list">
+                            <li>AR Filters</li>
+                            <li>DL Templates</li>
+                            <li>Event / Festival Templates</li>
+                        </ul>
+                        <p class="body-text">
+                            This immediately communicates the scope of the platform and sets the foundation for user orientation.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">3. Behavior-based content grouping</h4>
+                        <p class="body-text">
+                            Sections like Popular, Most Used, and Student Favorites were designed to help users find relevant content without overwhelming them.
+                        </p>
+                        <p class="body-text">Each card includes:</p>
+                        <ul class="bullet-list">
+                            <li>Thumbnail</li>
+                            <li>Title</li>
+                            <li>Short description</li>
+                            <li>Minimal hashtags</li>
+                            <li>Category indicator</li>
+                        </ul>
+                        <p class="body-text">
+                            The structure minimizes noise while improving scannability.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">4. Gradient "theme boxes" for contextual storytelling</h4>
+                        <p class="body-text">
+                            Mid-page sections such as "Templates for This Month" and "Templates You Might Need Right Now" use a soft lavender-pink gradient with rounded shapes to create a clear break between content groups and guide users visually through the narrative.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">5. Designed for mobile-first adaptation</h4>
+                        <p class="body-text">
+                            Even though the primary screenshot is desktop-first, each module was designed to collapse naturally into:
+                        </p>
+                        <ul class="bullet-list">
+                            <li>Single-column lists</li>
+                            <li>Horizontal scrollable sections</li>
+                            <li>Stacked card modules</li>
+                        </ul>
+                        <p class="body-text">ensuring consistency across breakpoints.</p>
+                    </div>
+                </div>
+
+                <!-- Approach -->
+                <div class="content-section approach-section">
+                    <h3 class="section-heading">Approach</h3>
+                    <ul class="bullet-list">
+                        <li>Rebuilt the IA based on content type, user intent, and usage patterns</li>
+                        <li>Defined a modular content system aligned with brand visuals</li>
+                        <li>Created low-fidelity sketches → structured wireframes → final visuals</li>
+                        <li>Partnered with internal stakeholders to validate content hierarchy</li>
+                        <li>Ensured that every module was component-ready for development</li>
+                    </ul>
+                </div>
+
+                <!-- Design Decisions -->
+                <div class="content-section">
+                    <h3 class="section-heading">Design Decisions</h3>
+                    <ul class="bullet-list">
+                        <li>Adopted a unified card design for all asset types</li>
+                        <li>Used subtle background changes to differentiate thematic sections</li>
+                        <li>Added "View All" on the right side to maintain flow without adding friction</li>
+                        <li>Used minimal tagging to reduce cognitive load</li>
+                        <li>Simplified category icons for universal comprehension</li>
+                    </ul>
+                </div>
+
+                <!-- Result -->
+                <div class="content-section result-section">
+                    <h3 class="section-heading">Result</h3>
+                    <ul class="bullet-list highlight">
+                        <li>Launched the first dedicated discovery page for Studio</li>
+                        <li>Improved asset clarity and exploration efficiency</li>
+                        <li>Consolidated fragmented content types into one structured, scroll-based flow</li>
+                        <li>Created a scalable template used for future content expansions</li>
+                    </ul>
+                    
+                    <div class="result-images">
+                        <div class="result-image-wrapper">
+                            <img src="Screenshot 2025-11-29 at 9.13.00 PM 1.png" alt="Studio Discovery Page Result 1" />
+                        </div>
+                        <div class="result-image-wrapper">
+                            <img src="Screenshot 2025-11-29 at 9.13.34 PM 1.png" alt="Studio Discovery Page Result 2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="case-study-divider"></div>
+
+        <!-- Case Study 2: B2B Project Detail Page -->
+        <section class="case-study">
+            <div class="case-study-container">
+                <div class="case-study-number-header">
+                    <span class="case-number">2.</span>
+                    <h2 class="case-title-inline">B2B Project Detail Page</h2>
+                </div>
+                
+                <!-- Overview -->
+                <div class="content-section">
+                    <h3 class="section-heading">Overview</h3>
+                    <p class="body-text">
+                        I designed a new B2B case study detail page to introduce large-scale brand collaborations with clear storytelling and high visual fidelity. This page did not exist previously, so I built a reusable template that communicates context, creative process, and results.
+                    </p>
+                </div>
+
+                <!-- Challenge -->
+                <div class="content-section highlight-section">
+                    <h3 class="section-heading">Challenge</h3>
+                    
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">1. The purpose of the page had to be defined first</h4>
+                        <p class="body-text">
+                            Existing project listings relied heavily on thumbnails, making it difficult to communicate narrative, problem-solving, or impact.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">2. Diverse projects required a unified storytelling structure</h4>
+                        <p class="body-text">
+                            Each B2B project differed in:
+                        </p>
+                        <ul class="bullet-list">
+                            <li>Purpose</li>
+                            <li>Interactive features</li>
+                            <li>Visual assets</li>
+                            <li>KPIs</li>
+                        </ul>
+                        <p class="body-text">
+                            A scalable template was essential to house all future case studies in a consistent format.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4 class="subsection-heading">3. High visual quality required for a B2B audience</h4>
+                        <p class="body-text">
+                            The page needed to reflect the brand's premium look, support long-form content, and highlight rich visuals without overwhelming users.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Solution -->
+                <div class="content-section">
+                    <h3 class="section-heading">Solution</h3>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">1. Structured the page into a clear, reusable narrative system</h4>
+                        <p class="body-text">
+                            Following best practices for case-study storytelling:
+                        </p>
+                        <ul class="bullet-list">
+                            <li><strong>Hero</strong> — project identity</li>
+                            <li><strong>Overview</strong> — high-level summary</li>
+                            <li><strong>Purpose</strong> — context and goals</li>
+                            <li><strong>Solution</strong> — UX decisions, flows, and visuals</li>
+                            <li><strong>Impact</strong> — performance metrics or outcomes</li>
+                        </ul>
+                        <p class="body-text">
+                            This structure helps readers understand the project in a logical, fluid sequence.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">2. Built a "visual annotation layer" (numbers 1–5)</h4>
+                        <p class="body-text">
+                            To explain complex screens, I added numbered overlays directly on top of the visuals. This enables users to understand:
+                        </p>
+                        <ul class="bullet-list">
+                            <li>Interaction points</li>
+                            <li>Key UI decisions</li>
+                            <li>Element hierarchy</li>
+                        </ul>
+                        <p class="body-text">
+                            with a single glance—mirroring patterns used in senior designer portfolios.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">3. Unified typographic scale and spacing rhythm</h4>
+                        <ul class="bullet-list">
+                            <li>Clear section headers</li>
+                            <li>Wide margins</li>
+                            <li>Soft tonal dividers</li>
+                            <li>Minimalistic black-and-white structure with light accents</li>
+                        </ul>
+                        <p class="body-text">
+                            These decisions allow the content-heavy case study to feel premium and readable.
+                        </p>
+                    </div>
+
+                    <div class="solution-item">
+                        <h4 class="subsection-heading">4. Integrated measurable impact</h4>
+                        <p class="body-text">
+                            Metrics such as "Global B2B 20,000+" were included to emphasize real-world value and scale—important for partner-facing materials.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Approach -->
+                <div class="content-section approach-section">
+                    <h3 class="section-heading">Approach</h3>
+                    <ul class="bullet-list">
+                        <li>Interviewed team members to extract project goals and insights</li>
+                        <li>Organized contents into narrative buckets (hero / context / story / features / outcome)</li>
+                        <li>Designed module systems that can be reused across different projects</li>
+                        <li>Created custom annotation overlays to explain complex illustrations and rooms</li>
+                        <li>Iterated between wireframes and visual compositions to finalize hierarchy</li>
+                    </ul>
+                </div>
+
+                <!-- Design Decisions -->
+                <div class="content-section">
+                    <h3 class="section-heading">Design Decisions</h3>
+                    <ul class="bullet-list">
+                        <li>Rounded containers and soft gradients to match the Studio brand</li>
+                        <li>Dedicated image-first sections to highlight artwork and environment design</li>
+                        <li>Repeatable text–image pairing patterns for readability</li>
+                        <li>Numbered callouts to highlight points of interest</li>
+                        <li>Soft hover and shadow accents to add depth without clutter</li>
+                    </ul>
+                </div>
+
+                <!-- Result -->
+                <div class="content-section result-section">
+                    <h3 class="section-heading">Result</h3>
+                    <ul class="bullet-list highlight">
+                        <li>Delivered the company's first dedicated B2B case-study template</li>
+                        <li>Enabled the team to present brand collaborations with clarity and narrative depth</li>
+                        <li>Improved external communication with partners and stakeholders</li>
+                        <li>Provided a scalable template for future B2B project documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Projects Button -->
+        <div class="back-section">
+            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <a href="mailto:suhhee1128@gmail.com" class="footer-link">suhhee1128@gmail.com</a>
+            </div>
+            <p>&copy; 2025 Seohee Kim. All rights reserved.</p>
+            <p>Product Designer Portfolio</p>
+        </div>
+    </footer>
+    <script type="module" src="firebase-config.js"></script>
+</body>
+</html>
+
