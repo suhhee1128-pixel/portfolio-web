@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX.MO - Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .pixmo-page {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pixmo-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+        }
+
+        .back-link {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        .pixmo-content {
+            padding-top: 80px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .pixmo-image-container {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        .pixmo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Video Section */
+        .video-section {
+            width: 100%;
+            padding: 0 40px 100px 40px;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .video-header {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pixmo-video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .pixmo-nav {
+                padding: 15px 20px;
+            }
+
+            .pixmo-content {
+                padding-top: 60px;
+            }
+
+            .video-section {
+                padding: 0 20px 60px 20px;
+                gap: 30px;
+            }
+
+            .video-header {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pixmo-page">
+        <!-- Navigation -->
+        <nav class="pixmo-nav">
+            <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+        </nav>
+
+        <!-- PIX.MO Image -->
+        <div class="pixmo-content">
+            <div class="pixmo-image-container">
+                <img src="images/PIX.MO.png" alt="PIX.MO Project" class="pixmo-image" />
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <h2 class="video-header">DEMO</h2>
+            <div class="video-container">
+                <video class="pixmo-video" controls autoplay muted loop>
+                    <source src="images/AI demo.mov" type="video/quicktime">
+                    <source src="images/AI demo.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+

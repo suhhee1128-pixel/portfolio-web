@@ -531,6 +531,17 @@ body {
     margin: 0;
 }
 
+.project-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    color: #242424;
+    text-align: center;
+    margin: 8px 0 0 0;
+    padding: 0 20px;
+    line-height: 1.4;
+    max-width: 100%;
+}
+
 .project-link:hover .project-image img,
 .project-card:hover .project-image img {
     opacity: 0.3;
