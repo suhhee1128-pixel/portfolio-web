@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendPulse - Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .trendpulse-page {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .trendpulse-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+        }
+
+        .back-link {
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        .trendpulse-content {
+            padding-top: 80px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .trendpulse-image-container {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+        .trendpulse-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            .trendpulse-nav {
+                padding: 15px 20px;
+            }
+
+            .trendpulse-content {
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="trendpulse-page">
+        <!-- Navigation -->
+        <nav class="trendpulse-nav">
+            <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+        </nav>
+
+        <!-- TrendPulse Image -->
+        <div class="trendpulse-content">
+            <div class="trendpulse-image-container">
+                <img src="images/Frame 1.png" alt="TrendPulse Project" class="trendpulse-image" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
