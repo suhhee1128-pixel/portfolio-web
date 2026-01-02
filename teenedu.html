@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poly+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poly+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -61,23 +61,163 @@
             margin: 0;
         }
 
-        .wally-image-container {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
+        /* Hero Section Styles */
+        .hero-section {
+            padding: 80px 40px;
             background-color: #ffffff;
-            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .wally-image {
+        .hero-top-row {
+            display: flex;
+            gap: 80px;
+            align-items: flex-start; /* Align image to top */
+            margin-bottom: 60px;
+        }
+
+        .hero-left-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hero-title {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero-tag {
+            background-color: rgba(255, 182, 193, 0.2);
+            color: #E76BA3;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(231, 107, 163, 0.3);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .hero-tag:hover {
+            background-color: rgba(255, 182, 193, 0.3);
+            transform: scale(1.05);
+        }
+
+        .hero-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .hero-right-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 20px; /* Slight offset if needed */
+        }
+
+        .hero-image-container {
             width: 100%;
-            height: auto;
-            display: block;
-            margin: 0;
+            max-width: 600px;
+            aspect-ratio: 16 / 10;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 20px 60px rgba(181, 101, 216, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-section-divider-full {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(99, 99, 99, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .hero-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+            row-gap: 40px;
+        }
+
+        .hero-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Span 2 columns for long content like Role if needed, or keep 1fr */
+        .hero-info-item.full-width {
+            grid-column: span 2;
+        }
+
+        .info-label {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #000;
+            margin: 0;
+        }
+
+        .info-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #636363;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .hero-tools {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            background-color: transparent;
+        }
+
+        .tool-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .tool-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         .wally-link-button-inline {
@@ -98,8 +238,8 @@
             color: #000;
             transition: all 0.3s ease;
             white-space: nowrap;
-            margin-bottom: 24px;
             width: fit-content;
+            margin-top: 32px;
         }
 
         .wally-link-button-inline:hover {
@@ -113,27 +253,8 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 40px;
+            padding: 0 40px 80px 40px;
             background-color: #ffffff;
-        }
-
-        .portfolio-header {
-            margin-bottom: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .portfolio-header-left {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-header-right {
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .portfolio-image-placeholder {
@@ -150,51 +271,6 @@
             font-weight: 500;
             margin-bottom: 32px;
             border-radius: 8px;
-        }
-
-        .portfolio-title {
-            font-family: 'Poly Sans', sans-serif;
-            font-size: 64px;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .portfolio-tagline {
-            font-family: 'Poly Sans', sans-serif;
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 24px;
-            line-height: 1.6;
-        }
-
-        .portfolio-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .meta-item {
-            font-family: 'Poly Sans', sans-serif;
-        }
-
-        .meta-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .meta-value {
-            font-size: 16px;
-            color: #000;
-            line-height: 1.6;
         }
 
         .portfolio-section {
@@ -447,6 +523,47 @@
             transform: scale(1.2);
         }
 
+        /* Back to Projects Button */
+        .back-section {
+            text-align: center;
+            margin: 80px 0 100px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: transparent;
+            border: 2px solid #FF6B9D;
+            border-radius: 8px;
+            color: #FF6B9D;
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #FF6B9D;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(255, 107, 157, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-top-row {
+                gap: 50px;
+            }
+
+            .hero-title {
+                font-size: 38px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .wally-nav {
                 padding: 15px 20px;
@@ -456,21 +573,42 @@
                 padding-top: 60px;
             }
 
+            .hero-section {
+                padding: 60px 20px 40px 20px;
+            }
+
+            .hero-top-row {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .hero-left-content {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-right-image {
+                width: 100%;
+            }
+            
+            .hero-info-grid {
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+            }
+            
+            .hero-info-item.full-width {
+                grid-column: span 1;
+            }
+
             .portfolio-content {
                 padding: 60px 20px;
-            }
-
-            .portfolio-title {
-                font-size: 40px;
-            }
-
-            .portfolio-tagline {
-                font-size: 20px;
-            }
-
-            .portfolio-meta {
-                grid-template-columns: 1fr;
-                gap: 20px;
             }
 
             .section-title {
@@ -539,305 +677,347 @@
             <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
         </nav>
 
-        <!-- Wally Image Content Removed -->
         <div class="wally-content">
-        </div>
-
-        <!-- Portfolio Content -->
-        <section class="portfolio-content">
-            <div class="portfolio-header">
-                <h1 class="portfolio-title">Wally</h1>
-                <a href="https://wally3v2.vercel.app/" target="_blank" class="wally-link-button-inline">
-                    🔗 View Live Site
-                </a>
-                <p class="portfolio-tagline">AI-Powered Behavioral Budgeting & Insight App</p>
-                
-                <div class="portfolio-meta">
-                    <div class="meta-item">
-                        <div class="meta-label">Team</div>
-                        <div class="meta-value">2-person team (Product/UX + Engineering)</div>
-                    </div>
-                    <div class="meta-item">
-                        <div class="meta-label">Role</div>
-                        <div class="meta-value">Product Designer · UX/UI Designer · Frontend Contributor<br>(UX Research · Interaction Design · UI Design · Frontend Development)</div>
-                    </div>
-                    <div class="meta-item">
-                        <div class="meta-label">Platform</div>
-                        <div class="meta-value">Web / Mobile App</div>
-                    </div>
-                    <div class="meta-item">
-                        <div class="meta-label">Timeline / Location</div>
-                        <div class="meta-value">Sep 2025 – Nov 2025 (6 weeks)<br>Irvine, CA</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Hero</h2>
-                <div class="portfolio-image-placeholder">📸 [Image 1 — Hero Screens]<br>Core product screens highlighting AI chat and behavioral insights</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Overview</h2>
-                <div class="section-content">
-                    <p>Wally is an AI-driven personal finance platform designed to help users change spending behavior, not just track expenses.</p>
-                    <p>While most budgeting apps focus on dashboards and transaction logs, Wally reframes budgeting as a behavioral and emotional problem. By combining conversational AI with insight-driven reports, Wally helps users understand why they overspend and how to intervene—before overspending becomes habitual.</p>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 2 — High-Level Product Flow]<br>Conversation → Insight → Reflection → Action</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Problem Space</h2>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Why existing budgeting apps fail to change behavior</h3>
-                <div class="section-content">
-                    <p>Despite widespread adoption of budgeting tools, overspending remains common.</p>
-                    <p>Research showed that the core problem wasn’t data availability—but interpretation and action:</p>
-                    <ul>
-                        <li>Users could see expenses, but didn’t understand patterns</li>
-                        <li>Impulsive spending repeatedly broke budgets</li>
-                        <li>Dashboards felt overwhelming or judgmental</li>
-                        <li>Insights lacked clarity and emotional context</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p>Most budgeting tools showed what users spent, but failed to influence how they spent.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 3 — Existing Budgeting UX vs. Wally Direction]</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Research & Key Insights</h2>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Research Methods</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Desk research</li>
-                        <li>Surveys and usability testing (30+ participants)</li>
-                        <li>Open card sorting on spending insights</li>
-                    </ul>
-                </div>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Key Findings</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Users didn’t want more data—they wanted clear explanations</li>
-                        <li>Emotional and contextual guidance mattered more than charts</li>
-                        <li>Reports felt like spreadsheets, not reflection tools</li>
-                        <li>There was no clear entry point for understanding behavior</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p><strong>Core Insight:</strong> Behavior change requires guidance that feels human, supportive, and timely—not punitive or data-heavy.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 4 — Card Sorting Results / Insight Structure]</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Design Direction</h2>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Design Hypothesis</h3>
-                <div class="section-content">
-                    <p>If users receive emotion-aware, contextual feedback about their spending—delivered through conversational and non-judgmental AI—they will better understand their habits and be more likely to stay within budget.</p>
-                    <div class="highlight-box">
-                        <p>This reframed Wally from an expense tracker into a behavioral coaching product.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 5 — Design Principles Visualization]</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Solution Strategy</h2>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Core Principles</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Behavior over raw data</li>
-                        <li>Conversation over dashboards</li>
-                        <li>Emotion-aware insights</li>
-                        <li>Supportive, non-judgmental tone</li>
-                        <li>Insight first, details later</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Key UX Solutions</h2>
-                
-                <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">1️⃣ AI-Based Behavioral Coaching</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Conversational interface replacing static dashboards</li>
-                        <li>Adaptive AI personas that adjust tone (supportive, direct, playful)</li>
-                        <li>Spending data translated into natural language explanations</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p><strong>Why it worked:</strong> Users were more receptive to feedback when it felt like guidance, not reporting.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 6 — AI Chat Interface Screens]</div>
-
-                <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">2️⃣ Emotion-Based Spending Insights</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Linked emotional states to spending behavior</li>
-                        <li>Surfaced patterns behind impulsive purchases</li>
-                        <li>Converted insights into actionable spending nudges</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p>This shifted budgeting from “tracking mistakes” to understanding behavioral triggers.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 7 — Emotion & Time-Based Insight UI]</div>
-
-                <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">3️⃣ Report Page Redesign as a Reflection Tool</h3>
-                <div class="section-content">
-                    <p>The report page became the core reflection and decision-making moment.</p>
-                    <p><strong>Before:</strong></p>
-                    <ul>
-                        <li>Flat hierarchy</li>
-                        <li>Equal visual weight across data</li>
-                        <li>High cognitive load</li>
-                        <li>Insights buried in numbers</li>
-                    </ul>
-                    <p><strong>After:</strong></p>
-                    <ul>
-                        <li>Clear top-down structure: Key behavioral insight summary, Pattern breakdown, Detailed spending data</li>
-                        <li>Visual grouping aligned with card-sorting results</li>
-                        <li>Reduced noise and improved scanability</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p>The report evolved from a dashboard into a behavioral reflection tool.</p>
-                    </div>
-                </div>
-                <div class="portfolio-image-placeholder">📸 [Image 8 — Report Page Before / After Comparison]</div>
-            </div>
-
-            <div class="portfolio-section">
-                <h2 class="section-title">Usability Testing & Impact</h2>
-                <div class="portfolio-image-placeholder">📊 [Image 9 — Usability Metrics Visualization]</div>
-                <div class="section-content">
-                    <p>Post-redesign testing showed measurable improvements:</p>
-                    <div class="metrics-grid">
-                        <div class="metric-item">
-                            <div class="metric-value">60%+</div>
-                            <div class="metric-label">Users reported reduced unnecessary spending</div>
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <!-- Top Row: Left Content & Right Image -->
+                <div class="hero-top-row">
+                    <div class="hero-left-content">
+                        <h1 class="hero-title">Wally</h1>
+                        <div class="hero-tags">
+                            <span class="hero-tag">UX/UI Design</span>
+                            <span class="hero-tag">Product Design</span>
+                            <span class="hero-tag">Interaction Design</span>
                         </div>
-                        <div class="metric-item">
-                            <div class="metric-value">31%</div>
-                            <div class="metric-label">Faster comprehension time</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-value">28%</div>
-                            <div class="metric-label">Increase in perceived usefulness</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-value">54% → 79%</div>
-                            <div class="metric-label">Agreement with “I understand my spending patterns”</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-value">35%</div>
-                            <div class="metric-label">Improvement in task success rate</div>
+                        <p class="hero-description">
+                            Wally is an AI-driven personal finance platform designed to help users change spending behavior, not just track expenses.
+                        </p>
+                        <p class="hero-description">
+                            By combining conversational AI with insight-driven reports, Wally helps users understand why they overspend and how to intervene—before overspending becomes habitual.
+                        </p>
+                        
+                        <!-- View Live Site Button -->
+                        <a href="https://wally3v2.vercel.app/" target="_blank" class="wally-link-button-inline">
+                            🔗 View Live Site
+                        </a>
+                    </div>
+                    
+                    <div class="hero-right-image">
+                        <div class="hero-image-container">
+                            <img src="images/wallyfinal.png" alt="Wally Project Preview" />
                         </div>
                     </div>
-                    <p>Users consistently described insights as:</p>
-                    <ul>
-                        <li>Clearer</li>
-                        <li>More actionable</li>
-                        <li>Less overwhelming</li>
-                    </ul>
+                </div>
+
+                <!-- Full Width Divider -->
+                <div class="hero-section-divider-full"></div>
+
+                <!-- Info Grid (2 Columns) -->
+                <div class="hero-info-grid">
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Tools</h3>
+                        <div class="hero-tools">
+                            <div class="tool-icon figma-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" width="40" height="40">
+                            </div>
+                            <div class="tool-icon">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" width="40" height="40">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Team</h3>
+                        <p class="info-text">2-person team (Product/UX + Engineering)</p>
+                    </div>
+
+                    <div class="hero-info-item full-width">
+                        <h3 class="info-label">Role</h3>
+                        <p class="info-text">Product Designer · UX/UI Designer</p>
+                        <p class="info-text" style="font-size: 14px; color: #888; margin-top: 4px;">Product ownership, UX strategy, interaction design, and frontend collaboration</p>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Platform</h3>
+                        <p class="info-text">Web / Mobile App</p>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Timeline / Location</h3>
+                        <p class="info-text">Sep 2025 – Nov 2025 (6 weeks) / Irvine, CA</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="portfolio-section">
-                <h2 class="section-title">Business & Product Impact</h2>
-                <div class="portfolio-image-placeholder">📈 [Image 10 — Business Impact Snapshot]</div>
-                <div class="section-content">
-                    <ul>
-                        <li>85% overall user satisfaction</li>
-                        <li>Early validation of an emotion-driven budgeting model</li>
-                        <li>Target: 5K users</li>
-                        <li>Conversion rate: 1%</li>
-                        <li>Projected revenue: ~$2K (6-month horizon)</li>
-                        <li>Primary market: United States</li>
-                    </ul>
+            <!-- Portfolio Content -->
+            <section class="portfolio-content">
+                <div class="portfolio-section">
+                    <h2 class="section-title">Hero</h2>
+                    <div class="portfolio-image-placeholder">📸 [Image 1 — Hero Screens]<br>Core product screens highlighting AI chat and behavioral insights</div>
                 </div>
-            </div>
 
-            <div class="portfolio-section">
-                <h2 class="section-title">Collaboration & Implementation</h2>
+                <div class="portfolio-section">
+                    <h2 class="section-title">Overview</h2>
+                    <div class="section-content">
+                        <p>Wally is an AI-driven personal finance platform designed to help users change spending behavior, not just track expenses.</p>
+                        <p>While most budgeting apps focus on dashboards and transaction logs, Wally reframes budgeting as a behavioral and emotional problem. By combining conversational AI with insight-driven reports, Wally helps users understand why they overspend and how to intervene—before overspending becomes habitual.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 2 — High-Level Product Flow]<br>Conversation → Insight → Reflection → Action</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Problem Space</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Why existing budgeting apps fail to change behavior</h3>
+                    <div class="section-content">
+                        <p>Despite widespread adoption of budgeting tools, overspending remains common.</p>
+                        <p>Research showed that the core problem wasn’t data availability—but interpretation and action:</p>
+                        <ul>
+                            <li>Users could see expenses, but didn’t understand patterns</li>
+                            <li>Impulsive spending repeatedly broke budgets</li>
+                            <li>Dashboards felt overwhelming or judgmental</li>
+                            <li>Insights lacked clarity and emotional context</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p>Most budgeting tools showed what users spent, but failed to influence how they spent.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 3 — Existing Budgeting UX vs. Wally Direction]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Research & Key Insights</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Research Methods</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Desk research</li>
+                            <li>Surveys and usability testing (30+ participants)</li>
+                            <li>Open card sorting on spending insights</li>
+                        </ul>
+                    </div>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Key Findings</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Users didn’t want more data—they wanted clear explanations</li>
+                            <li>Emotional and contextual guidance mattered more than charts</li>
+                            <li>Reports felt like spreadsheets, not reflection tools</li>
+                            <li>There was no clear entry point for understanding behavior</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p><strong>Core Insight:</strong> Behavior change requires guidance that feels human, supportive, and timely—not punitive or data-heavy.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 4 — Card Sorting Results / Insight Structure]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Design Direction</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Design Hypothesis</h3>
+                    <div class="section-content">
+                        <p>If users receive emotion-aware, contextual feedback about their spending—delivered through conversational and non-judgmental AI—they will better understand their habits and be more likely to stay within budget.</p>
+                        <div class="highlight-box">
+                            <p>This reframed Wally from an expense tracker into a behavioral coaching product.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 5 — Design Principles Visualization]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Solution Strategy</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Core Principles</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Behavior over raw data</li>
+                            <li>Conversation over dashboards</li>
+                            <li>Emotion-aware insights</li>
+                            <li>Supportive, non-judgmental tone</li>
+                            <li>Insight first, details later</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Key UX Solutions</h2>
+                    
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">1️⃣ AI-Based Behavioral Coaching</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Conversational interface replacing static dashboards</li>
+                            <li>Adaptive AI personas that adjust tone (supportive, direct, playful)</li>
+                            <li>Spending data translated into natural language explanations</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p><strong>Why it worked:</strong> Users were more receptive to feedback when it felt like guidance, not reporting.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 6 — AI Chat Interface Screens]</div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">2️⃣ Emotion-Based Spending Insights</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Linked emotional states to spending behavior</li>
+                            <li>Surfaced patterns behind impulsive purchases</li>
+                            <li>Converted insights into actionable spending nudges</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p>This shifted budgeting from “tracking mistakes” to understanding behavioral triggers.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 7 — Emotion & Time-Based Insight UI]</div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">3️⃣ Report Page Redesign as a Reflection Tool</h3>
+                    <div class="section-content">
+                        <p>The report page became the core reflection and decision-making moment.</p>
+                        <p><strong>Before:</strong></p>
+                        <ul>
+                            <li>Flat hierarchy</li>
+                            <li>Equal visual weight across data</li>
+                            <li>High cognitive load</li>
+                            <li>Insights buried in numbers</li>
+                        </ul>
+                        <p><strong>After:</strong></p>
+                        <ul>
+                            <li>Clear top-down structure: Key behavioral insight summary, Pattern breakdown, Detailed spending data</li>
+                            <li>Visual grouping aligned with card-sorting results</li>
+                            <li>Reduced noise and improved scanability</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p>The report evolved from a dashboard into a behavioral reflection tool.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 8 — Report Page Before / After Comparison]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Usability Testing & Impact</h2>
+                    <div class="portfolio-image-placeholder">📊 [Image 9 — Usability Metrics Visualization]</div>
+                    <div class="section-content">
+                        <p>Post-redesign testing showed measurable improvements:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-value">60%+</div>
+                                <div class="metric-label">Users reported reduced unnecessary spending</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">31%</div>
+                                <div class="metric-label">Faster comprehension time</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">28%</div>
+                                <div class="metric-label">Increase in perceived usefulness</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">54% → 79%</div>
+                                <div class="metric-label">Agreement with “I understand my spending patterns”</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value">35%</div>
+                                <div class="metric-label">Improvement in task success rate</div>
+                            </div>
+                        </div>
+                        <p>Users consistently described insights as:</p>
+                        <ul>
+                            <li>Clearer</li>
+                            <li>More actionable</li>
+                            <li>Less overwhelming</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Business & Product Impact</h2>
+                    <div class="portfolio-image-placeholder">📈 [Image 10 — Business Impact Snapshot]</div>
+                    <div class="section-content">
+                        <ul>
+                            <li>85% overall user satisfaction</li>
+                            <li>Early validation of an emotion-driven budgeting model</li>
+                            <li>Target: 5K users</li>
+                            <li>Conversion rate: 1%</li>
+                            <li>Projected revenue: ~$2K (6-month horizon)</li>
+                            <li>Primary market: United States</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Collaboration & Implementation</h2>
                 <div class="section-content">
                     <p>This project was built by a 2-person team, with me owning the product experience end to end.</p>
                     <ul>
-                        <li>Defined product direction by linking emotional states to spending behavior</li>
-                        <li>Shaped core UX flows, AI personas, and interaction logic</li>
-                        <li>Contributed directly to frontend implementation using Next.js</li>
-                        <li>Collaborated via GitHub (branches, PRs)</li>
-                        <li>Participated in deployment using Vercel</li>
-                        <li>Designed within real technical constraints (Auth, DB, Edge Functions)</li>
+                        <li>Owned end-to-end product design from problem definition to final UI</li>
+                        <li>Designed UX flows, interaction logic, and UI systems with implementation in mind</li>
+                        <li>Contributed directly to frontend development using Next.js</li>
+                        <li>Implemented core UI components and interaction behaviors</li>
+                        <li>Collaborated closely with engineers to align design decisions with real technical constraints</li>
+                        <li>Participated in deployment and production readiness via Vercel</li>
                     </ul>
                     <div class="highlight-box">
                         <p>This ensured the product was production-aware and scalable, not conceptual.</p>
                     </div>
                 </div>
-                <div class="portfolio-image-placeholder">📸 [Image 11 — Implementation / GitHub / Architecture Overview]</div>
-            </div>
+                    <div class="portfolio-image-placeholder">📸 [Image 11 — Implementation / GitHub / Architecture Overview]</div>
+                </div>
 
-            <div class="portfolio-section">
-                <h2 class="section-title">Reflection</h2>
-                <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">What this project reinforced</h3>
-                <div class="section-content">
-                    <ul>
-                        <li>Behavior change depends on clarity, timing, and emotional framing</li>
-                        <li>In financial products, trust is a UX and language problem</li>
-                        <li>Information architecture drives behavior more than feature count</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p>Wally strengthened my belief that strong product design sits at the intersection of human psychology, product strategy, and technical constraints.</p>
+                <div class="portfolio-section">
+                    <h2 class="section-title">Reflection</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">What this project reinforced</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Behavior change depends on clarity, timing, and emotional framing</li>
+                            <li>In financial products, trust is a UX and language problem</li>
+                            <li>Information architecture drives behavior more than feature count</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p>Wally strengthened my belief that strong product design sits at the intersection of human psychology, product strategy, and technical constraints.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Presentation Slider Section -->
-        <section class="presentation-section">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Orbitron', sans-serif; font-size: 48px; font-weight: 700;">Presentation</h2>
+            </section>
             
-            <div class="slider-container">
-                <button class="slider-btn prev-btn" aria-label="Previous slide">←</button>
+            <!-- Presentation Slider Section -->
+            <section class="presentation-section">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Orbitron', sans-serif; font-size: 48px; font-weight: 700;">Presentation</h2>
                 
-                <div class="slider-wrapper">
-                    <div class="slides-track" id="slidesTrack">
-                        <!-- Slides will be inserted by JS -->
+                <div class="slider-container">
+                    <button class="slider-btn prev-btn" aria-label="Previous slide">←</button>
+                    
+                    <div class="slider-wrapper">
+                        <div class="slides-track" id="slidesTrack">
+                            <!-- Slides will be inserted by JS -->
+                        </div>
                     </div>
+                    
+                    <button class="slider-btn next-btn" aria-label="Next slide">→</button>
                 </div>
                 
-                <button class="slider-btn next-btn" aria-label="Next slide">→</button>
-            </div>
-            
-            <div class="slider-dots" id="sliderDots">
-                <!-- Dots will be inserted by JS -->
-            </div>
-        </section>
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be inserted by JS -->
+                </div>
+            </section>
 
-        <!-- Video Section -->
-        <section class="video-section">
-            <h2 class="video-header">DEMO</h2>
-            <div class="video-container">
-                <video class="wally-video" controls autoplay muted loop>
-                    <source src="images/fullstack 최.mov" type="video/quicktime">
-                    <source src="images/fullstack 최.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <!-- Video Section -->
+            <section class="video-section">
+                <h2 class="video-header">DEMO</h2>
+                <div class="video-container">
+                    <video class="wally-video" controls autoplay muted loop>
+                        <source src="images/fullstack 최.mov" type="video/quicktime">
+                        <source src="images/fullstack 최.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- Thanks Section -->
+            <section class="thanks-section">
+                <h2 class="thanks-title">Thanks For Watching!</h2>
+                <a href="https://wally3v2.vercel.app/" target="_blank" class="thanks-link-button">
+                    🔗 View Live Site
+                </a>
+            </section>
+
+            <!-- Back to Projects Button -->
+            <div class="back-section">
+                <a href="index.html#projects" class="back-button">← Back to Projects</a>
             </div>
-        </section>
-
-        <!-- Thanks Section -->
-        <section class="thanks-section">
-            <h2 class="thanks-title">Thanks For Watching!</h2>
-            <a href="https://wally3v2.vercel.app/" target="_blank" class="thanks-link-button">
-                🔗 View Live Site
-            </a>
-        </section>
-
-        <!-- Back to Projects Button -->
-        <div class="back-section">
-            <a href="index.html#projects" class="back-button">← Back to Projects</a>
         </div>
     </div>
     <script>
@@ -904,4 +1084,3 @@
     </script>
 </body>
 </html>
-
