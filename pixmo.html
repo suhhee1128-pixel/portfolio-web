@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIX.MO - Project</title>
+    <title>PIX.MO - AI-Powered Sprite Generation & Playable Game System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poly+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -61,29 +61,304 @@
             margin: 0;
         }
 
-        .pixmo-image-container {
-            width: 100%;
+        /* Hero Section Styles */
+        .hero-section {
+            padding: 80px 40px;
+            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-top-row {
             display: flex;
+            gap: 80px;
             align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .hero-left-content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hero-title {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hero-tag {
+            background-color: rgba(255, 182, 193, 0.2);
+            color: #E76BA3;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(231, 107, 163, 0.3);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .hero-tag:hover {
+            background-color: rgba(255, 182, 193, 0.3);
+            transform: scale(1.05);
+        }
+
+        .hero-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .hero-right-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 20px;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 16 / 10;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 20px 60px rgba(181, 101, 216, 0.3);
+            display: flex;
+            align-items: center;
             justify-content: center;
             padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-section-divider-full {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(99, 99, 99, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .hero-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+            row-gap: 40px;
+        }
+
+        .hero-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hero-info-item.full-width {
+            grid-column: span 2;
+        }
+
+        .info-label {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #000;
             margin: 0;
+        }
+
+        .info-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #636363;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Content Section */
+        .portfolio-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px 80px 40px;
             background-color: #ffffff;
         }
 
-        .pixmo-image {
+        .portfolio-image-placeholder {
             width: 100%;
-            height: auto;
-            display: block;
+            aspect-ratio: 16/9;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-family: 'Poly Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            border-radius: 8px;
+        }
+
+        .portfolio-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Poly Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-content {
+            font-family: 'Poly Sans', sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .section-content p {
+            margin-bottom: 16px;
+        }
+
+        .section-content ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section-content li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background-color: #f5f5f5;
+            border-left: 4px solid #333;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
             margin: 0;
-            padding: 0;
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+        }
+
+        /* Presentation Slider Styles */
+        .presentation-section {
+            width: 100%;
+            padding: 80px 40px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            aspect-ratio: 16/9;
+        }
+
+        .slides-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #fff;
+        }
+
+        .slider-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            max-width: 800px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #333;
+            transform: scale(1.2);
         }
 
         /* Video Section */
         .video-section {
             width: 100%;
-            padding: 0 40px 100px 40px;
-            background-color: #000000;
+            padding: 80px 40px;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -92,10 +367,10 @@
         }
 
         .video-header {
-            font-family: 'Archivo', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-weight: 700;
             font-size: 48px;
-            color: #ffffff;
+            color: #000;
             text-align: center;
         }
 
@@ -114,6 +389,47 @@
             box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
         }
 
+        /* Back to Projects Button */
+        .back-section {
+            text-align: center;
+            margin: 80px 0 100px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: transparent;
+            border: 2px solid #FF6B9D;
+            border-radius: 8px;
+            color: #FF6B9D;
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #FF6B9D;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(255, 107, 157, 0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-top-row {
+                gap: 50px;
+            }
+
+            .hero-title {
+                font-size: 38px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+        }
+
         @media (max-width: 768px) {
             .pixmo-nav {
                 padding: 15px 20px;
@@ -121,6 +437,76 @@
 
             .pixmo-content {
                 padding-top: 60px;
+            }
+
+            .hero-section {
+                padding: 60px 20px 40px 20px;
+            }
+
+            .hero-top-row {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .hero-left-content {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-right-image {
+                width: 100%;
+            }
+            
+            .hero-info-grid {
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+            }
+            
+            .hero-info-item.full-width {
+                grid-column: span 1;
+            }
+
+            .portfolio-content {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-content {
+                font-size: 16px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .presentation-section {
+                padding: 60px 20px;
+            }
+            
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .prev-btn { left: -10px; }
+            .next-btn { right: -10px; }
+            
+            .slider-wrapper {
+                margin: 0 10px;
             }
 
             .video-section {
@@ -141,30 +527,320 @@
             <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
         </nav>
 
-        <!-- PIX.MO Image -->
         <div class="pixmo-content">
-            <div class="pixmo-image-container">
-                <img src="images/PIX.MO.png" alt="PIX.MO Project" class="pixmo-image" />
-            </div>
-        </div>
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <!-- Top Row: Left Content & Right Image -->
+                <div class="hero-top-row">
+                    <div class="hero-left-content">
+                        <h1 class="hero-title">PIX.MO</h1>
+                        <div class="hero-tags">
+                            <span class="hero-tag">Solo Project</span>
+                            <span class="hero-tag">AI × Game × System Design</span>
+                        </div>
+                        <p class="hero-description">
+                            PIX.MO is a solo AI project where I explored whether custom AI-generated sprites could go beyond visuals and become truly playable game assets.
+                        </p>
+                        <p class="hero-description">
+                            Instead of stopping at image generation, I challenged myself to design an end-to-end system—from character creation, to consistent sprite generation, to real in-game validation inside a playable beat-’em-up game.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-right-image">
+                        <div class="hero-image-container">
+                            <div class="portfolio-image-placeholder" style="width: 100%; height: 100%; margin: 0; background-color: #eee;">⬜︎ [Hero Image]</div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Video Section -->
-        <section class="video-section">
-            <h2 class="video-header">DEMO</h2>
-            <div class="video-container">
-                <video class="pixmo-video" controls autoplay muted loop>
-                    <source src="images/AI demo.mov" type="video/quicktime">
-                    <source src="images/AI demo.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
+                <!-- Full Width Divider -->
+                <div class="hero-section-divider-full"></div>
 
-        <!-- Back to Projects Button -->
-        <div class="back-section">
-            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+                <!-- Info Grid (2 Columns) -->
+                <div class="hero-info-grid">
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Tools</h3>
+                        <p class="info-text">Python, AI Models, Game Engine</p>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Team</h3>
+                        <p class="info-text">Solo Project</p>
+                    </div>
+
+                    <div class="hero-info-item full-width">
+                        <h3 class="info-label">Role</h3>
+                        <p class="info-text">Designed, Built, Executed (End-to-End)</p>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Platform</h3>
+                        <p class="info-text">Playable Game System</p>
+                    </div>
+                    
+                    <div class="hero-info-item">
+                        <h3 class="info-label">Timeline</h3>
+                        <p class="info-text">2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Content -->
+            <section class="portfolio-content">
+                <div class="portfolio-section">
+                    <h2 class="section-title">Overview</h2>
+                    <div class="section-content">
+                        <p>PIX.MO is a solo AI project where I explored whether custom AI-generated sprites could go beyond visuals and become truly playable game assets.</p>
+                        <p>Instead of stopping at image generation, I challenged myself to design an end-to-end system—from character creation, to consistent sprite generation, to real in-game validation inside a playable beat-’em-up game.</p>
+                        <p>This project was fully designed, built, and executed independently.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Why This Project</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">The gap I wanted to explore</h3>
+                    <div class="section-content">
+                        <p>AI-generated images are everywhere—but in games, sprites often fail at one critical point:</p>
+                        <div class="highlight-box">
+                            <p>They look good, but they don’t work.</p>
+                        </div>
+                        <p>From my research and community exploration:</p>
+                        <ul>
+                            <li>AI sprites often lack frame consistency</li>
+                            <li>Animations break when placed in a real game engine</li>
+                            <li>Developers still need heavy manual cleanup</li>
+                        </ul>
+                        <p>Yet indie developers and creators want customization and speed.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Community Questions & Market Signals]</div>
+                    <div class="section-content">
+                        <p>This led to a core question: <strong>Can AI generate sprites that are not just pretty—but playable?</strong></p>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Problem Definition</h2>
+                    <div class="section-content">
+                        <p>To make AI sprites usable in real games, three problems had to be solved:</p>
+                        <p><strong>1️⃣ Customization</strong><br>
+                        Creators want to define Character style, Color palette, Mood, weapon, role. But most generators produce generic outputs.</p>
+                        <p><strong>2️⃣ Consistency Across Frames</strong><br>
+                        Sprites must share the same scale, pivot, and proportions and maintain visual continuity across actions (idle, attack, skill, etc.). Without this, animation breaks.</p>
+                        <p><strong>3️⃣ Playability Validation</strong><br>
+                        Even visually consistent sprites often don’t align with hitboxes, break combat timing, or feel “off” during gameplay. True validation only happens inside a real game.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Problem Breakdown Diagram]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Solution</h2>
+                    <div class="section-content">
+                        <p>I designed PIX.MO as a three-layer system, not a single feature.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — “Solution with Gemini” Overview Slide]</div>
+                    
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">1️⃣ Customized Character Generation</h3>
+                    <div class="section-content">
+                        <p>Users define characters through structured inputs (Name & description, Color & mood, Weapon type). This ensures generation starts with intent, not randomness.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Character Input UI]</div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">2️⃣ Consistent Sprite System</h3>
+                    <div class="section-content">
+                        <p>Instead of generating single images, I designed the system around action-based sprite sets with fixed frame counts per action and shared canvas/scale/pivot. Each action (Idle, Attack, Skill, Dash, Death) produces a coherent sprite sequence.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Generated Sprite Frames Grid]</div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">3️⃣ Playable Verification Inside a Game</h3>
+                    <div class="section-content">
+                        <p>To avoid “theoretical usability,” I embedded sprites into a real beat-’em-up game. I built a simple combat system with HP, damage, and hit detection, allowing real-time sprite swapping.</p>
+                        <p>This allowed me to verify animation flow, combat readability, and visual feedback during hits.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — In-Game Combat with Custom Sprite]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Process & Effort</h2>
+                    <div class="section-content">
+                        <p>This project required bridging AI generation → engine constraints → gameplay reality.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Sprite → Engine → Game Flow Diagram]</div>
+                    <div class="section-content">
+                        <p>What I did end-to-end:</p>
+                        <ul>
+                            <li>Designed sprite constraints suitable for games</li>
+                            <li>Experimented with AI generation tools and prompts</li>
+                            <li>Iterated sprite sets based on engine feedback</li>
+                            <li>Integrated sprites into a playable game loop</li>
+                            <li>Debugged animation and collision issues</li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Prototype → Final Game Comparison]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Market & Context</h2>
+                    <div class="section-content">
+                        <p>According to market research, the AI in Games market is projected to grow ~5.4× by 2034, with strong interest from indie developers and creators.</p>
+                        <p>Community reactions consistently asked: “How did you make this?” / “Is this open source?”</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Market Growth Chart & Community Quotes]</div>
+                    <div class="section-content">
+                        <div class="highlight-box">
+                            <p>This validated that the problem wasn’t niche—it was underserved.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Business Thinking (Exploratory)</h2>
+                    <div class="section-content">
+                        <p>I also explored how such a system could scale sustainably.</p>
+                        <ul>
+                            <li>Free trial for experimentation</li>
+                            <li>Credit-based pricing tied to sprite actions</li>
+                            <li>Commercial usage unlocked for real production</li>
+                        </ul>
+                        <p>This wasn’t about monetization first—but about designing with real-world constraints in mind.</p>
+                    </div>
+                    <div class="portfolio-image-placeholder">⬜︎ [Image — Business Model Slide]</div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Outcome</h2>
+                    <div class="section-content">
+                        <ul class="bullet-list" style="font-weight: 500;">
+                            <li>Built a fully playable game using AI-generated sprites</li>
+                            <li>Proved that AI sprites can pass real gameplay validation</li>
+                            <li>Designed an end-to-end system, not a demo</li>
+                            <li>Completed entirely as a solo project</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="portfolio-section">
+                    <h2 class="section-title">Reflection</h2>
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">What this project taught me</h3>
+                    <div class="section-content">
+                        <p><strong>AI features only matter when they survive real constraints</strong></p>
+                        <p>Systems thinking is more important than individual outputs. “Playable” is a higher bar than “generated”.</p>
+                        <div class="highlight-box">
+                            <p>PIX.MO represents how I approach AI: not as a novelty, but as a tool that must work in real products.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Why This Project Matters in My Portfolio</h3>
+                    <div class="section-content">
+                        <ul>
+                            <li>Shows solo ownership from concept to execution</li>
+                            <li>Demonstrates AI × design × implementation thinking</li>
+                            <li>Goes beyond visuals into system-level problem solving</li>
+                            <li>Proves I can finish complex experiments end to end</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Presentation Slider Section -->
+            <section class="presentation-section">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Orbitron', sans-serif; font-size: 48px; font-weight: 700;">Presentation</h2>
+                
+                <div class="slider-container">
+                    <button class="slider-btn prev-btn" aria-label="Previous slide">←</button>
+                    
+                    <div class="slider-wrapper">
+                        <div class="slides-track" id="slidesTrack">
+                            <!-- Slides will be inserted by JS -->
+                        </div>
+                    </div>
+                    
+                    <button class="slider-btn next-btn" aria-label="Next slide">→</button>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be inserted by JS -->
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="video-section">
+                <h2 class="video-header">DEMO</h2>
+                <div class="video-container">
+                    <video class="pixmo-video" controls autoplay muted loop>
+                        <source src="images/AI demo.mov" type="video/quicktime">
+                        <source src="images/AI demo.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <!-- Back to Projects Button -->
+            <div class="back-section">
+                <a href="index.html#projects" class="back-button">← Back to Projects</a>
+            </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('slidesTrack');
+            const dotsContainer = document.getElementById('sliderDots');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            
+            // Total number of slides extracted from PDF
+            const totalSlides = 10;
+            let currentSlide = 0;
+
+            // Initialize slides
+            for (let i = 1; i <= totalSlides; i++) {
+                // Create slide image
+                const img = document.createElement('img');
+                // Pad number with leading zero if needed (01, 02, ... 10)
+                const pageNum = i.toString().padStart(2, '0');
+                img.src = `images/pixmo-slides/slide-${pageNum}.png`;
+                img.alt = `Presentation Slide ${i}`;
+                img.className = 'slide';
+                track.appendChild(img);
+
+                // Create dot
+                const dot = document.createElement('div');
+                dot.className = `dot ${i === 1 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(i - 1));
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = document.querySelectorAll('.dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function goToSlide(index) {
+                if (index < 0) {
+                    currentSlide = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide = index;
+                }
+                updateSlider();
+            }
+
+            // Event Listeners
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Optional: Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+            });
+        });
+    </script>
 </body>
 </html>
-
