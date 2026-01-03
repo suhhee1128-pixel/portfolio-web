@@ -254,6 +254,22 @@
             margin-bottom: 80px;
         }
 
+        .final-ui-section {
+            background-color: #f5f5f5;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            margin-left: -50vw;
+            padding: 80px 20px;
+        }
+        
+        .final-ui-section .section-title,
+        .final-ui-section > div {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .section-title {
             font-family: 'Inter', sans-serif;
             font-size: 32px;
@@ -316,15 +332,15 @@
 
         .metric-value {
             font-family: 'Inter', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 60px;
+            font-weight: 400;
             color: #000;
             margin-bottom: 8px;
         }
 
         .metric-label {
             font-family: 'Inter', sans-serif;
-            font-size: 14px;
+            font-size: 18px;
             color: #666;
         }
 
@@ -896,7 +912,7 @@
                         
                         <p>To evaluate how users perceived Wally after hands-on use, I conducted a user survey focused on clarity, usefulness, and behavioral impact.</p>
                         
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-top: 32px; margin-bottom: 16px;">What Users Valued Most</h4>
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">What Users Valued Most</h4>
                         <ul class="bullet-list">
                             <li><strong>1. Actionable, behavior-shaping advice</strong><br>Users consistently praised the app for providing specific and practical spending advice, rather than generic financial tips. This reinforced the decision to position Wally as a behavioral coaching tool, not a passive tracker.</li>
                             <li><strong>2. Engaging and approachable UI</strong><br>Participants described the UI as “cute” and engaging, noting that the friendly visual tone made the experience feel less judgmental and more motivating—supporting long-term engagement.</li>
@@ -907,7 +923,7 @@
                             <p>“The mood-based insights were especially helpful.” <br>— User feedback</p>
                         </div>
 
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-top: 32px; margin-bottom: 16px;">Areas for Improvement (Identified Through Survey)</h4>
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">Areas for Improvement (Identified Through Survey)</h4>
                         <ul class="bullet-list">
                             <li><strong>1. Desktop experience felt too mobile-oriented</strong><br>Some users noted that the phone-style layout felt unnatural on desktop, indicating the need for clearer platform-specific UI optimization.</li>
                             <li><strong>2. AI responses lacked clarity at times</strong><br>While users appreciated the tone, several mentioned that AI responses could feel noisy or overly verbose, highlighting the need for more concise, scannable explanations.</li>
@@ -915,7 +931,7 @@
                             <li><strong>4. Feature usage was not always intuitive</strong><br>Some participants were unsure how to fully use certain features, pointing to the need for lightweight onboarding cues and micro-copy guidance.</li>
                     </ul>
 
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-top: 32px; margin-bottom: 16px;">How These Insights Informed Next Steps</h4>
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">How These Insights Informed Next Steps</h4>
                         <p>Based on the survey findings, I identified clear follow-up actions:</p>
                         <ul class="bullet-list">
                             <li>Refine desktop-specific layouts</li>
@@ -935,13 +951,6 @@
                         <img src="images/wally/card-sorting.png" alt="Card Sorting Results" class="wally-image" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block;">
                             </div>
 
-                <div class="section-content" style="margin-top: 24px;">
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 12px;">Impact</h4>
-                        <ul style="font-family: 'Inter', sans-serif; font-size: 16px; color: #333; line-height: 1.6; margin-left: 20px;">
-                            <li style="margin-bottom: 8px;">Reduced report page depth to improve access to the tracker and full spending history</li>
-                            <li>+20% increase in feature comprehension after card sorting usability testing</li>
-                                    </ul>
-                                </div>
                             </div>
 
             <div class="portfolio-section">
@@ -962,9 +971,13 @@
                             <li>Visual grouping aligned with card-sorting results</li>
                             <li>Reduced noise and improved scanability</li>
                     </ul>
-                    <div class="highlight-box">
-                            <p>The report evolved from a dashboard into a behavioral reflection tool.</p>
-                </div>
+                    <div class="highlight-box" style="margin-top: 24px;">
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 400; margin-bottom: 12px; color: #000;">Impact</h4>
+                        <ul style="font-family: 'Inter', sans-serif; font-size: 24px; color: #333; line-height: 1.6; margin-left: 20px; margin-top: 8px;">
+                            <li style="margin-bottom: 8px;">Reduced report page depth to improve access to the tracker and full spending history</li>
+                            <li>+20% increase in feature comprehension after card sorting usability testing</li>
+                        </ul>
+                    </div>
                     </div>
                     <div class="report-comparison" style="display: flex; gap: 40px; flex-wrap: wrap; margin-top: 24px; justify-content: center;">
                         <div class="report-image-wrapper" style="flex: 1; max-width: 250px; min-width: 200px;">
@@ -978,7 +991,7 @@
                                 </div>
                             </div>
 
-            <div class="portfolio-section">
+            <div class="portfolio-section final-ui-section">
                     <h2 class="section-title">Final UI Design</h2>
                     <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                         <div style="text-align: center;">

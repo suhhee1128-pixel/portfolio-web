@@ -28,122 +28,65 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
-.header {
+/* Navigation */
+.project-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(99, 99, 99, 0.1);
-    z-index: 1000;
-    padding: 20px 0;
 }
 
-.header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
+.back-link {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: #000000;
-    margin: 0;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.logo:hover {
-    color: #FF6B9D;
-}
-
-.nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 40px;
-}
-
-.nav a {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 500;
     font-size: 16px;
-    color: #636363;
+    color: #000;
     text-decoration: none;
-    transition: color 0.3s ease;
-    position: relative;
+    transition: opacity 0.3s ease;
 }
 
-.nav a:hover {
-    color: #FF6B9D;
-}
-
-.nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #FF6B9D;
-    transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-    width: 100%;
+.back-link:hover {
+    opacity: 0.7;
 }
 
 /* Main Container */
 .main {
     padding-top: 80px;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
 }
 
 /* Hero Section */
 .hero-section {
-    padding: 80px 0 80px 0;
+    padding: 80px 20px;
     background-color: #ffffff;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .hero-content-wrapper {
-    display: flex;
-    gap: 80px;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.hero-left {
-    flex: 1;
-    max-width: 500px;
+    margin-top: 40px;
 }
 
 .hero-title {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 48px;
+    font-weight: 400;
+    font-size: 80px;
     color: #000;
-    margin-bottom: 24px;
-    line-height: 1.2;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    max-width: 100%;
 }
 
 .hero-subtitle-main {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 32px;
     color: #636363;
     margin-bottom: 24px;
@@ -155,6 +98,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .hero-tag {
@@ -178,6 +122,7 @@ body {
 .hero-description {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
+    font-weight: 300;
     color: #333333;
     line-height: 1.7;
     margin-bottom: 16px;
@@ -192,8 +137,9 @@ body {
 
 .hero-info-group {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: row;
+    gap: 80px;
+    align-items: flex-start;
 }
 
 .hero-info-item {
@@ -204,7 +150,7 @@ body {
 
 .info-label {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     color: #000;
     margin: 0;
@@ -213,6 +159,7 @@ body {
 .info-text {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
+    font-weight: 300;
     color: #636363;
     margin: 0;
 }
@@ -262,7 +209,7 @@ body {
 
 .tool-badge span {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     color: #ffffff;
 }
@@ -275,7 +222,7 @@ body {
 
 .hero-author {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     color: #636363;
 }
@@ -283,46 +230,156 @@ body {
 .hero-date {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
+    font-weight: 300;
     color: #999999;
-}
-
-.hero-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero-image-container {
     width: 100%;
-    max-width: 600px;
-    aspect-ratio: 16 / 10;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 20px 60px rgba(181, 101, 216, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    margin-bottom: 40px;
 }
 
 .hero-image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
+    border-radius: 40px;
+    clip-path: inset(2px 0 0 0);
+}
+
+/* Summary Section */
+.summary-section {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.summary-title {
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 80px;
+    align-items: start;
+}
+
+.summary-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.summary-heading {
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #000;
+    margin: 0;
+}
+
+.summary-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.summary-text strong {
+    font-weight: 400;
+    color: #000;
+}
+
+.summary-list {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.8;
+    margin: 0;
+    margin-left: 24px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.summary-list li {
+    margin-bottom: 8px;
+}
+
+.summary-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: sticky;
+    top: 100px;
+}
+
+.summary-sidebar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-sidebar-heading {
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+}
+
+.summary-sidebar-text {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.summary-sidebar-list {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.8;
+    margin: 0;
+    margin-left: 24px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.summary-sidebar-list li {
+    margin-bottom: 8px;
 }
 
 /* Case Study Section */
 .case-study {
     margin-bottom: 100px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 .case-study-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -335,7 +392,7 @@ body {
 
 .case-number {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 48px;
     color: #FF6B9D;
     line-height: 1;
@@ -343,7 +400,7 @@ body {
 
 .case-title-inline {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 36px;
     color: #000;
     margin: 0;
@@ -357,8 +414,8 @@ body {
 
 .case-study-title {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 42px;
+    font-weight: 400;
+    font-size: 36px;
     color: #000;
     margin-bottom: 10px;
     line-height: 1.2;
@@ -367,6 +424,7 @@ body {
 .case-study-subtitle {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 20px;
+    font-weight: 300;
     color: #636363;
     margin-bottom: 20px;
     font-style: italic;
@@ -403,8 +461,8 @@ body {
 
 .section-heading {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 32px;
+    font-weight: 400;
+    font-size: 36px;
     color: #000;
     margin-bottom: 24px;
     line-height: 1.3;
@@ -412,7 +470,7 @@ body {
 
 .subsection-heading {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     color: #000;
     margin-bottom: 12px;
@@ -423,6 +481,7 @@ body {
 .body-text {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
+    font-weight: 300;
     color: #333333;
     line-height: 1.8;
     margin-bottom: 16px;
@@ -431,6 +490,7 @@ body {
 .bullet-list {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
+    font-weight: 300;
     color: #333333;
     line-height: 1.8;
     margin-left: 24px;
@@ -443,7 +503,7 @@ body {
 
 .bullet-list li strong {
     color: #000;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* Highlighted Sections */
@@ -494,7 +554,7 @@ body {
 
 .result-image-wrapper {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 40px;
     overflow: hidden;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
@@ -505,6 +565,33 @@ body {
     height: auto;
     display: block;
     object-fit: contain;
+    border-radius: 40px;
+}
+
+.portfolio-image-wrapper {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.portfolio-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 40px;
+}
+
+.image-caption {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #666666;
+    margin-top: 12px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.portfolio-image-wrapper-cropped img {
+    clip-path: inset(2px);
 }
 
 /* Case Study Divider */
@@ -528,7 +615,7 @@ body {
     border-radius: 8px;
     color: #FF6B9D;
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -603,7 +690,16 @@ body {
     }
 
     .hero-title {
-        font-size: 38px;
+        font-size: 60px;
+    }
+
+    .summary-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .summary-right {
+        position: static;
     }
 
     .hero-subtitle-main {
@@ -629,40 +725,65 @@ body {
 }
 
 @media (max-width: 768px) {
-    .header .container {
-        padding: 0 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav ul {
-        gap: 20px;
-    }
-
-    .nav a {
-        font-size: 14px;
+    .project-nav {
+        padding: 20px 20px;
     }
 
     .main {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .hero-section {
-        padding: 60px 0 40px 0;
-    }
-
-    .hero-content-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .hero-left {
-        max-width: 100%;
+        padding: 60px 20px 40px 20px;
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: 48px;
+    }
+
+    .summary-section {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .summary-title {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .summary-content {
+        gap: 40px;
+    }
+
+    .summary-left {
+        gap: 32px;
+    }
+
+    .summary-item {
+        gap: 12px;
+    }
+
+    .summary-heading {
+        font-size: 28px;
+    }
+
+    .summary-text,
+    .summary-list {
+        font-size: 16px;
+    }
+
+    .summary-right {
+        gap: 32px;
+    }
+
+    .summary-sidebar-heading {
+        font-size: 16px;
+    }
+
+    .summary-sidebar-text,
+    .summary-sidebar-list {
+        font-size: 14px;
     }
 
     .hero-subtitle-main {

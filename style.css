@@ -110,14 +110,15 @@ body {
 .header-section {
     position: relative;
     margin-top: 160px;
-    width: 996px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 42px;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 .profile-image {
@@ -296,14 +297,15 @@ body {
 .skills-section {
     position: relative;
     margin-top: 100px;
-    width: 1240px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 .skills-grid {
@@ -559,11 +561,15 @@ body {
 .about-section {
     position: relative;
     margin-top: 100px;
-    width: 1240px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 .about-section .section-title {
