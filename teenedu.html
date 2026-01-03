@@ -70,183 +70,130 @@
             margin: 0 auto;
         }
 
-        .hero-top-row {
-            display: flex;
-            gap: 80px;
-            align-items: flex-start; /* Align image to top */
-            margin-bottom: 60px;
-        }
-
-        .hero-left-content {
-            flex: 1;
-            max-width: 500px;
-        }
-
-        .hero-title {
+        .hero-main-title {
             font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 48px;
+            font-weight: 400;
+            font-size: 96px;
             color: #000;
-            margin-bottom: 24px;
-            line-height: 1.2;
+            line-height: normal;
+            letter-spacing: -1.92px;
+            margin: 0;
+            margin-bottom: 0;
         }
 
-        .hero-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
+        .hero-main-title p {
+            margin: 0;
         }
 
-        .hero-tag {
-            background-color: rgba(255, 182, 193, 0.2);
-            color: #E76BA3;
+        .hero-subtitle {
             font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 12px;
-            padding: 8px 18px;
-            border-radius: 30px;
-            border: 1px solid rgba(231, 107, 163, 0.3);
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .hero-tag:hover {
-            background-color: rgba(255, 182, 193, 0.3);
-            transform: scale(1.05);
+            font-weight: 400;
+            font-size: 96px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -1.92px;
+            margin: 0;
         }
 
         .hero-description {
             font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            color: #333333;
-            line-height: 1.7;
-            margin-bottom: 16px;
+            font-weight: 400;
+            font-size: 48px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -0.96px;
+            margin: 0;
+            margin-top: 40px;
         }
 
-        .hero-right-image {
-            flex: 1;
+        .hero-description p {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .hero-info-row {
             display: flex;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 49px 213px;
             align-items: flex-start;
-            padding-top: 20px; /* Slight offset if needed */
+            margin-top: 40px;
         }
 
-        .hero-image-container {
+        .hero-info-item-new {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-template-rows: max-content;
+            place-items: start;
+        }
+
+        .hero-info-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            color: #666;
+            line-height: normal;
+            letter-spacing: -0.48px;
+            margin: 0;
+        }
+
+        .hero-info-value {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -0.48px;
+            margin: 0;
+            margin-top: 40px;
+        }
+
+        .hero-image-section {
+            margin-top: 60px;
             width: 100%;
-            max-width: 600px;
-            aspect-ratio: 16 / 10;
-            border-radius: 20px;
+        }
+
+        .hero-image-wrapper {
+            background-color: #dddfe7;
+            border-radius: 23px;
+            padding: 64px;
             overflow: hidden;
-            box-shadow: 0px 20px 60px rgba(181, 101, 216, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
-            background-color: #f5f5f5;
+            position: relative;
         }
 
-        .hero-image-container img {
+        .hero-image-wrapper img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
 
-        .hero-section-divider-full {
-            width: 100%;
-            height: 1px;
-            background-color: rgba(99, 99, 99, 0.2);
-            margin-bottom: 40px;
-        }
-
-        .hero-info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 60px;
-            row-gap: 40px;
-        }
-
-        .hero-info-item {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* Span 2 columns for long content like Role if needed, or keep 1fr */
-        .hero-info-item.full-width {
-            grid-column: span 2;
-        }
-
-        .info-label {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 16px;
-            color: #000;
-            margin: 0;
-        }
-
-        .info-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            color: #636363;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .hero-tools {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .tool-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-            background-color: transparent;
-        }
-
-        .tool-icon:hover {
-            transform: scale(1.1);
-        }
-
-        .tool-icon img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .wally-link-button-inline {
+        .hero-visit-button {
             display: inline-flex;
-            flex-direction: row;
-            justify-content: center;
             align-items: center;
-            padding: 12px 24px;
-            gap: 10px;
+            justify-content: center;
             background: #ffffff;
-            border: 1px solid #4ACC80;
-            box-shadow: 0px 4px 12px rgba(74, 204, 128, 0.15);
-            border-radius: 46px;
+            border: 1px solid #000;
+            border-radius: 67px;
+            padding: 13px 46px 13px 40px;
             text-decoration: none;
             font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
+            font-size: 36px;
             color: #000;
+            letter-spacing: -0.72px;
+            margin-top: 40px;
             transition: all 0.3s ease;
-            white-space: nowrap;
-            width: fit-content;
-            margin-top: 32px;
         }
 
-        .wally-link-button-inline:hover {
-            background: #f0fff4;
-            box-shadow: 0px 6px 16px rgba(74, 204, 128, 0.25);
-            transform: translateY(-2px);
+        .hero-visit-button:hover {
+            background: #f5f5f5;
+        }
+
+        .hero-visit-button::after {
+            content: '↗';
+            margin-left: 10px;
+            font-size: 36px;
+            transform: rotate(45deg);
+            display: inline-block;
         }
 
         /* Portfolio Content Section */
@@ -552,16 +499,30 @@
         }
 
         @media (max-width: 1024px) {
-            .hero-top-row {
-                gap: 50px;
+            .hero-main-title {
+                font-size: 64px;
+                letter-spacing: -1.28px;
             }
 
-            .hero-title {
-                font-size: 38px;
+            .hero-subtitle {
+                font-size: 64px;
+                letter-spacing: -1.28px;
             }
 
             .hero-description {
-                font-size: 15px;
+                font-size: 32px;
+                letter-spacing: -0.64px;
+            }
+
+            .hero-info-label,
+            .hero-info-value {
+                font-size: 20px;
+                letter-spacing: -0.4px;
+            }
+
+            .hero-visit-button {
+                font-size: 28px;
+                letter-spacing: -0.56px;
             }
         }
 
@@ -578,34 +539,51 @@
                 padding: 60px 20px 40px 20px;
             }
 
-            .hero-top-row {
-                flex-direction: column;
-                gap: 40px;
+            .hero-main-title {
+                font-size: 48px;
+                letter-spacing: -0.96px;
             }
 
-            .hero-left-content {
-                max-width: 100%;
-            }
-
-            .hero-title {
-                font-size: 32px;
+            .hero-subtitle {
+                font-size: 48px;
+                letter-spacing: -0.96px;
             }
 
             .hero-description {
-                font-size: 15px;
+                font-size: 24px;
+                letter-spacing: -0.48px;
             }
 
-            .hero-right-image {
+            .hero-info-row {
+                gap: 30px 40px;
+            }
+
+            .hero-info-label,
+            .hero-info-value {
+                font-size: 18px;
+                letter-spacing: -0.36px;
+            }
+
+            .hero-info-value {
+                margin-top: 20px;
+            }
+
+            .hero-image-wrapper {
+                padding: 32px;
+            }
+
+            .hero-image-container {
+                flex-direction: column;
+            }
+
+            .hero-image-left {
                 width: 100%;
             }
-            
-            .hero-info-grid {
-                grid-template-columns: 1fr;
-                row-gap: 30px;
-            }
-            
-            .hero-info-item.full-width {
-                grid-column: span 1;
+
+            .hero-visit-button {
+                font-size: 24px;
+                letter-spacing: -0.48px;
+                padding: 12px 32px;
             }
 
             .portfolio-content {
@@ -681,73 +659,52 @@
         <div class="wally-content">
             <!-- Hero Section -->
             <div class="hero-section">
-                <!-- Top Row: Left Content & Right Image -->
-                <div class="hero-top-row">
-                    <div class="hero-left-content">
-                        <h1 class="hero-title">Wally</h1>
-                        <div class="hero-tags">
-                            <span class="hero-tag">UX/UI Design</span>
-                            <span class="hero-tag">Product Design</span>
-                            <span class="hero-tag">Interaction Design</span>
-                        </div>
-                        <p class="hero-description">
-                            Wally is an AI-driven personal finance platform designed to help users change spending behavior, not just track expenses.
-                        </p>
-                        <p class="hero-description">
-                            By combining conversational AI with insight-driven reports, Wally helps users understand why they overspend and how to intervene—before overspending becomes habitual.
-                        </p>
-                        
-                        <!-- View Live Site Button -->
-                        <a href="https://wally3v2.vercel.app/" target="_blank" class="wally-link-button-inline">
-                    🔗 View Live Site
+                <h1 class="hero-main-title">
+                    <p>Wally.</p>
+                    <p class="hero-subtitle">AI-driven personal finance platform</p>
+                </h1>
+
+                <!-- Info Row -->
+                <div class="hero-info-row">
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Platform</p>
+                        <p class="hero-info-value">Web / Mobile App</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Role</p>
+                        <p class="hero-info-value">Product Designer · UX/UI Designer</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Timeline</p>
+                        <p class="hero-info-value">Nov 2025 – Dec 2025 (6 weeks) / Irvine, CA</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Team</p>
+                        <p class="hero-info-value">2-person team (Product/UX + Engineering)</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Tools</p>
+                        <p class="hero-info-value">Figma, Next.js, VS Code, Github</p>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="hero-image-section">
+                    <div class="hero-image-wrapper">
+                        <img src="images/hero-image.png" alt="Wally App Interface" style="width: 100%; height: auto; display: block;" />
+                    </div>
+                </div>
+
+                <!-- Description Text -->
+                <div class="hero-description">
+                    <p>Wally is an AI-driven personal finance platform designed to help users change spending behavior, not just track expenses.</p>
+                    <p>By combining conversational AI with insight-driven reports, Wally helps users understand why they overspend and how to intervene—before overspending becomes habitual.</p>
+                </div>
+
+                <!-- Visit Website Button -->
+                <a href="https://wally3v2.vercel.app/" target="_blank" class="hero-visit-button">
+                    Visit Website
                 </a>
-                    </div>
-                    
-                    <div class="hero-right-image">
-                        <div class="hero-image-container">
-                            <img src="images/wally.png" alt="Wally Project Preview" />
-                        </div>
-            </div>
-        </div>
-
-                <!-- Full Width Divider -->
-                <div class="hero-section-divider-full"></div>
-
-                <!-- Info Grid (2 Columns) -->
-                <div class="hero-info-grid">
-                    <div class="hero-info-item">
-                        <h3 class="info-label">Tools</h3>
-                        <div class="hero-tools">
-                            <div class="tool-icon figma-icon">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" width="40" height="40">
-                    </div>
-                            <div class="tool-icon">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" width="40" height="40">
-                    </div>
-                    </div>
-                </div>
-                    
-                    <div class="hero-info-item">
-                        <h3 class="info-label">Team</h3>
-                        <p class="info-text">2-person team (Product/UX + Engineering)</p>
-                    </div>
-
-                    <div class="hero-info-item full-width">
-                        <h3 class="info-label">Role</h3>
-                        <p class="info-text">Product Designer · UX/UI Designer</p>
-                        <p class="info-text" style="font-size: 14px; color: #888; margin-top: 4px;">Product ownership, UX strategy, interaction design, and frontend collaboration</p>
-                    </div>
-                    
-                    <div class="hero-info-item">
-                        <h3 class="info-label">Platform</h3>
-                        <p class="info-text">Web / Mobile App</p>
-                    </div>
-                    
-                    <div class="hero-info-item">
-                        <h3 class="info-label">Timeline / Location</h3>
-                        <p class="info-text">Nov 2025 – Dec 2025 (6 weeks) / Irvine, CA</p>
-                    </div>
-                </div>
             </div>
 
             <!-- Portfolio Content -->
@@ -1242,6 +1199,11 @@
     </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
