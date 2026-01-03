@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choremint - UX/UI Project</title>
+    <title>ChoreMint - Turning Household Chores into a System-Driven Experience</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
         html, body {
@@ -37,13 +38,14 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 20px 40px;
+            padding: 20px 20px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
         }
 
         .back-link {
-            font-family: 'Archivo', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: 16px;
             color: #000;
             text-decoration: none;
@@ -57,26 +59,218 @@
         .choremint-content {
             padding-top: 80px;
             width: 100%;
-            min-height: 100vh;
             margin: 0;
         }
 
-        .svg-container {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
+        /* Hero Section Styles */
+        .hero-section {
+            padding: 80px 20px;
             background-color: #ffffff;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .svg-viewer {
+        .hero-main-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 80px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -1.6px;
+            margin: 0;
+            margin-bottom: 0;
+            max-width: 1600px;
+        }
+
+        .hero-main-title p {
+            margin: 0;
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 80px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -1.6px;
+            margin: 0;
+        }
+
+        .hero-description {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 26px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -0.52px;
+            margin: 0;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+        }
+
+        .hero-description p {
+            margin: 0;
+        }
+
+        .hero-info-row {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            gap: 49px 213px;
+            align-items: start;
+            margin-top: 40px;
+        }
+
+        .hero-info-item-new {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-template-rows: max-content;
+            place-items: start;
+        }
+
+        .hero-info-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #666;
+            line-height: normal;
+            letter-spacing: -0.32px;
+            margin: 0;
+        }
+
+        .hero-info-value {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -0.32px;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .hero-image-section {
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .hero-image-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image-wrapper img {
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        /* Portfolio Content Section */
+        .portfolio-content {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .portfolio-image-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            border-radius: 8px;
+        }
+
+        .portfolio-section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .section-content {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .section-content p {
+            margin-bottom: 16px;
+        }
+
+        .section-content ul {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section-content li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background-color: #f5f5f5;
+            border-left: 4px solid #333;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
             margin: 0;
-            padding: 0;
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .wally-image-container {
+            margin: 32px 0;
+            width: 100%;
+        }
+
+        .wally-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-weight: 400;
         }
 
         @media (max-width: 768px) {
@@ -88,8 +282,49 @@
                 padding-top: 60px;
             }
 
-            .svg-container {
-                padding: 0;
+            .hero-section {
+                padding: 60px 20px 40px 20px;
+            }
+
+            .hero-main-title {
+                font-size: 48px;
+                letter-spacing: -0.96px;
+            }
+
+            .hero-subtitle {
+                font-size: 48px;
+                letter-spacing: -0.96px;
+            }
+
+            .hero-description {
+                font-size: 24px;
+                letter-spacing: -0.48px;
+            }
+
+            .hero-info-row {
+                gap: 30px 40px;
+            }
+
+            .hero-info-label,
+            .hero-info-value {
+                font-size: 18px;
+                letter-spacing: -0.36px;
+            }
+
+            .hero-info-value {
+                margin-top: 20px;
+            }
+
+            .portfolio-content {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-content {
+                font-size: 16px;
             }
         }
     </style>
@@ -101,18 +336,311 @@
             <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
         </nav>
 
-        <!-- SVG Content -->
         <div class="choremint-content">
-            <div class="svg-container">
-                <img src="images/choremint_real.png" alt="Choremint Project" class="svg-viewer" />
-            </div>
-        </div>
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1 class="hero-main-title">
+                    <p>ChoreMint.</p>
+                    <p class="hero-subtitle">Turning Household Chores into a System-Driven, Habit-Forming Experience</p>
+                </h1>
 
-        <!-- Back to Projects Button -->
-        <div class="back-section">
-            <a href="index.html#projects" class="back-button">← Back to Projects</a>
+                <!-- Info Row -->
+                <div class="hero-info-row">
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Role</p>
+                        <p class="hero-info-value">Product Designer · UX/UI Designer</p>
+                        <p style="font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; color: #666; line-height: 1.4; margin-top: 8px; letter-spacing: -0.28px;">(End-to-end UX strategy, interaction design, system design)</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Platform</p>
+                        <p class="hero-info-value">iOS Mobile App (MVP)</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Timeline</p>
+                        <p class="hero-info-value">Sep 2025 – Nov 2025</p>
+                    </div>
+                    <div class="hero-info-item-new">
+                        <p class="hero-info-label">Team</p>
+                        <p class="hero-info-value">1 Designer, 2 Developers</p>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="hero-image-section">
+                    <div class="hero-image-wrapper">
+                        <div class="portfolio-image-placeholder">📷 [Hero Image]</div>
+                    </div>
+                </div>
+
+                <!-- Parent Home + Child Home 핵심 화면 2–3장 -->
+                <div class="hero-image-section" style="margin-top: 40px;">
+                    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
+                        <div style="text-align: center; flex: 1; min-width: 200px;">
+                            <div class="portfolio-image-placeholder" style="aspect-ratio: 9/16;">📷 [Parent Home Screen]</div>
+                        </div>
+                        <div style="text-align: center; flex: 1; min-width: 200px;">
+                            <div class="portfolio-image-placeholder" style="aspect-ratio: 9/16;">📷 [Child Home Screen]</div>
+                        </div>
+                        <div style="text-align: center; flex: 1; min-width: 200px;">
+                            <div class="portfolio-image-placeholder" style="aspect-ratio: 9/16;">📷 [Game System Screen]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Content -->
+            <section class="portfolio-content">
+                <!-- 1. Overview -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">1. Overview</h2>
+                    <div class="section-content">
+                        <p>ChoreMint is a chore and allowance management app designed to reduce emotional friction between parents and children by transforming chores from nagging into a system-driven experience.</p>
+                        <p>Instead of relying on reminders, charts, or parental enforcement, ChoreMint creates a clear loop where chores, progress, and rewards are consistently connected—helping children build autonomy while reducing parental emotional labor.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Concept / Mission Visual] "Turning chores from nagging into a system-driven experience" 미션 슬라이드</div>
+                    </div>
+                </div>
+
+                <!-- 2. Problem Space -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">2. Problem Space</h2>
+                    <div class="section-content">
+                        <p><strong>Everyday chores are inevitable.</strong></p>
+                        <p><strong>The problem is how they are experienced.</strong></p>
+                        <p>From research, household chores frequently lead to conflict not because tasks are difficult, but because expectations, completion criteria, and rewards are unclear.</p>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Key pain points identified:</h3>
+                        <ul class="bullet-list">
+                            <li>Parents carry the full burden of tracking, checking, and rewarding</li>
+                            <li>Children perceive chores as forced obligations</li>
+                            <li>Traditional chart- or sticker-based systems fail after short-term use</li>
+                        </ul>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Problem Illustration] Parent–child friction / emotional labor 시각화 슬라이드</div>
+                    </div>
+                </div>
+
+                <!-- 3. Research & Key Insights -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">3. Research & Key Insights</h2>
+                    <div class="section-content">
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Research Methods</h3>
+                        <ul class="bullet-list">
+                            <li><strong>Parent Survey</strong> — 33 participants (Nov 5, 2025)</li>
+                            <li><strong>In-depth Interviews</strong> — 3 parents (Nov 7, 2025)</li>
+                        </ul>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Survey Results Chart] "Traditional chore systems fail long-term" 설문 그래프</div>
+                    </div>
+                    <div class="section-content" style="margin-top: 32px;">
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Key Findings</h3>
+                        <ul class="bullet-list">
+                            <li>Manual tracking systems require high parental effort</li>
+                            <li>Delayed rewards weaken motivation</li>
+                            <li>Visibility without accountability increases frustration</li>
+                        </ul>
+                        <h4 style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-top: 32px; margin-bottom: 16px;">Representative Quotes:</h4>
+                        <div class="highlight-box">
+                            <p>"The chart system worked for a while, but it took too much of my time to manage."</p>
+                        </div>
+                        <div class="highlight-box">
+                            <p>"If rewards were given right away, my kids would have been more engaged."</p>
+                        </div>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Interview Quotes Slide] 부모 인터뷰 인용 정리 슬라이드</div>
+                    </div>
+                </div>
+
+                <!-- 4. Design Insight & Hypothesis -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">4. Design Insight & Hypothesis</h2>
+                    <div class="section-content">
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Core Insight</h3>
+                        <p>Managing chores and allowances is a multi-variable behavioral problem, not a task-list problem.</p>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">Design Hypothesis</h3>
+                        <p>If chores are designed as a clear, reward-driven system with immediate feedback, children will participate more actively, and parents will experience less emotional friction.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Insight → Direction Diagram] "Gamified system + instant reward loop" 인사이트 슬라이드</div>
+                    </div>
+                </div>
+
+                <!-- 5. Core User Flow -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">5. Core User Flow (핵심 구조)</h2>
+                    <div class="section-content">
+                        <p>Parent assigns chores</p>
+                        <p>→ Child completes tasks</p>
+                        <p>→ Progress is visualized instantly</p>
+                        <p>→ Rewards are triggered</p>
+                        <p>→ Habits are reinforced</p>
+                        <p style="margin-top: 24px;">ChoreMint was intentionally designed as a closed behavioral loop, minimizing the need for parental intervention.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Core Flow Diagram] Parent → Child → Reward 흐름 다이어그램</div>
+                    </div>
+                </div>
+
+                <!-- 6. Information Architecture -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">6. Information Architecture</h2>
+                    <div class="section-content">
+                        <p>ChoreMint serves two users with fundamentally different needs.</p>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Parent Experience</h3>
+                        <ul class="bullet-list">
+                            <li>Assign and approve chores</li>
+                            <li>Manage rewards and goals</li>
+                            <li>View family-wide progress at a glance</li>
+                        </ul>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">Child Experience</h3>
+                        <ul class="bullet-list">
+                            <li>View today's chores</li>
+                            <li>Complete tasks with minimal friction</li>
+                            <li>Track progress and earned rewards</li>
+                        </ul>
+                        <p style="margin-top: 24px;">Same data, different framing—to match each user's mental model.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [IA Diagram] Parent / Child View 분리 구조</div>
+                    </div>
+                </div>
+
+                <!-- 7. Key UX Solutions -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">7. Key UX Solutions</h2>
+                    
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">1️⃣ Quest-Based Chore System</h3>
+                    <div class="section-content">
+                        <p>Chores are structured as quests with clear completion criteria and rewards.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Child Chore List / Quest Screen] 아이가 보는 할 일 카드 화면</div>
+                    </div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">2️⃣ Progress-First Visualization</h3>
+                    <div class="section-content">
+                        <p>Progress states (to approve / incomplete / completed) are surfaced before task details.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Progress UI] 진행 상태 강조된 홈 화면</div>
+                    </div>
+
+                    <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">3️⃣ Approval-Centered Parent Flow</h3>
+                    <div class="section-content">
+                        <p>Parents act as reviewers, approving completed chores in a single, streamlined flow.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Parent Approval Flow] 승인 → 확인 → 완료 화면 흐름</div>
+                    </div>
+                </div>
+
+                <!-- 8. Usability Testing -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">8. Usability Testing</h2>
+                    <div class="section-content">
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Test Focus</h3>
+                        <ul class="bullet-list">
+                            <li>Task clarity</li>
+                            <li>Next-action visibility</li>
+                            <li>Reward understanding</li>
+                        </ul>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">Key Issues Identified</h3>
+                        <ul class="bullet-list">
+                            <li>Scattered information increased cognitive load</li>
+                            <li>Next actions were not immediately obvious</li>
+                            <li>Task lists felt informational rather than actionable</li>
+                        </ul>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Usability Issues (AS-IS)] 문제 있었던 화면 캡처</div>
+                    </div>
+                </div>
+
+                <!-- 9. Iteration: Screen Improvements -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">9. Iteration: Screen Improvements</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px;">
+                        <div>
+                            <h3 class="section-title" style="font-size: 24px; margin-bottom: 16px;">Before</h3>
+                            <ul class="bullet-list">
+                                <li>Fragmented task lists</li>
+                                <li>High cognitive load</li>
+                                <li>Delayed feedback</li>
+                            </ul>
+                            <div class="wally-image-container" style="margin-top: 24px;">
+                                <div class="portfolio-image-placeholder">📷 [Before Screens]</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="section-title" style="font-size: 24px; margin-bottom: 16px;">After</h3>
+                            <ul class="bullet-list">
+                                <li>Priority-driven layout</li>
+                                <li>Clear next actions</li>
+                                <li>Immediate visual confirmation</li>
+                            </ul>
+                            <div class="wally-image-container" style="margin-top: 24px;">
+                                <div class="portfolio-image-placeholder">📷 [After Screens]</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wally-image-container" style="margin-top: 32px;">
+                        <div class="portfolio-image-placeholder">📷 [AS-IS / TO-BE 비교 화면]</div>
+                    </div>
+                </div>
+
+                <!-- 10. Outcome & Impact -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">10. Outcome & Impact</h2>
+                    <div class="section-content">
+                        <p>Through system-driven UX improvements, ChoreMint shifted chores from instruction-based interactions to behavior-driven habits.</p>
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Observed impact during testing:</h3>
+                        <ul class="bullet-list">
+                            <li>Reduced need for parental reminders</li>
+                            <li>Increased child engagement through instant feedback</li>
+                            <li>Clearer accountability without emotional conflict</li>
+                        </ul>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Outcome Summary Visual]</div>
+                    </div>
+                </div>
+
+                <!-- 11. Collaboration & Implementation -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">11. Collaboration & Implementation</h2>
+                    <div class="section-content">
+                        <ul class="bullet-list">
+                            <li>Owned end-to-end UX and UI design</li>
+                            <li>Designed component-ready screens aligned with development constraints</li>
+                            <li>Collaborated closely with developers throughout MVP implementation</li>
+                        </ul>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Design → Dev Handoff Visual]</div>
+                    </div>
+                </div>
+
+                <!-- 12. Reflection -->
+                <div class="portfolio-section">
+                    <h2 class="section-title">12. Reflection</h2>
+                    <div class="section-content">
+                        <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">What this project reinforced</h3>
+                        <ul class="bullet-list">
+                            <li>Behavior change requires system design, not feature accumulation</li>
+                            <li>Multi-user products demand role-based UX framing</li>
+                            <li>Good UX reduces emotional labor</li>
+                        </ul>
+                        <p style="margin-top: 24px;">ChoreMint strengthened my ability to design behavioral systems that balance clarity, motivation, and scalability.</p>
+                    </div>
+                    <div class="wally-image-container">
+                        <div class="portfolio-image-placeholder">📷 [Final Product Shot]</div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </body>
 </html>
-
