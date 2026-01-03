@@ -409,14 +409,15 @@ body {
 .projects-section {
     position: relative;
     margin-top: 100px;
-    width: 1240px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 20px;
 }
 
 /* Projects 서브텍스트 */
@@ -476,8 +477,8 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     background-color: #f8f9fa;
-    margin-bottom: 12px;
-    aspect-ratio: 16 / 9;
+    margin-bottom: 20px;
+    aspect-ratio: 16 / 10;
 }
 
 .project-image img {
