@@ -444,8 +444,8 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     width: 100%;
 }
 
@@ -462,12 +462,11 @@ body {
 
 .project-card {
     background-color: #fffefe;
-    border: 1px solid rgba(99, 99, 99, 0.2);
-    border-radius: 4px;
-    height: 272px;
+    border: none;
+    border-radius: 0;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -486,30 +485,32 @@ body {
 
 .project-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color: #f8f9fa;
+    margin-top: 16px;
 }
 
 .project-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    border-radius: 4px;
 }
 
 .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 193, 243, 0.7);
+    position: static;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
     align-items: center;
     justify-content: center;
     opacity: 0;
