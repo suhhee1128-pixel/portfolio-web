@@ -453,11 +453,6 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
-    transition: transform 0.3s ease;
-}
-
-.project-link:hover {
-    transform: scale(1.01);
 }
 
 .project-card {
@@ -533,15 +528,6 @@ body {
     max-width: 100%;
 }
 
-.project-link:hover .project-image img,
-.project-card:hover .project-image img {
-    opacity: 0.3;
-}
-
-.project-link:hover .project-overlay,
-.project-card:hover .project-overlay {
-    opacity: 0.7;
-}
 
 .project-content {
     padding: 20px;
