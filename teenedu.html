@@ -196,7 +196,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 20px 14px 20px 30px;
+            padding: 20px 32px;
             width: auto;
             height: auto;
             background: #FFFFFF;
@@ -209,10 +209,14 @@
             color: #000000;
             margin-top: 40px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .hero-visit-button:hover {
-            background: #f5f5f5;
+            background: #A6FF82;
+            border-color: #A6FF82;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0px 8px 24px rgba(166, 255, 130, 0.4);
         }
 
         .hero-visit-button::after {
@@ -251,8 +255,8 @@
 
         .section-title {
             font-family: 'Inter', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 400;
             color: #000;
             margin-bottom: 24px;
             line-height: 1.3;
@@ -260,7 +264,8 @@
 
         .section-content {
             font-family: 'Inter', sans-serif;
-            font-size: 18px;
+            font-size: 24px;
+            font-weight: 300;
             color: #333;
             line-height: 1.8;
             margin-bottom: 24px;
@@ -551,9 +556,9 @@
             }
 
             .hero-visit-button {
-                width: 240px;
+                width: auto;
                 height: auto;
-                padding: 18px 28px 18px 40px;
+                padding: 18px 28px;
                 font-size: 18px;
             }
             
@@ -623,9 +628,9 @@
             }
 
             .hero-visit-button {
-                width: 240px;
+                width: auto;
                 height: auto;
-                padding: 18px 28px 18px 40px;
+                padding: 18px 28px;
                 font-size: 18px;
             }
             
@@ -763,30 +768,21 @@
             <!-- Portfolio Content -->
             <section class="portfolio-content">
             <div class="portfolio-section">
-                    <h2 class="section-title">Problem Space</h2>
+                    <h2 class="section-title">Problem</h2>
                     <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">Why existing budgeting apps fail to change behavior</h3>
                 <div class="section-content">
                         <p>Despite widespread adoption of budgeting tools, overspending remains common.</p>
-                        <p>Research showed that the core problem wasn’t data availability—but interpretation and action:</p>
-                        <ul>
-                            <li>Users could see expenses, but didn’t understand patterns</li>
-                            <li>Impulsive spending repeatedly broke budgets</li>
-                            <li>Dashboards felt overwhelming or judgmental</li>
-                            <li>Insights lacked clarity and emotional context</li>
-                    </ul>
-                    <div class="highlight-box">
-                            <p>Most budgeting tools showed what users spent, but failed to influence how they spent.</p>
-                    </div>
+                        <p>Research showed that the core problem wasn't data availability—but interpretation and action.</p>
             </div>
 
                     <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">Challenges in Personal Finance Management</h3>
                 <div class="section-content">
                         <p>Key challenges identified through desk research:</p>
                         <ul>
-                            <li style="font-weight: 700; color: #000;"><strong>55.9%</strong> Controlling Spending</li>
-                            <li><strong>30%</strong> Irregular income</li>
-                            <li><strong>28%</strong> Low Financial Literacy</li>
-                            <li style="font-weight: 700; color: #000;"><strong>23.7%</strong> Difficulty tracking expenses</li>
+                            <li style="font-weight: 400; color: #000;">55.9% Controlling Spending</li>
+                            <li>30% Irregular income</li>
+                            <li>28% Low Financial Literacy</li>
+                            <li style="font-weight: 400; color: #000;">23.7% Difficulty tracking expenses</li>
                     </ul>
                         <p style="font-size: 14px; color: #666; margin-top: 12px;">Source: Academy Bank, 2025</p>
                         <p>Even with tools available, the gap between "knowing" and "doing" remains high due to behavioral barriers.</p>
@@ -1240,6 +1236,16 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
