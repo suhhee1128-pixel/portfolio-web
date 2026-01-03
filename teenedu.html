@@ -816,25 +816,26 @@
                             <p>This shifted budgeting from "tracking mistakes" to understanding behavioral triggers.</p>
                     </div>
                 </div>
-                    <div class="wally-image-container" style="margin-top: 24px; margin-bottom: 24px; display: flex; justify-content: flex-start;">
-                        <img src="images/emotion.png" alt="Emotion & Time-Based Insight UI" class="wally-image" style="width: auto; max-width: 100%; height: auto; border-radius: 8px;">
-            </div>
-
-                    <!-- Insight Slider -->
-                    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 48px;">
-                        <div class="slider-container" id="insightSlider" style="max-width: 500px; margin: 0 0 24px 0; position: relative;">
-                            <button class="slider-btn prev-btn-insight" aria-label="Previous slide" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); z-index: 10;">←</button>
-                            <div class="slider-wrapper" style="box-shadow: none; border: 1px solid #eee; background-color: transparent;">
-                                <div class="slides-track" id="insightSlidesTrack">
-                                    <img src="images/mood-slides/slide-01.png" alt="Mood Insight Detail 1" class="slide">
-                                    <img src="images/mood-slides/slide-02.png" alt="Mood Insight Detail 2" class="slide">
-                                    <img src="images/mood-slides/slide-03.png" alt="Mood Insight Detail 3" class="slide">
+                    <div style="display: flex; align-items: flex-start; gap: 24px; margin-top: 24px; margin-bottom: 48px; flex-wrap: wrap;">
+                        <div class="wally-image-container" style="flex: 1; min-width: 300px;">
+                            <img src="images/emotion.png" alt="Emotion & Time-Based Insight UI" class="wally-image" style="width: 100%; max-width: 100%; height: auto; border-radius: 8px;">
+                        </div>
+                        <!-- Insight Slider -->
+                        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center;">
+                            <div class="slider-container" id="insightSlider" style="max-width: 500px; margin: 0 0 24px 0; position: relative;">
+                                <button class="slider-btn prev-btn-insight" aria-label="Previous slide" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); z-index: 10;">←</button>
+                                <div class="slider-wrapper" style="box-shadow: none; border: 1px solid #eee; background-color: transparent;">
+                                    <div class="slides-track" id="insightSlidesTrack">
+                                        <img src="images/mood-slides/slide-01.png" alt="Mood Insight Detail 1" class="slide">
+                                        <img src="images/mood-slides/slide-02.png" alt="Mood Insight Detail 2" class="slide">
+                                        <img src="images/mood-slides/slide-03.png" alt="Mood Insight Detail 3" class="slide">
+                            </div>
+                            </div>
+                                <button class="slider-btn next-btn-insight" aria-label="Next slide" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); z-index: 10;">→</button>
                     </div>
+                            <div class="slider-dots" id="insightSliderDots" style="margin-top: 0;"></div>
+                        </div>
                     </div>
-                            <button class="slider-btn next-btn-insight" aria-label="Next slide" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background-color: rgba(0,0,0,0.3); z-index: 10;">→</button>
-                </div>
-                        <div class="slider-dots" id="insightSliderDots" style="margin-top: 0;"></div>
-            </div>
 
                     <h3 class="section-title" style="font-size: 24px; margin-top: 48px; margin-bottom: 16px;">3️⃣ Report Page Redesign as a Reflection Tool</h3>
                 <div class="section-content">
@@ -1234,6 +1235,7 @@
     </script>
 </body>
 </html>
+
 
 
 
