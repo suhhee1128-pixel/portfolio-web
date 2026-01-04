@@ -193,31 +193,30 @@
 
         .hero-visit-button {
             box-sizing: border-box;
-            display: inline-flex;
+            display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 20px 32px;
-            width: auto;
+            padding: 14px 35px;
+            gap: 10px;
+            width: fit-content;
             height: auto;
             background: #FFFFFF;
             border: 1px solid #000000;
-            border-radius: 67px;
+            border-radius: 100px;
             text-decoration: none;
             font-family: 'Inter', sans-serif;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 24px;
             color: #000000;
             margin-top: 40px;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
             cursor: pointer;
         }
 
         .hero-visit-button:hover {
             background: #A6FF82;
             border-color: #A6FF82;
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0px 8px 24px rgba(166, 255, 130, 0.4);
         }
 
         .hero-visit-button::after {
@@ -272,7 +271,7 @@
 
         .section-title {
             font-family: 'Inter', sans-serif;
-            font-size: 32px;
+            font-size: 44px;
             font-weight: 400;
             color: #000;
             margin-bottom: 24px;
@@ -779,6 +778,7 @@
                 <!-- Visit Website Button -->
                 <a href="https://wally3v2.vercel.app/" target="_blank" class="hero-visit-button">
                     Visit Website
+                    <img src="undefined.svg" alt="External link" style="width: 24px; height: 24px; margin-left: 4px;" />
                 </a>
             </div>
 
