@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baccarat - Seohee Kim</title>
+    <link rel="stylesheet" href="character-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .main {
+            background-color: #000000;
+        }
+
+        .hero-section {
+            background-color: #000000;
+        }
+
+        .hero-title {
+            color: #FFFFFF;
+            font-weight: 300;
+            font-size: 80px;
+        }
+
+        .hero-description {
+            color: #FFFFFF;
+        }
+
+        .case-study {
+            background-color: #000000;
+        }
+
+        .case-study-container {
+            background-color: #000000;
+        }
+
+        .section-heading {
+            color: #FFFFFF;
+        }
+
+        .body-text {
+            color: #FFFFFF;
+        }
+
+        .bullet-list {
+            color: #FFFFFF;
+        }
+
+        .subsection-heading {
+            color: #FFFFFF;
+        }
+
+        .back-link {
+            color: #FFFFFF;
+        }
+
+        .project-nav {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* PDF Slider Styles */
+        .pdf-slider-section {
+            width: 100%;
+            padding: 80px 20px;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0;
+            background-color: #000000;
+            aspect-ratio: 16/9;
+        }
+
+        .slides-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #000000;
+        }
+
+        .slider-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="project-nav">
+        <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+    </nav>
+
+    <div class="main">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">Baccarat</h1>
+            <p class="hero-description" style="font-size: 40px; font-weight: 400; line-height: 1.2; margin-top: 48px; margin-bottom: 0; max-width: 100%;">
+                The Baccarat Project is a branding and spatial design proposal that reinterprets the heritage craftsmanship of the French luxury crystal brand Baccarat in a contemporary context.<br>
+                Expanding beyond its traditional elite image, the project targets younger generations through a renewed brand identity.<br>
+                Inspired by Baccarat's slogan "Art of Joy," neon pink and crystal reflections are used to visualize passion and emotional energy throughout the space.<br>
+                Exhibition zones, interactive experiences, and bar spaces are sequenced to immerse visitors in the brand narrative.<br>
+                This project presents an integrated brand experience that connects identity, marketing, and spatial design into a cohesive environment.
+            </p>
+        </div>
+
+        <!-- Presentation PDF Slider -->
+        <section class="pdf-slider-section">
+            <div class="slider-container">
+                <button class="slider-btn prev-btn-presentation" aria-label="Previous slide">←</button>
+                <div class="slider-wrapper">
+                    <div class="slides-track" id="presentationSlidesTrack">
+                        <!-- Slides will be inserted by JS -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn-presentation" aria-label="Next slide">→</button>
+            </div>
+            <div class="slider-dots" id="presentationSliderDots">
+                <!-- Dots will be inserted by JS -->
+            </div>
+        </section>
+
+        <!-- Space PDF Slider -->
+        <section class="pdf-slider-section">
+            <div class="slider-container">
+                <button class="slider-btn prev-btn-space" aria-label="Previous slide">←</button>
+                <div class="slider-wrapper">
+                    <div class="slides-track" id="spaceSlidesTrack">
+                        <!-- Slides will be inserted by JS -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn-space" aria-label="Next slide">→</button>
+            </div>
+            <div class="slider-dots" id="spaceSliderDots">
+                <!-- Dots will be inserted by JS -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Helper function to get PDF page count (requires PDF.js)
+        // For now, we'll use a simpler approach with iframe pages
+        
+        function initPDFSlider(pdfPath, trackId, dotsId, prevBtn, nextBtn, estimatedPages) {
+            const track = document.getElementById(trackId);
+            const dotsContainer = document.getElementById(dotsId);
+            let currentSlide = 0;
+            const totalPages = estimatedPages;
+
+            // Create slides for each page
+            for (let i = 1; i <= totalPages; i++) {
+                const iframe = document.createElement('iframe');
+                iframe.className = 'slide';
+                iframe.src = `${pdfPath}#page=${i}`;
+                track.appendChild(iframe);
+
+                const dot = document.createElement('div');
+                dot.className = `dot ${i === 1 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(i - 1));
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function goToSlide(index) {
+                if (index < 0) {
+                    currentSlide = totalPages - 1;
+                } else if (index >= totalPages) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide = index;
+                }
+                updateSlider();
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize presentation slider (estimate 20 pages)
+            const prevBtnPresentation = document.querySelector('.prev-btn-presentation');
+            const nextBtnPresentation = document.querySelector('.next-btn-presentation');
+            initPDFSlider('images/baccarat/발표자료.pdf', 'presentationSlidesTrack', 'presentationSliderDots', prevBtnPresentation, nextBtnPresentation, 20);
+
+            // Initialize space slider (estimate 20 pages)
+            const prevBtnSpace = document.querySelector('.prev-btn-space');
+            const nextBtnSpace = document.querySelector('.next-btn-space');
+            initPDFSlider('images/baccarat/바카라space.pdf', 'spaceSlidesTrack', 'spaceSliderDots', prevBtnSpace, nextBtnSpace, 20);
+        });
+    </script>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <a href="mailto:suhhee1128@gmail.com" class="footer-link">suhhee1128@gmail.com</a>
+            </div>
+            <p>&copy; 2025 Seohee Kim. All rights reserved.</p>
+            <p>Product Designer Portfolio</p>
+        </div>
+    </footer>
+</body>
+</html>
+
