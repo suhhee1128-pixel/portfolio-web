@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum of CARE UI - Seohee Kim</title>
+    <link rel="stylesheet" href="character-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        .portfolio-image-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-family: 'Archivo', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            border-radius: 8px;
+        }
+
+        .portfolio-image-wrapper img,
+        .hero-image-container img {
+            border-radius: 0 !important;
+        }
+
+        .hero-info-row {
+            display: grid;
+            grid-template-columns: repeat(3, max-content);
+            gap: 49px 213px;
+            align-items: start;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .hero-info-item-new {
+            display: grid;
+            grid-template-columns: max-content;
+            grid-template-rows: max-content;
+            place-items: start;
+        }
+
+        .hero-info-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #666;
+            line-height: normal;
+            letter-spacing: -0.32px;
+            margin: 0;
+        }
+
+        .hero-info-value {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: normal;
+            letter-spacing: -0.32px;
+            margin: 0;
+            margin-top: 8px;
+        }
+
+        .hero-visit-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 35px;
+            gap: 10px;
+            width: fit-content;
+            height: auto;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 100px;
+            text-decoration: none;
+            color: #000000;
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 40px;
+            transition: background-color 0.2s ease;
+        }
+
+        .hero-visit-button:hover {
+            background-color: #F5F5F5;
+        }
+
+        .hero-visit-button img {
+            width: 24px;
+            height: 24px;
+            margin-left: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-info-row {
+                gap: 30px 40px;
+            }
+
+            .hero-info-label,
+            .hero-info-value {
+                font-size: 18px;
+                letter-spacing: -0.36px;
+            }
+
+            .hero-info-value {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="project-nav">
+        <a href="index.html#projects" class="back-link">← Back to Portfolio</a>
+    </nav>
+
+    <div class="main">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">Museum of CARE UI</h1>
+
+            <!-- Info Row -->
+            <div class="hero-info-row">
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Platform</p>
+                    <p class="hero-info-value">Website (Desktop & Mobile)</p>
+                </div>
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Role</p>
+                    <p class="hero-info-value">UX/UI Design Intern</p>
+                </div>
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Team</p>
+                    <p class="hero-info-value">3-person cross-functional team</p>
+                </div>
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Timeline</p>
+                    <p class="hero-info-value">Mar 2025 – May 2025 (3 months)</p>
+                </div>
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Tools</p>
+                    <p class="hero-info-value">Figma, Monday.com, Adobe Illustrator</p>
+                </div>
+                <div class="hero-info-item-new">
+                    <p class="hero-info-label">Language</p>
+                    <p class="hero-info-value">KOR/ENG</p>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="main.svg" alt="Museum of CARE UI Main" />
+            </div>
+            <p class="hero-description" style="font-size: 40px; font-weight: 400; line-height: 1.5; margin-top: 48px; margin-bottom: 0; max-width: 100%;">
+                A digital museum platform that connects repatriated cultural heritage with exhibitions, educational experiences, and visitor reservations.
+            </p>
+            <a href="https://caremuseum.org/" target="_blank" class="hero-visit-button">
+                Visit Website
+                <img src="undefined.svg" alt="External link" />
+            </a>
+        </div>
+
+        <!-- Case Study Content -->
+        <div class="case-study">
+            <div class="case-study-container">
+                <!-- Problem Section -->
+                <div class="content-section">
+                    <h2 class="section-heading">Problem</h2>
+                    <p class="body-text">
+                        The CARE Museum, Korea's first museum dedicated to repatriated cultural heritage, features diverse exhibition halls, youth experience zones, special and curated exhibitions, and a complex collection of artifacts. However, the original website lacked a clear and intuitive structure for visitors to quickly find information, make reservations, or understand the breadth of offerings.
+                    </p>
+                    <ul class="bullet-list">
+                        <li>Ticketing and reservation details were scattered</li>
+                        <li>Exhibition categories were not clearly structured</li>
+                        <li>The user experience lacked consistency across desktop and mobile</li>
+                        <li>Descriptions of artifacts and exhibits were hard to navigate</li>
+                    </ul>
+                    <p class="body-text">
+                        This made it difficult for general visitors, especially non-experts and young users, to find the information they needed.
+                    </p>
+                </div>
+
+                <!-- Solution Section -->
+                <div class="content-section">
+                    <h2 class="section-heading">Solution</h2>
+                    <p class="body-text">
+                        We completely reorganized the site's information architecture so visitors can smoothly access exhibition details, reservations, artifact stories, and educational experiences in a logical and engaging sequence.
+                    </p>
+                    <h3 class="subsection-heading">Key Design Directions</h3>
+                    <ul class="bullet-list">
+                        <li><strong>Clear Information Architecture</strong><br>
+                        Exhibition categories (e.g., Repatriated Heritage Halls, Youth Experience Zone, Special Exhibits) were organized in a hierarchical structure to support intuitive discovery.
+                        <div class="portfolio-image-wrapper" style="max-width: 1400px; margin: 20px auto 0;">
+                            <img src="design1.png" alt="Clear Information Architecture" />
+                        </div>
+                        </li>
+                        <li><strong>Reservation Flow & Visit Info Systemization</strong><br>
+                        Reservation and visit details were positioned prominently, with date/time guidance and QR code ticketing flows clearly communicated to simplify planning.</li>
+                        <li><strong>Exhibit Content Enrichment</strong><br>
+                        Artifact-specific pages were created that combine visuals with historical context and meaningful explanation, making complex cultural content accessible to all visitors.</li>
+                        <li><strong>Responsive UX (Desktop & Mobile)</strong><br>
+                        Information flow and interaction patterns were unified across devices, ensuring smooth navigation whether on desktop or mobile.</li>
+                        <li><strong>Reusable Component System</strong><br>
+                        Standardized components for exhibit lists, category navigation, and featured modules were built to ensure scalability and maintainability.</li>
+                    </ul>
+                    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px; margin-bottom: 0;">
+                        <div class="portfolio-image-wrapper" style="max-width: 690px; margin: 0;">
+                            <img src="group53.svg" alt="Museum of CARE UI" />
+                        </div>
+                        <div class="portfolio-image-wrapper" style="max-width: 690px; margin: 0;">
+                            <img src="this.svg" alt="Museum of CARE UI Reservation" />
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px; margin-bottom: 0;">
+                        <div class="portfolio-image-wrapper" style="max-width: 690px; margin: 0;">
+                            <img src="Mobile111.svg" alt="Museum of CARE UI Mobile 1" />
+                        </div>
+                        <div class="portfolio-image-wrapper" style="max-width: 690px; margin: 0;">
+                            <img src="mobile222.svg" alt="Museum of CARE UI Mobile 2" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Section -->
+                <div class="content-section">
+                    <h2 class="section-heading">Impact</h2>
+                    <ul class="bullet-list">
+                        <li>Visitors can now compare and understand exhibition spaces more easily</li>
+                        <li>The reservation and visit planning process is simplified</li>
+                        <li>Consistent UX across devices improves accessibility and engagement</li>
+                        <li>Artifact content is presented in a visitor-friendly storytelling format</li>
+                    </ul>
+                    <div class="portfolio-image-wrapper" style="max-width: 1200px; margin: 40px auto 0;">
+                        <img src="work.png" alt="Museum of CARE UI Work" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <a href="mailto:suhhee1128@gmail.com" class="footer-link">suhhee1128@gmail.com</a>
+            </div>
+            <p>&copy; 2025 Seohee Kim. All rights reserved.</p>
+            <p>Product Designer Portfolio</p>
+        </div>
+    </footer>
+</body>
+</html>
