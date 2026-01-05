@@ -201,7 +201,7 @@
 
         .section-title {
             font-family: 'Inter', sans-serif;
-            font-size: 32px;
+            font-size: 44px;
             font-weight: 400;
             color: #000;
             margin-bottom: 24px;
@@ -210,7 +210,7 @@
 
         .section-content {
             font-family: 'Inter', sans-serif;
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 300;
             color: #333;
             line-height: 1.8;
@@ -231,11 +231,8 @@
         }
 
         .highlight-box {
-            background-color: #f5f5f5;
-            border-left: 4px solid #333;
             padding: 24px;
             margin: 32px 0;
-            border-radius: 4px;
         }
 
         .highlight-box p {
@@ -541,7 +538,7 @@
                     </div>
                     <div class="hero-info-item-new">
                         <p class="hero-info-label">Timeline</p>
-                        <p class="hero-info-value">2025</p>
+                        <p class="hero-info-value">2025.09-2025.11</p>
                     </div>
                     <div class="hero-info-item-new">
                         <p class="hero-info-label">Team</p>
@@ -549,7 +546,7 @@
                     </div>
                     <div class="hero-info-item-new">
                         <p class="hero-info-label">Tools</p>
-                        <p class="hero-info-value">Python, AI Models, Game Engine</p>
+                        <p class="hero-info-value">Next.js, Figma, Front-end Development, Python, AI Models, Game Engine</p>
                     </div>
                 </div>
 
@@ -561,31 +558,19 @@
                 </div>
 
                 <!-- Description Text -->
+                <h1 style="font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 400; color: #000; margin-top: 20px; margin-bottom: 40px; line-height: 1.2;">Unveiling PIX.MO:<br>Where AI-Generated Sprites<br>Finally Work in Games</h1>
                 <div class="hero-description">
                     <p>PIX.MO is a solo AI project where I explored whether custom AI-generated sprites could go beyond visuals and become truly playable game assets.</p>
-                    <p>Instead of stopping at image generation, I challenged myself to design an end-to-end system—from character creation, to consistent sprite generation, to real in-game validation inside a playable beat-’em-up game.</p>
+                    <p>Instead of stopping at image generation, I challenged myself to design an end-to-end system—from character creation, to consistent sprite generation, to real in-game validation inside a playable PIX.MO game.</p>
                 </div>
             </div>
 
             <!-- Portfolio Content -->
             <section class="portfolio-content">
                 <div class="portfolio-section">
-                    <h2 class="section-title">Overview</h2>
+                    <h2 class="section-title">Problem</h2>
                     <div class="section-content">
-                        <p>PIX.MO is a solo AI project where I explored whether custom AI-generated sprites could go beyond visuals and become truly playable game assets.</p>
-                        <p>Instead of stopping at image generation, I challenged myself to design an end-to-end system—from character creation, to consistent sprite generation, to real in-game validation inside a playable beat-’em-up game.</p>
-                        <p>This project was fully designed, built, and executed independently.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-section">
-                    <h2 class="section-title">Why This Project</h2>
-                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">The gap I wanted to explore</h3>
-                    <div class="section-content">
-                        <p>AI-generated images are everywhere—but in games, sprites often fail at one critical point:</p>
-                        <div class="highlight-box">
-                            <p>They look good, but they don’t work.</p>
-                        </div>
+                        <p>AI-generated images are everywhere, but in games, sprites often fail at a critical point. They may look visually appealing, yet they don't function properly in actual gameplay.</p>
                         <p>From my research and community exploration:</p>
                         <ul>
                             <li>AI sprites often lack frame consistency</li>
@@ -603,12 +588,11 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">Problem Definition</h2>
                     <div class="section-content">
-                        <p>To make AI sprites usable in real games, three problems had to be solved:</p>
-                        <p><strong>1️⃣ Customization</strong><br>
+                        <p><strong>1. Customization</strong><br>
                         Creators want to define Character style, Color palette, Mood, weapon, role. But most generators produce generic outputs.</p>
-                        <p><strong>2️⃣ Consistency Across Frames</strong><br>
+                        <p><strong>2. Consistency Across Frames</strong><br>
                         Sprites must share the same scale, pivot, and proportions and maintain visual continuity across actions (idle, attack, skill, etc.). Without this, animation breaks.</p>
-                        <p><strong>3️⃣ Playability Validation</strong><br>
+                        <p><strong>3. Playability Validation</strong><br>
                         Even visually consistent sprites often don’t align with hitboxes, break combat timing, or feel “off” during gameplay. True validation only happens inside a real game.</p>
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — Problem Breakdown Diagram]</div>
@@ -621,21 +605,21 @@
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — “Solution with Gemini” Overview Slide]</div>
                     
-                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">1️⃣ Customized Character Generation</h3>
+                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">1. Customized Character Generation</h3>
                     <div class="section-content">
                         <p>Users define characters through structured inputs (Name & description, Color & mood, Weapon type). This ensures generation starts with intent, not randomness.</p>
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — Character Input UI]</div>
 
-                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">2️⃣ Consistent Sprite System</h3>
+                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">2. Consistent Sprite System</h3>
                     <div class="section-content">
                         <p>Instead of generating single images, I designed the system around action-based sprite sets with fixed frame counts per action and shared canvas/scale/pivot. Each action (Idle, Attack, Skill, Dash, Death) produces a coherent sprite sequence.</p>
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — Generated Sprite Frames Grid]</div>
 
-                    <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">3️⃣ Playable Verification Inside a Game</h3>
+                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">3. Playable Verification Inside a Game</h3>
                     <div class="section-content">
-                        <p>To avoid “theoretical usability,” I embedded sprites into a real beat-’em-up game. I built a simple combat system with HP, damage, and hit detection, allowing real-time sprite swapping.</p>
+                        <p>To avoid "theoretical usability," I embedded sprites into a real 'PIX.MO' game. I built a simple combat system with HP, damage, and hit detection, allowing real-time sprite swapping.</p>
                         <p>This allowed me to verify animation flow, combat readability, and visual feedback during hits.</p>
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — In-Game Combat with Custom Sprite]</div>
@@ -664,28 +648,9 @@
                     <h2 class="section-title">Market & Context</h2>
                     <div class="section-content">
                         <p>According to market research, the AI in Games market is projected to grow ~5.4× by 2034, with strong interest from indie developers and creators.</p>
-                        <p>Community reactions consistently asked: “How did you make this?” / “Is this open source?”</p>
+                        
                     </div>
                     <div class="portfolio-image-placeholder">⬜︎ [Image — Market Growth Chart & Community Quotes]</div>
-                    <div class="section-content">
-                        <div class="highlight-box">
-                            <p>This validated that the problem wasn’t niche—it was underserved.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-section">
-                    <h2 class="section-title">Business Thinking (Exploratory)</h2>
-                    <div class="section-content">
-                        <p>I also explored how such a system could scale sustainably.</p>
-                        <ul>
-                            <li>Free trial for experimentation</li>
-                            <li>Credit-based pricing tied to sprite actions</li>
-                            <li>Commercial usage unlocked for real production</li>
-                        </ul>
-                        <p>This wasn’t about monetization first—but about designing with real-world constraints in mind.</p>
-                    </div>
-                    <div class="portfolio-image-placeholder">⬜︎ [Image — Business Model Slide]</div>
                 </div>
 
                 <div class="portfolio-section">
@@ -702,14 +667,6 @@
 
                 <div class="portfolio-section">
                     <h2 class="section-title">Reflection</h2>
-                    <h3 class="section-title" style="font-size: 24px; margin-top: 16px; margin-bottom: 16px;">What this project taught me</h3>
-                    <div class="section-content">
-                        <p><strong>AI features only matter when they survive real constraints</strong></p>
-                        <p>Systems thinking is more important than individual outputs. “Playable” is a higher bar than “generated”.</p>
-                        <div class="highlight-box">
-                            <p>PIX.MO represents how I approach AI: not as a novelty, but as a tool that must work in real products.</p>
-                        </div>
-                    </div>
                     
                     <h3 class="section-title" style="font-size: 24px; margin-top: 32px; margin-bottom: 16px;">Why This Project Matters in My Portfolio</h3>
                     <div class="section-content">
@@ -756,10 +713,6 @@
                 </div>
             </section>
 
-            <!-- Back to Projects Button -->
-            <div class="back-section">
-                <a href="index.html#projects" class="back-button">← Back to Projects</a>
-            </div>
         </div>
     </div>
     <script>
