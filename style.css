@@ -578,39 +578,20 @@ body {
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 }
 
 .about-card {
-    background-color: #fffefe;
-    border: 1px solid rgba(99, 99, 99, 0.2);
-    border-radius: 4px;
-    height: 272px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
-}
-
-.about-card {
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-}
-
-.about-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.about-card:hover .project-image img {
-    opacity: 0.3;
-}
-
-.about-card:hover .project-overlay {
-    opacity: 0.7;
 }
 
 /* About Me 서브텍스트 */
@@ -869,7 +850,6 @@ body {
     }
     
     .about-card {
-        height: 200px;
         width: 100%;
     }
 }

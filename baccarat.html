@@ -109,6 +109,13 @@
             background-color: #000000;
         }
 
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
         .slider-btn {
             background-color: rgba(255, 255, 255, 0.2);
             color: white;
@@ -188,18 +195,19 @@
             </div>
         </section>
 
-        <!-- Space PDF Slider -->
+        <!-- Interior Images Slider -->
         <section class="pdf-slider-section">
+            <h2 class="section-heading" style="text-align: center; margin-bottom: 40px; color: #FFFFFF;">Interior</h2>
             <div class="slider-container">
-                <button class="slider-btn prev-btn-space" aria-label="Previous slide">←</button>
+                <button class="slider-btn prev-btn-interior" aria-label="Previous slide">←</button>
                 <div class="slider-wrapper">
-                    <div class="slides-track" id="spaceSlidesTrack">
+                    <div class="slides-track" id="interiorSlidesTrack">
                         <!-- Slides will be inserted by JS -->
                     </div>
                 </div>
-                <button class="slider-btn next-btn-space" aria-label="Next slide">→</button>
+                <button class="slider-btn next-btn-interior" aria-label="Next slide">→</button>
             </div>
-            <div class="slider-dots" id="spaceSliderDots">
+            <div class="slider-dots" id="interiorSliderDots">
                 <!-- Dots will be inserted by JS -->
             </div>
         </section>
@@ -258,16 +266,67 @@
             });
         }
 
+        function initImageSlider(imageFolder, trackId, dotsId, prevBtn, nextBtn, totalImages) {
+            const track = document.getElementById(trackId);
+            const dotsContainer = document.getElementById(dotsId);
+            let currentSlide = 0;
+
+            // Create slides for each image
+            for (let i = 1; i <= totalImages; i++) {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = 'slide';
+                const img = document.createElement('img');
+                img.src = `${imageFolder}/${i}.png`;
+                img.alt = `Interior Image ${i}`;
+                slideDiv.appendChild(img);
+                track.appendChild(slideDiv);
+
+                const dot = document.createElement('div');
+                dot.className = `dot ${i === 1 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(i - 1));
+                dotsContainer.appendChild(dot);
+            }
+
+            const dots = dotsContainer.querySelectorAll('.dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function goToSlide(index) {
+                if (index < 0) {
+                    currentSlide = totalImages - 1;
+                } else if (index >= totalImages) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide = index;
+                }
+                updateSlider();
+            }
+
+            prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+            nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize presentation slider (estimate 20 pages)
             const prevBtnPresentation = document.querySelector('.prev-btn-presentation');
             const nextBtnPresentation = document.querySelector('.next-btn-presentation');
             initPDFSlider('images/baccarat/발표자료.pdf', 'presentationSlidesTrack', 'presentationSliderDots', prevBtnPresentation, nextBtnPresentation, 20);
 
-            // Initialize space slider (estimate 20 pages)
-            const prevBtnSpace = document.querySelector('.prev-btn-space');
-            const nextBtnSpace = document.querySelector('.next-btn-space');
-            initPDFSlider('images/baccarat/바카라space.pdf', 'spaceSlidesTrack', 'spaceSliderDots', prevBtnSpace, nextBtnSpace, 20);
+            // Initialize interior images slider (36 images)
+            const prevBtnInterior = document.querySelector('.prev-btn-interior');
+            const nextBtnInterior = document.querySelector('.next-btn-interior');
+            initImageSlider('images/baccarat/interior', 'interiorSlidesTrack', 'interiorSliderDots', prevBtnInterior, nextBtnInterior, 36);
         });
     </script>
     </div>
