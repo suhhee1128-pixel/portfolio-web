@@ -179,8 +179,9 @@
             </p>
         </div>
 
-        <!-- Presentation PDF Slider -->
+        <!-- Presentation Images Slider -->
         <section class="pdf-slider-section">
+            <h2 class="section-heading" style="text-align: center; margin-bottom: 40px; color: #FFFFFF;">Presentation</h2>
             <div class="slider-container">
                 <button class="slider-btn prev-btn-presentation" aria-label="Previous slide">←</button>
                 <div class="slider-wrapper">
@@ -318,10 +319,10 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize presentation slider (estimate 20 pages)
+            // Initialize presentation images slider (12 images)
             const prevBtnPresentation = document.querySelector('.prev-btn-presentation');
             const nextBtnPresentation = document.querySelector('.next-btn-presentation');
-            initPDFSlider('images/baccarat/발표자료.pdf', 'presentationSlidesTrack', 'presentationSliderDots', prevBtnPresentation, nextBtnPresentation, 20);
+            initImageSlider('images/baccarat/presentation', 'presentationSlidesTrack', 'presentationSliderDots', prevBtnPresentation, nextBtnPresentation, 12);
 
             // Initialize interior images slider (36 images)
             const prevBtnInterior = document.querySelector('.prev-btn-interior');
