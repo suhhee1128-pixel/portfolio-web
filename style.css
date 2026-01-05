@@ -668,6 +668,10 @@ body {
 
 .contact-icon {
     font-size: 1.2rem;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: inline-block;
 }
 
 
@@ -1061,11 +1065,15 @@ body {
 .contact-link:hover {
     transform: translateY(-2px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
-    border-color: #ffa2c1;
+    border-color: #A7C6FF;
 }
 
 .contact-icon {
     font-size: 20px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: inline-block;
 }
 
 .contact-link span:last-child {

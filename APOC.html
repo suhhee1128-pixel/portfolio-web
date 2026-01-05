@@ -24,6 +24,45 @@
             margin-bottom: 32px;
             border-radius: 8px;
         }
+
+        .hero-visit-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 14px 35px;
+            gap: 10px;
+            width: fit-content;
+            height: auto;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            border-radius: 100px;
+            text-decoration: none;
+            color: #000000;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .hero-visit-button:hover {
+            background-color: #F5F5F5;
+        }
+
+        .hero-visit-button img {
+            width: 24px;
+            height: 24px;
+            margin-left: 4px;
+        }
+
+        .hero-visit-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +77,16 @@
             <div class="hero-image-container">
                 <img src="apoc2.png" alt="Character Design Project Preview" />
             </div>
+            <div class="hero-visit-buttons">
+                <a href="https://studio.apoc.day/#/template" target="_blank" class="hero-visit-button">
+                    Visit Website 1
+                    <img src="undefined.svg" alt="External link" />
+                </a>
+                <a href="https://brand.apoc.day/portfolio" target="_blank" class="hero-visit-button">
+                    Visit Website 2
+                    <img src="undefined.svg" alt="External link" />
+                </a>
+            </div>
             <!-- Summary Section -->
             <div class="summary-section">
                 <h2 class="summary-title">Summary</h2>
@@ -46,17 +95,17 @@
                         <div class="summary-item">
                             <h3 class="summary-heading">Mission</h3>
                             <p class="summary-text">
-                                The Studio platform hosted a rapidly growing range of assets—including AR filters, 3D templates, event-based bundles, and large-scale B2B brand collaborations. However, users lacked structured ways to discover, understand, and evaluate this content, both for self-serve asset exploration and external-facing B2B storytelling.
+                                Studio platform hosted a rapidly growing range of assets—from AR filters and 3D templates to event bundles and B2B brand collaborations—but users lacked clear ways to discover and evaluate this content.
                             </p>
                             <p class="summary-text">
-                                The mission of this project was twofold:
+                                This project aimed to:
                             </p>
                             <ul class="summary-list">
-                                <li>To design a scalable discovery experience that enables efficient exploration of a large asset ecosystem</li>
-                                <li>To create a premium, reusable case study framework that clearly communicates the value of Studio's B2B collaborations</li>
+                                <li>Design a scalable discovery experience for exploring a large asset ecosystem</li>
+                                <li>Create a premium, reusable case study framework for B2B storytelling</li>
                             </ul>
                             <p class="summary-text">
-                                Together, these efforts aimed to improve content clarity, usability, and the overall perceived credibility of the Studio platform.
+                                Together, these efforts improved content clarity, usability, and the perceived credibility of the Studio platform.
                             </p>
                         </div>
                         
@@ -67,52 +116,39 @@
                             </p>
                             <p class="summary-text"><strong>Studio Discovery Page</strong></p>
                             <ul class="summary-list">
-                                <li>Rebuilt the information architecture to support diverse asset types and user intents</li>
-                                <li>Designed a scroll-based discovery flow that balances variety with cognitive simplicity</li>
-                                <li>Created a modular card system for fast scanning and comparison</li>
-                                <li>Defined responsive layouts for both desktop and mobile</li>
+                                <li>Rebuilt the information architecture to support diverse asset types and user goals</li>
+                                <li>Designed a scroll-based discovery flow with modular card systems for fast scanning</li>
+                                <li>Defined responsive layouts across desktop and mobile</li>
                             </ul>
                             <p class="summary-text"><strong>B2B Project Detail Page</strong></p>
                             <ul class="summary-list">
-                                <li>Designed the first dedicated case study page for brand collaborations</li>
+                                <li>Designed Studio's first dedicated B2B case study experience</li>
                                 <li>Established a reusable storytelling structure (context → solution → impact)</li>
-                                <li>Introduced visual annotation layers to explain complex UI decisions efficiently</li>
-                                <li>Designed a content-heavy layout system optimized for clarity and readability across devices</li>
+                                <li>Created content-heavy layouts optimized for clarity and readability</li>
                             </ul>
                             <p class="summary-text">
-                                I was responsible for the full design process, from early wireframes to final UI, ensuring all components were scalable and development-ready.
+                                I owned the full design process, from early wireframes to final, development-ready UI.
                             </p>
                         </div>
                         
                         <div class="summary-item">
-                            <h3 class="summary-heading">The Impact</h3>
-                            <p class="summary-text">
-                                This work marked a foundational shift in how Studio content is surfaced and communicated:
-                            </p>
+                            <h3 class="summary-heading">Impact</h3>
                             <p class="summary-text"><strong>Studio Discovery Page</strong></p>
                             <ul class="summary-list">
-                                <li>Launched the platform's first dedicated asset discovery experience</li>
-                                <li>Consolidated fragmented content into a single, structured exploration flow</li>
-                                <li>Improved users' ability to quickly understand available asset types and use cases</li>
-                                <li>Established a scalable discovery template for future content expansion</li>
+                                <li>Launched Studio's first structured asset discovery experience</li>
+                                <li>Unified fragmented content into a single, scalable exploration flow</li>
+                                <li>Improved users' ability to quickly understand available assets and use cases</li>
                             </ul>
                             <p class="summary-text"><strong>B2B Project Detail Page</strong></p>
                             <ul class="summary-list">
-                                <li>Delivered the company's first reusable B2B case study framework</li>
-                                <li>Improved clarity and narrative quality for brand collaboration projects</li>
+                                <li>Delivered Studio's first reusable B2B case study framework</li>
+                                <li>Enhanced clarity and storytelling for brand collaborations</li>
                                 <li>Elevated Studio's external-facing brand credibility</li>
-                                <li>Enabled consistent documentation of future B2B partnerships across desktop and mobile</li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="summary-right">
-                        <div class="summary-sidebar-item">
-                            <h3 class="summary-sidebar-heading">Client</h3>
-                            <p class="summary-sidebar-text">famppy</p>
-                            <p class="summary-sidebar-text">Studio Platform Team</p>
-                        </div>
-                        
                         <div class="summary-sidebar-item">
                             <h3 class="summary-sidebar-heading">Services</h3>
                             <ul class="summary-sidebar-list">
@@ -127,7 +163,6 @@
                         <div class="summary-sidebar-item">
                             <h3 class="summary-sidebar-heading">My Role</h3>
                             <p class="summary-sidebar-text">UX/UI Designer Intern</p>
-                            <p class="summary-sidebar-text">Studio Platform</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +173,7 @@
         <section class="case-study">
             <div class="case-study-container">
                 <div class="case-study-number-header">
-                    <h2 class="case-title-inline">Project 1. Studio Discovery Page</h2>
+                    <h2 class="case-title-inline" style="font-size: 60px; background-color: rgba(255, 182, 193, 0.3); padding: 0; display: inline-block;">Project 1. Studio Discovery Page</h2>
                 </div>
                 <p class="case-study-subtitle">Asset Discovery Experience · Desktop & Mobile</p>
                 
@@ -248,7 +283,7 @@
         <section class="case-study">
             <div class="case-study-container">
                 <div class="case-study-number-header">
-                    <h2 class="case-title-inline">Project 2. B2B Project Detail Page</h2>
+                    <h2 class="case-title-inline" style="font-size: 60px; background-color: rgba(255, 182, 193, 0.3); padding: 0; display: inline-block;">Project 2. B2B Project Detail Page</h2>
                 </div>
                 <p class="case-study-subtitle">Case Study System for Brand Collaborations · Desktop & Mobile</p>
                 
