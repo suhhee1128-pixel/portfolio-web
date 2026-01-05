@@ -43,9 +43,9 @@ body {
 }
 
 .header .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,11 +53,11 @@ body {
 
 .logo {
     font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     color: #000000;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0;
 }
 
 .nav ul {
@@ -313,6 +313,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
     margin-top: 0;
+    align-items: stretch;
 }
 
 .skill-card {
@@ -324,7 +325,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    height: fit-content;
+    height: 100%;
 }
 
 .skill-card:hover {
@@ -425,7 +426,7 @@ body {
 /* Projects 서브텍스트 */
 .projects-subtitle {
     text-align: left;
-    margin: -20px 0 20px 0;
+    margin: -30px 0 5px 0;
 }
 
 .projects-subtitle p {
@@ -433,6 +434,7 @@ body {
     font-size: 24px;
     color: #636363;
     font-style: italic;
+    font-weight: 300;
     margin: 0;
 }
 
@@ -597,7 +599,7 @@ body {
 /* About Me 서브텍스트 */
 .about-subtitle {
     text-align: left;
-    margin: 00px 0 50px 0;
+    margin: -30px 0 5px 0;
 }
 
 .about-subtitle p {
@@ -605,6 +607,7 @@ body {
     font-size: 24px;
     color: #636363;
     font-style: italic;
+    font-weight: 300;
     margin: 0;
 }
 
