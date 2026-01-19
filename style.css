@@ -180,7 +180,7 @@ body {
     font-size: 24px;
     line-height: 32px;
     color: #333333;
-    max-width: 800px;
+    max-width: 1000px; /* 너비를 충분히 늘려서 원치 않는 줄바꿈 방지 */
 }
 
 .description p {
@@ -189,6 +189,17 @@ body {
 
 .muted {
     color: #ffabc8;
+}
+
+/* Desktop Line Break Control */
+.desktop-br {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .desktop-br {
+        display: none !important; /* 모바일에서는 강제 줄바꿈 확실히 숨김 */
+    }
 }
 
 /* Available for work button and social links container */
@@ -526,8 +537,8 @@ body {
     font-weight: 400;
     font-size: 48px;
     color: #000;
-    top-margin: 0;
-    bottom-margin: 10;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .projects-grid {
@@ -764,14 +775,16 @@ body {
 @media (max-width: 1600px) {
     .header .container {
         padding: 0 20px;
+        max-width: 100%;
     }
     
     .nav ul {
-        gap: 30px;
+        gap: 20px;
     }
     
     .main {
-        padding: 0 20px;
+        padding: 0;
+        overflow-x: hidden; /* 가로 스크롤 방지 */
     }
     
     .header-section,
@@ -779,87 +792,56 @@ body {
     .projects-section,
     .about-section,
     .contact {
-        width: calc(100% - 100px);
+        width: 100%; /* 고정폭 제거 */
         max-width: 1240px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-    }
-}
-
-@media (max-width: 1400px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .about-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 1024px) {
-    .header-section,
-    .skills-section,
-    .projects-section,
-    .about-section,
-    .contact {
-        width: calc(100% - 60px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 16px;
-    }
-    
-    .main-title h1 {
-        font-size: 48px;
-    }
-    
-    .description {
-        font-size: 20px;
-        line-height: 28px;
-    }
-    
-    .section-title {
-        font-size: 36px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .about-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .project-card {
-        width: 100%;
-    }
-    
-    .about-card {
-        width: 100%;
+        padding: 0 20px; /* 좌우 여백 확보 */
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 768px) {
+    /* 전체 레이아웃 안전장치 */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .header {
+        position: fixed; /* 헤더 고정 유지 */
+        width: 100%;
+    }
+
     .header .container {
-        padding: 0 20px;
+        padding: 10px 20px;
         flex-direction: column;
         gap: 15px;
+        width: 100%;
     }
     
+    .nav {
+        width: 100%;
+    }
+
     .nav ul {
-        gap: 20px;
+        gap: 15px 10px; /* 세로 가로 간격 */
+        flex-wrap: wrap; /* 메뉴 줄바꿈 허용 */
+        justify-content: center; /* 중앙 정렬 */
+        width: 100%;
     }
     
     .nav a {
-        font-size: 14px;
+        font-size: 13px; /* 폰트 사이즈 약간 축소 */
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+    
+    /* 메인 컨텐츠 여백 및 정렬 */
+    .main {
+        padding-top: 140px; /* 헤더 높이만큼 여백 확보 */
+    }
+
+    .header-section {
+        margin-top: 20px; /* 추가 여백 */
+        gap: 20px;
     }
     
     .header-section,
@@ -867,95 +849,64 @@ body {
     .projects-section,
     .about-section,
     .contact {
-        width: calc(100% - 40px);
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        padding: 0 24px; /* 모바일 좌우 여백 */
     }
-    
-    .header-section {
-        margin-top: 50px;
-        gap: 30px;
-    }
-    
-    .skills-section {
-        margin-top: 60px;
-    }
-    
-    .projects-section {
-        margin-top: 60px;
-    }
-    
-    .about-section {
-        margin-top: 60px;
-    }
-    
+
     .profile-image {
         width: 80px;
         height: 80px;
+        margin-bottom: 10px;
     }
     
+    .intro-content {
+        width: 100%;
+    }
+
     .main-title h1 {
         font-size: 32px;
+        word-break: keep-all; /* 단어 단위 줄바꿈 */
     }
     
     .description {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 1.6;
+        width: 100%;
+        max-width: 100%;
     }
     
-    .section-title {
-        font-size: 28px;
-    }
-    
-    .availability-button {
-        font-size: 14px;
-        padding: 10px 12px;
-    }
-    
-    .resume-button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    
-    .linkedin-button {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    
+    /* 버튼들이 화면 밖으로 나가지 않게 */
     .availability-section {
-        gap: 15px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
     
-    .social-link {
-        width: 36px;
-        height: 36px;
-    }
+    /* 기존 스타일 유지 */
+    .skills-section { margin-top: 60px; }
+    .projects-section { margin-top: 60px; }
+    .about-section { margin-top: 60px; }
     
-    .social-icon {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .social-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .projects-grid {
+    /* 그리드 및 카드 스타일 */
+    .projects-grid, .about-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
-    .about-grid {
-        grid-template-columns: 1fr;
+    .project-card, .about-card {
+        width: 100%;
+        height: auto;
     }
-    
-    .project-card {
-        height: 200px;
+
+    .project-image {
+        aspect-ratio: 4/3;
         width: 100%;
     }
     
-    .about-card {
+    /* 푸터 */
+    .footer {
         width: 100%;
+        padding: 40px 20px;
+        box-sizing: border-box;
     }
 }
 
@@ -1261,4 +1212,143 @@ body {
     color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0px 4px 12px rgba(255, 107, 157, 0.3);
+}
+
+/* Mobile Optimization Overrides (Final) */
+@media (max-width: 768px) {
+    /* Header Content Spacing Fix */
+    .header-section {
+        margin-top: 80px !important; /* 헤더 겹침 방지: 메뉴 줄바꿈 고려하여 충분히 확보 */
+    }
+
+    /* Contact Section Vertical Layout */
+    .contact-content {
+        display: flex;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    
+    .contact-info, .contact-form {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Project Cards & Grid */
+    .projects-grid, .about-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .project-card, .about-card {
+        height: auto !important;
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .project-image {
+        aspect-ratio: 4/3 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+
+    /* Navigation Wrap & Align */
+    .nav ul {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+    
+    .nav li {
+        width: auto; /* 메뉴 아이템 너비 자동 */
+    }
+
+    /* Flex Child Overflow Fix (텍스트 잘림 근본 원인 해결) */
+    .intro-content, .header-section, .main-title, .description {
+        min-width: 0 !important; /* Flex 컨테이너 안에서 줄어들 수 있게 허용 */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Text Wrap Fix */
+    .description, .description p, .body-text, p, .intro-content p, .intro-content {
+        font-size: 20px !important;
+        white-space: normal !important;
+        word-wrap: normal !important;
+        overflow-wrap: normal !important;
+        word-break: keep-all !important; /* 단어 중간 끊김 방지 */
+        box-sizing: border-box !important;
+    }
+
+    /* Description & Button Spacing */
+    .intro-content {
+        margin-bottom: 40px !important; /* 설명글과 버튼 사이 여백 추가 */
+    }
+
+    /* Subtitle Font Size Adjustment */
+    .projects-subtitle p, .about-subtitle p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Section Title Font Size (Mobile) */
+    .section-title {
+        font-size: 32px !important; /* 기존 대비 +4px */
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Main Title Font Size (Mobile) */
+    .main-title h1 {
+        font-size: 40px !important; /* 기존 32px -> 40px (+8px) */
+        line-height: 1.2 !important;
+    }
+
+    /* Section Spacing Reduction (버튼과 다음 섹션 사이 여백 축소) */
+    .header-section {
+        margin-bottom: 40px !important; /* 기존 100px -> 40px */
+    }
+    
+    .projects-section {
+        margin-top: 0 !important; /* 기존 60px -> 0 */
+    }
+
+    /* Availability Section Button Layout (Mobile) */
+    .availability-section {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .availability-row-top, .availability-row-bottom {
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+    
+    .availability-button {
+        width: fit-content !important; /* 첫 줄 버튼은 내용 크기만큼 */
+    }
+    
+    .availability-row-bottom {
+        justify-content: flex-start !important; /* 아래 줄 버튼들 왼쪽 정렬 */
+    }
+}
+
+/* Availability Section Desktop Layout Fix */
+@media (min-width: 769px) {
+    .availability-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .availability-row-top, .availability-row-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
 }
