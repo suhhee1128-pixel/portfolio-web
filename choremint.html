@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
         html, body {
@@ -22,12 +21,14 @@
             width: 100%;
             overflow-x: hidden;
             overflow-y: auto;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            font-family: 'Outfit', sans-serif;
         }
 
         .choremint-page {
             width: 100%;
             min-height: 100vh;
-            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -38,23 +39,25 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 20px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+            padding: 20px 40px;
+            background: rgba(250, 250, 250, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .back-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 20px;
-            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.6);
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
             letter-spacing: 0.5px;
         }
 
         .back-link:hover {
-            opacity: 0.7;
+            color: #000;
         }
 
         .choremint-content {
@@ -65,19 +68,19 @@
 
         /* Hero Section Styles */
         .hero-section {
-            padding: 80px 20px;
-            background-color: #ffffff;
+            padding: 120px 40px 40px 40px;
+            background-color: #fafafa;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .hero-main-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
+            font-size: 96px;
             color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            line-height: 1;
+            letter-spacing: -0.03em;
             margin: 0;
             margin-bottom: 0;
             max-width: 1600px;
@@ -88,13 +91,14 @@
         }
 
         .hero-subtitle {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            font-size: 32px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.3;
+            letter-spacing: normal;
             margin: 0;
+            font-style: italic;
         }
 
         .hero-info-row {
@@ -102,7 +106,7 @@
             grid-template-columns: repeat(3, max-content);
             gap: 49px 213px;
             align-items: start;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .hero-info-item-new {
@@ -113,51 +117,54 @@
         }
 
         .hero-info-label {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            color: #666;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.4);
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: 0.05em;
             margin: 0;
+            text-transform: uppercase;
         }
 
         .hero-info-value {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 400;
             font-size: 16px;
             color: #000;
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: normal;
             margin: 0;
-            margin-top: 20px;
+            margin-top: 12px;
         }
 
         .hero-image-section {
-            margin-top: 60px;
+            margin-top: 80px;
             width: 100%;
         }
 
         .hero-image-wrapper {
             overflow: hidden;
             position: relative;
+            border-radius: 40px;
         }
 
         .hero-image-wrapper img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 40px;
         }
 
         .hero-question {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 70px;
-            line-height: 85px;
+            font-size: 84px;
+            line-height: 1.2;
             letter-spacing: -0.02em;
             color: #000000;
             margin: 0;
-            margin-top: 60px;
+            margin-top: 80px;
             width: 100%;
             max-width: 1551px;
         }
@@ -167,17 +174,17 @@
         }
 
         .hero-description {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 300;
-            font-size: 26px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -0.52px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+            letter-spacing: normal;
             margin: 0;
             margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 29px;
+            gap: 24px;
         }
 
         /* Portfolio Content Section */
@@ -185,8 +192,8 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px 80px 20px;
-            background-color: #ffffff;
+            padding: 0 40px 120px 40px;
+            background-color: #fafafa;
         }
 
         .portfolio-image-placeholder {
@@ -198,42 +205,42 @@
             align-items: center;
             justify-content: center;
             color: #666;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 32px;
-            border-radius: 8px;
+            border-radius: 40px;
         }
 
         .portfolio-section {
-            margin-bottom: 80px;
+            margin-bottom: 120px;
         }
 
         .section-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 44px;
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
             font-weight: 400;
             color: #000;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
 
         .section-content {
-            font-family: 'Inter', sans-serif;
-            font-size: 24px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
             font-weight: 300;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.6;
+            margin-bottom: 32px;
         }
 
         .section-content p {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content ul {
             margin-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content li {
@@ -241,29 +248,33 @@
         }
 
         .highlight-box {
-            background-color: #f5f5f5;
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 4px;
+            background-color: #fff;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .highlight-box p {
             margin: 0;
             font-style: italic;
             color: #000;
-            font-weight: 500;
+            font-weight: 400;
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
         }
 
         .wally-image-container {
-            margin: 32px 0;
+            margin: 40px 0;
             width: 100%;
         }
 
         .wally-image {
             width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 40px;
             display: block;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.05);
         }
 
         .bullet-list {
@@ -276,13 +287,16 @@
             margin-bottom: 16px;
             padding-left: 24px;
             position: relative;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.8);
         }
 
         .bullet-list li::before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #000;
+            color: rgba(0, 0, 0, 0.4);
             font-weight: 400;
         }
 
@@ -301,27 +315,24 @@
 
             .hero-main-title {
                 font-size: 48px;
-                letter-spacing: -0.96px;
             }
 
             .hero-subtitle {
-                font-size: 48px;
-                letter-spacing: -0.96px;
+                font-size: 24px;
             }
 
             .hero-description {
-                font-size: 24px;
-                letter-spacing: -0.48px;
+                font-size: 16px;
             }
 
             .hero-info-row {
                 gap: 30px 40px;
+                grid-template-columns: 1fr;
             }
 
             .hero-info-label,
             .hero-info-value {
-                font-size: 18px;
-                letter-spacing: -0.36px;
+                font-size: 14px;
             }
 
             .hero-info-value {
@@ -333,11 +344,16 @@
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             .section-content {
                 font-size: 16px;
+            }
+
+            .hero-question {
+                font-size: 52px;
+                margin-top: 40px;
             }
         }
     </style>
@@ -353,8 +369,7 @@
             <!-- Hero Section -->
             <div class="hero-section">
                 <h1 class="hero-main-title">
-                    <p>ChoreMint.</p>
-                    <p class="hero-subtitle">Turning Household Chores into a System-Driven, Habit-Forming Experience</p>
+                    <p>ChoreMint</p>
                 </h1>
 
                 <!-- Info Row -->
@@ -362,7 +377,7 @@
                     <div class="hero-info-item-new">
                         <p class="hero-info-label">Role</p>
                         <p class="hero-info-value">Product Designer · UX/UI Designer</p>
-                        <p style="font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; color: #666; line-height: 1.4; margin-top: 8px; letter-spacing: -0.28px;">(End-to-end UX strategy, interaction design, system design)</p>
+                        <p style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 14px; color: rgba(0,0,0,0.6); line-height: 1.4; margin-top: 8px;">(End-to-end UX strategy, interaction design, system design)</p>
                     </div>
                     <div class="hero-info-item-new">
                         <p class="hero-info-label">Platform</p>
@@ -399,16 +414,16 @@
                 </div>
 
                 <!-- Parent Home + Child Home 핵심 화면 2–3장 -->
-                <div class="hero-image-section" style="margin-top: 40px;">
-                    <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+                <div class="hero-image-section" style="margin-top: 80px;">
+                    <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
                         <div style="width: 260px; display: flex; align-items: flex-start; justify-content: center; margin-top: 20px;">
-                            <img src="images/choremint/parent-home.svg" alt="Parent Home Screen" style="width: 260px; max-width: 260px; height: auto; border-radius: 8px; object-fit: contain; display: block; margin: 0;">
+                            <img src="images/choremint/parent-home.svg" alt="Parent Home Screen" style="width: 260px; max-width: 260px; height: auto; border-radius: 24px; object-fit: contain; display: block; margin: 0; box-shadow: 0px 20px 40px rgba(0,0,0,0.1);">
                         </div>
                         <div style="width: 300px; display: flex; align-items: flex-start; justify-content: center;">
-                            <img src="images/choremint/child-home1.svg" alt="Child Home Screen" style="width: 300px; max-width: 300px; height: auto; border-radius: 8px; object-fit: contain; display: block; margin: 0;">
+                            <img src="images/choremint/child-home1.svg" alt="Child Home Screen" style="width: 300px; max-width: 300px; height: auto; border-radius: 24px; object-fit: contain; display: block; margin: 0; box-shadow: 0px 20px 40px rgba(0,0,0,0.1);">
                         </div>
                         <div style="width: 300px; display: flex; align-items: flex-start; justify-content: center;">
-                            <img src="images/choremint/game01.svg" alt="Game System Screen" style="width: 300px; max-width: 300px; height: auto; border-radius: 8px; object-fit: contain; display: block; margin: 0;">
+                            <img src="images/choremint/game01.svg" alt="Game System Screen" style="width: 300px; max-width: 300px; height: auto; border-radius: 24px; object-fit: contain; display: block; margin: 0; box-shadow: 0px 20px 40px rgba(0,0,0,0.1);">
                         </div>
                     </div>
                 </div>
@@ -432,7 +447,7 @@
                         <p><strong>Everyday chores are inevitable.</strong></p>
                         <p><strong>The problem is how they are experienced.</strong></p>
                         <p>From research, household chores frequently lead to conflict not because tasks are difficult, but because expectations, completion criteria, and rewards are unclear.</p>
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Key pain points identified:</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Key pain points identified:</h3>
                         <ul class="bullet-list">
                             <li>Parents carry the full burden of tracking, checking, and rewarding</li>
                             <li>Children perceive chores as forced obligations</li>
@@ -445,20 +460,20 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">Research & Key Insights</h2>
                     <div class="section-content">
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Research Methods</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Research Methods</h3>
                         <ul class="bullet-list">
                             <li><strong>Parent Survey</strong> — 33 participants (Nov 5, 2025)</li>
                             <li><strong>In-depth Interviews</strong> — 3 parents (Nov 7, 2025)</li>
                         </ul>
                     </div>
-                    <div class="wally-image-container" style="margin-top: 32px; display: flex; justify-content: center;">
-                        <img src="images/choremint/user-research.png" alt="User Research" class="wally-image" style="max-width: 800px; width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="margin-top: 48px; display: flex; justify-content: center;">
+                        <img src="images/choremint/user-research.png" alt="User Research" class="wally-image" style="max-width: 800px; width: 100%; height: auto;">
                     </div>
                     <div class="wally-image-container">
-                        <img src="images/choremint/survey-results.png" alt="Survey Results Chart" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/survey-results.png" alt="Survey Results Chart" class="wally-image">
                     </div>
-                    <div class="section-content" style="margin-top: 32px;">
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Key Findings</h3>
+                    <div class="section-content" style="margin-top: 48px;">
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Key Findings</h3>
                         <ul class="bullet-list">
                             <li>Manual tracking systems require high parental effort</li>
                             <li>Delayed rewards weaken motivation</li>
@@ -472,25 +487,25 @@
                         </div>
                     </div>
                     <div class="wally-image-container">
-                        <img src="images/choremint/interview-quotes-slide.png" alt="Interview Quotes Slide" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/interview-quotes-slide.png" alt="Interview Quotes Slide" class="wally-image">
                     </div>
                 </div>
 
                 <!-- 4. Design Insight & Hypothesis -->
                 <div class="portfolio-section">
                     <h2 class="section-title">Design Insight & Hypothesis</h2>
-                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 24px; margin-top: 32px; margin-bottom: 32px;">
-                        <img src="images/choremint/persona.png" alt="Persona" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
-                        <img src="images/choremint/user-journey.png" alt="User Journey" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 40px; margin-top: 48px; margin-bottom: 48px;">
+                        <img src="images/choremint/persona.png" alt="Persona" class="wally-image">
+                        <img src="images/choremint/user-journey.png" alt="User Journey" class="wally-image">
                     </div>
                     <div class="section-content">
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 0; margin-bottom: 16px;">Core Insight</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 0; margin-bottom: 24px;">Core Insight</h3>
                         <p>Managing chores and allowances is a multi-variable behavioral problem, not a task-list problem.</p>
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">Design Hypothesis</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Design Hypothesis</h3>
                         <p>If chores are designed as a clear, reward-driven system with immediate feedback, children will participate more actively, and parents will experience less emotional friction.</p>
                     </div>
                     <div class="wally-image-container">
-                        <img src="images/choremint/insight-direction.png" alt="Insight → Direction Diagram" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/insight-direction.png" alt="Insight → Direction Diagram" class="wally-image">
                     </div>
                 </div>
 
@@ -505,9 +520,9 @@
                         <p>→ Habits are reinforced</p>
                         <p style="margin-top: 24px;">ChoreMint was intentionally designed as a closed behavioral loop, minimizing the need for parental intervention.</p>
                     </div>
-                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 24px;">
-                        <img src="images/choremint/parent-1.png" alt="Parent Flow" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
-                        <img src="images/choremint/child1.png" alt="Child Flow" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 40px;">
+                        <img src="images/choremint/parent-1.png" alt="Parent Flow" class="wally-image">
+                        <img src="images/choremint/child1.png" alt="Child Flow" class="wally-image">
                     </div>
                 </div>
 
@@ -516,13 +531,13 @@
                     <h2 class="section-title">Information Architecture</h2>
                     <div class="section-content">
                         <p>ChoreMint serves two users with fundamentally different needs.</p>
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Parent Experience</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Parent Experience</h3>
                         <ul class="bullet-list">
                             <li>Assign and approve chores</li>
                             <li>Manage rewards and goals</li>
                             <li>View family-wide progress at a glance</li>
                         </ul>
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">Child Experience</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Child Experience</h3>
                         <ul class="bullet-list">
                             <li>View today's chores</li>
                             <li>Complete tasks with minimal friction</li>
@@ -530,9 +545,9 @@
                         </ul>
                         <p style="margin-top: 24px;">Same data, different framing—to match each user's mental model.</p>
                     </div>
-                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 24px;">
-                        <img src="images/choremint/ia1.png" alt="IA Diagram 1" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
-                        <img src="images/choremint/ia2.png" alt="IA Diagram 2" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 40px;">
+                        <img src="images/choremint/ia1.png" alt="IA Diagram 1" class="wally-image">
+                        <img src="images/choremint/ia2.png" alt="IA Diagram 2" class="wally-image">
                     </div>
                 </div>
 
@@ -540,40 +555,40 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">Key UX Solutions</h2>
                     
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">1. Quest-Based Chore System</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">1. Quest-Based Chore System</h3>
                     <div class="section-content">
                         <p>Chores are structured as quests with clear completion criteria and rewards.</p>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">2. Progress-First Visualization</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">2. Progress-First Visualization</h3>
                     <div class="section-content">
                         <p>Progress states (to approve / incomplete / completed) are surfaced before task details.</p>
                     </div>
                     <div class="wally-image-container">
-                        <img src="images/choremint/progress-ui.png" alt="Progress UI" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/progress-ui.png" alt="Progress UI" class="wally-image">
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">3. Approval-Centered Parent Flow</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">3. Approval-Centered Parent Flow</h3>
                     <div class="section-content">
                         <p>Parents act as reviewers, approving completed chores in a single, streamlined flow.</p>
                     </div>
                     <div class="wally-image-container">
-                        <img src="images/choremint/parent-approval-flow.png" alt="Parent Approval Flow" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/parent-approval-flow.png" alt="Parent Approval Flow" class="wally-image">
                     </div>
                 </div>
 
                 <!-- 8. Usability Testing -->
                 <div class="portfolio-section">
                     <h2 class="section-title">Usability Testing</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 0.33fr; gap: 40px; margin-top: 32px; align-items: start;">
+                    <div style="display: grid; grid-template-columns: 1fr 0.5fr; gap: 60px; margin-top: 48px; align-items: start;">
                         <div class="section-content">
-                            <h3 class="section-title" style="font-size: 28px; margin-top: 0; margin-bottom: 16px;">Test Focus</h3>
+                            <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 0; margin-bottom: 24px;">Test Focus</h3>
                             <ul class="bullet-list">
                                 <li>Task clarity</li>
                                 <li>Next-action visibility</li>
                                 <li>Reward understanding</li>
                             </ul>
-                            <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">Key Issues Identified</h3>
+                            <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Key Issues Identified</h3>
                             <ul class="bullet-list">
                                 <li>Scattered information increased cognitive load</li>
                                 <li>Next actions were not immediately obvious</li>
@@ -581,7 +596,7 @@
                             </ul>
                         </div>
                         <div class="wally-image-container">
-                            <img src="images/choremint/usability-testing.png" alt="Usability Testing" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                            <img src="images/choremint/usability-testing.png" alt="Usability Testing" class="wally-image">
                         </div>
                     </div>
                 </div>
@@ -589,9 +604,9 @@
                 <!-- 9. Iteration: Screen Improvements -->
                 <div class="portfolio-section">
                     <h2 class="section-title">Iteration: Screen Improvements</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px;">
                         <div>
-                            <h3 class="section-title" style="font-size: 28px; margin-bottom: 16px;">Before</h3>
+                            <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-bottom: 24px;">Before</h3>
                             <ul class="bullet-list">
                                 <li>Fragmented task lists</li>
                                 <li>High cognitive load</li>
@@ -599,7 +614,7 @@
                             </ul>
                         </div>
                         <div>
-                            <h3 class="section-title" style="font-size: 28px; margin-bottom: 16px;">After</h3>
+                            <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-bottom: 24px;">After</h3>
                             <ul class="bullet-list">
                                 <li>Priority-driven layout</li>
                                 <li>Clear next actions</li>
@@ -607,16 +622,16 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="wally-image-container" style="margin-top: 32px;">
-                        <img src="images/choremint/usability-issues.png" alt="Usability Issues AS-IS" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="margin-top: 48px;">
+                        <img src="images/choremint/usability-issues.png" alt="Usability Issues AS-IS" class="wally-image">
                     </div>
-                    <div class="wally-image-container" style="margin-top: 32px;">
-                        <img src="images/choremint/child-redesign2.png" alt="Child Redesign" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="margin-top: 48px;">
+                        <img src="images/choremint/child-redesign2.png" alt="Child Redesign" class="wally-image">
                     </div>
                 </div>
                 <div class="portfolio-section">
                     <div class="wally-image-container" style="margin-top: 0;">
-                        <img src="images/choremint/usability-before-after.png" alt="AS-IS / TO-BE Comparison" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="images/choremint/usability-before-after.png" alt="AS-IS / TO-BE Comparison" class="wally-image">
                     </div>
                 </div>
 
@@ -625,22 +640,22 @@
                     <h2 class="section-title">Outcome & Impact</h2>
                     <div class="section-content">
                         <p>Through system-driven UX improvements, ChoreMint shifted chores from instruction-based interactions to behavior-driven habits.</p>
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Observed impact during testing:</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">Observed impact during testing:</h3>
                         <ul class="bullet-list">
                             <li>Reduced need for parental reminders</li>
                             <li>Increased child engagement through instant feedback</li>
                             <li>Clearer accountability without emotional conflict</li>
                         </ul>
                     </div>
-                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 24px;">
-                        <img src="images/choremint/outcome1.svg" alt="Outcome Summary 1" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
-                        <img src="images/choremint/outcome2.svg" alt="Outcome Summary 2" class="wally-image" style="width: 100%; height: auto; border-radius: 8px;">
+                    <div class="wally-image-container" style="display: flex; flex-direction: column; gap: 40px;">
+                        <img src="images/choremint/outcome1.svg" alt="Outcome Summary 1" class="wally-image">
+                        <img src="images/choremint/outcome2.svg" alt="Outcome Summary 2" class="wally-image">
                     </div>
                 </div>
 
                 <!-- 11. Collaboration & Implementation -->
                 <div class="portfolio-section">
-                    <h2 class="section-title">11. Collaboration & Implementation</h2>
+                    <h2 class="section-title">Collaboration & Implementation</h2>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Owned end-to-end UX and UI design</li>
@@ -652,9 +667,9 @@
 
                 <!-- 12. Reflection -->
                 <div class="portfolio-section">
-                    <h2 class="section-title">12. Reflection</h2>
+                    <h2 class="section-title">Reflection</h2>
                     <div class="section-content">
-                        <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">What this project reinforced</h3>
+                        <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 24px;">What this project reinforced</h3>
                         <ul class="bullet-list">
                             <li>Behavior change requires system design, not feature accumulation</li>
                             <li>Multi-user products demand role-based UX framing</li>
@@ -670,8 +685,8 @@
                     <div class="section-content">
                         <p>This deck was used for internal demo and concept presentation.<br>It documents the full product vision, UX decisions, and iteration process.</p>
                     </div>
-                    <div class="wally-image-container" style="margin-top: 32px;">
-                        <iframe src="images/choremint/choremintfinal.pdf" style="width: 100%; height: 800px; border: 1px solid #ddd; border-radius: 8px;"></iframe>
+                    <div class="wally-image-container" style="margin-top: 48px;">
+                        <iframe src="images/choremint/choremintfinal.pdf" style="width: 100%; height: 800px; border: 1px solid rgba(0,0,0,0.05); border-radius: 24px;"></iframe>
                     </div>
                 </div>
             </section>

@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
 
         html, body {
@@ -22,12 +21,14 @@
             width: 100%;
             overflow-x: hidden;
             overflow-y: auto;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            font-family: 'Outfit', sans-serif;
         }
 
         .trendpulse-page {
             width: 100%;
             min-height: 100vh;
-            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -38,23 +39,25 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 20px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+            padding: 20px 40px;
+            background: rgba(250, 250, 250, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .back-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 20px;
-            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.6);
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
             letter-spacing: 0.5px;
         }
 
         .back-link:hover {
-            opacity: 0.7;
+            color: #000;
         }
 
         .trendpulse-content {
@@ -65,19 +68,19 @@
 
         /* Hero Section Styles */
         .hero-section {
-            padding: 80px 20px 20px 20px;
-            background-color: #ffffff;
+            padding: 120px 40px 40px 40px;
+            background-color: #fafafa;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .hero-main-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
+            font-size: 96px;
             color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            line-height: 1;
+            letter-spacing: -0.03em;
             margin: 0;
             margin-bottom: 0;
             max-width: 1600px;
@@ -88,27 +91,28 @@
         }
 
         .hero-subtitle {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            font-size: 32px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.3;
+            letter-spacing: normal;
             margin: 0;
+            font-style: italic;
         }
 
         .hero-description {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 300;
-            font-size: 26px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -0.52px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+            letter-spacing: normal;
             margin: 0;
             margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 29px;
+            gap: 24px;
         }
 
         .hero-description p {
@@ -120,7 +124,7 @@
             grid-template-columns: repeat(3, max-content);
             gap: 49px 213px;
             align-items: start;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .hero-info-item-new {
@@ -131,28 +135,29 @@
         }
 
         .hero-info-label {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            color: #666;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.4);
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: 0.05em;
             margin: 0;
+            text-transform: uppercase;
         }
 
         .hero-info-value {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 400;
             font-size: 16px;
             color: #000;
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: normal;
             margin: 0;
-            margin-top: 20px;
+            margin-top: 12px;
         }
 
         .hero-image-section {
-            margin-top: 60px;
+            margin-top: 80px;
             margin-bottom: 0;
             width: 100%;
         }
@@ -160,12 +165,14 @@
         .hero-image-wrapper {
             overflow: hidden;
             position: relative;
+            border-radius: 40px;
         }
 
         .hero-image-wrapper img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 40px;
         }
 
         /* Portfolio Content Section */
@@ -173,39 +180,39 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px 80px 20px;
-            background-color: #ffffff;
+            padding: 0 40px 120px 40px;
+            background-color: #fafafa;
         }
 
         .portfolio-section {
-            margin-bottom: 80px;
+            margin-bottom: 160px;
         }
 
         .section-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 44px;
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
             font-weight: 400;
             color: #000;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
 
         .section-content {
-            font-family: 'Inter', sans-serif;
-            font-size: 24px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
             font-weight: 300;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.6;
+            margin-bottom: 32px;
         }
 
         .section-content p {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content ul {
             margin-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content li {
@@ -213,25 +220,27 @@
         }
 
         .highlight-box {
-            background-color: #f5f5f5;
-            border-left: 4px solid #333;
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 4px;
+            background-color: #fff;
+            border-left: 4px solid #000;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .highlight-box p {
             margin: 0;
             font-style: italic;
             color: #000;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
+            font-size: 24px;
         }
 
         .bullet-list {
             list-style-type: disc;
             margin-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
 
         .bullet-list li {
@@ -243,17 +252,18 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 80px 20px;
-            background-color: #f9f9f9;
+            padding: 120px 40px;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-radius: 40px 40px 0 0;
         }
 
         .slider-container {
             position: relative;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -264,8 +274,8 @@
         .slider-wrapper {
             width: 100%;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
             background-color: #fff;
             aspect-ratio: 16/9;
         }
@@ -285,13 +295,13 @@
         }
 
         .slider-btn {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
             transition: all 0.3s ease;
             z-index: 10;
@@ -301,15 +311,15 @@
         }
 
         .slider-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #000;
             transform: scale(1.1);
         }
 
         .slider-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 40px;
             flex-wrap: wrap;
             max-width: 800px;
         }
@@ -317,15 +327,15 @@
         .dot {
             width: 10px;
             height: 10px;
-            background-color: #ccc;
+            background-color: rgba(0, 0, 0, 0.2);
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         .dot.active {
-            background-color: #333;
-            transform: scale(1.2);
+            background-color: #000;
+            transform: scale(1.5);
         }
 
         /* Video Section */
@@ -333,17 +343,17 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 80px 20px;
-            background-color: #ffffff;
+            padding: 120px 40px;
+            background-color: #fafafa;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 60px;
         }
 
         .video-header {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
             font-size: 48px;
             color: #000;
@@ -361,30 +371,26 @@
         .trendpulse-video {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 1024px) {
             .hero-main-title {
                 font-size: 64px;
-                letter-spacing: -1.28px;
             }
 
             .hero-subtitle {
-                font-size: 64px;
-                letter-spacing: -1.28px;
+                font-size: 32px;
             }
 
             .hero-description {
-                font-size: 32px;
-                letter-spacing: -0.64px;
+                font-size: 18px;
             }
 
             .hero-info-label,
             .hero-info-value {
-                font-size: 20px;
-                letter-spacing: -0.4px;
+                font-size: 14px;
             }
         }
 
@@ -403,31 +409,19 @@
 
             .hero-main-title {
                 font-size: 48px;
-                letter-spacing: -0.96px;
             }
 
             .hero-subtitle {
-                font-size: 48px;
-                letter-spacing: -0.96px;
+                font-size: 24px;
             }
 
             .hero-description {
-                font-size: 24px;
-                letter-spacing: -0.48px;
+                font-size: 16px;
             }
 
             .hero-info-row {
                 gap: 30px 40px;
-            }
-
-            .hero-info-label,
-            .hero-info-value {
-                font-size: 18px;
-                letter-spacing: -0.36px;
-            }
-
-            .hero-info-value {
-                margin-top: 20px;
+                grid-template-columns: 1fr;
             }
 
             .portfolio-content {
@@ -477,7 +471,6 @@
             <div class="hero-section">
                 <h1 class="hero-main-title">
                     <p>TrendPulse</p>
-                    <p class="hero-subtitle">AI-Powered Trend Intelligence Platform</p>
                 </h1>
 
                 <!-- Info Row -->
@@ -512,10 +505,10 @@
                 </div>
             </div>
 
-            <h1 style="font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 400; color: #000; margin-top: 0; margin-bottom: 40px; line-height: 1.2; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 20px;">From Social Noise to Market Signals</h1>
+            <h1 style="font-family: 'Instrument Serif', serif; font-size: 80px; font-weight: 400; color: #000; margin-top: 0; margin-bottom: 40px; line-height: 1.2; max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 40px;">From Social Noise to Market Signals</h1>
 
             <!-- Description Text -->
-            <div class="hero-description" style="max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 20px; margin-bottom: 120px;">
+            <div class="hero-description" style="max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 40px; margin-bottom: 120px;">
                 <p>TrendPulse is an AI-driven trend intelligence platform designed to help travel creators make better content decisions—not based on intuition, but on real-time data.</p>
                 <p>The project focused on understanding how large-scale trend data is collected, processed, and delivered to users in a scalable cloud environment, while exploring how UI can surface complex backend insights in a clear, actionable way.</p>
                 <p>This project was less about polished UI and more about learning how product design, data pipelines, and cloud architecture work together to support real-world services.</p>
@@ -534,7 +527,7 @@
 
                 <div class="portfolio-section">
                     <h2 class="section-title">Problem</h2>
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 16px; margin-bottom: 16px;">Why creators struggle with trend-based content decisions</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 16px; margin-bottom: 16px;">Why creators struggle with trend-based content decisions</h3>
                     <div class="section-content">
                         <p>Travel creators often rely on instinct or outdated tools when deciding:</p>
                         <ul class="bullet-list">
@@ -554,7 +547,7 @@
 
                 <div class="portfolio-section">
                     <h2 class="section-title">Solution</h2>
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 16px; margin-bottom: 16px;">TrendPulse reframes content planning as a data problem</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 16px; margin-bottom: 16px;">TrendPulse reframes content planning as a data problem</h3>
                     <div class="section-content">
                         <p>TrendPulse provides creators with:</p>
                         <ul class="bullet-list">
@@ -569,7 +562,7 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">Key Features</h2>
                     
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">1. Regularly Updated Travel Trend Insights</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 32px; margin-bottom: 16px;">1. Regularly Updated Travel Trend Insights</h3>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Collects trend data every 2 hours</li>
@@ -578,7 +571,7 @@
                         </ul>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">2. Sentiment & Mood Analysis</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 16px;">2. Sentiment & Mood Analysis</h3>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Analyzes how people emotionally respond to destinations and trends</li>
@@ -587,7 +580,7 @@
                         </ul>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">3. AI Content Idea Generator</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 16px;">3. AI Content Idea Generator</h3>
                     <div class="section-content">
                         <p>Converts processed trend data into:</p>
                         <ul class="bullet-list">
@@ -599,7 +592,7 @@
                         <p>Bridges raw data and creative execution</p>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">4. AI Assistant</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 16px;">4. AI Assistant</h3>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Allows users to ask questions directly about trends</li>
@@ -626,11 +619,11 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">MVP Architecture (What I Learned)</h2>
                     
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">Separation of Concerns</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 32px; margin-bottom: 16px;">Separation of Concerns</h3>
                     <div class="section-content">
                         <p>The system is divided into two independent layers:</p>
                         
-                        <h4 style="font-size: 20px; font-weight: 400; margin-top: 24px; margin-bottom: 12px;">1. Data Pipeline Architecture</h4>
+                        <h4 style="font-size: 20px; font-weight: 500; margin-top: 24px; margin-bottom: 12px; font-family: 'Outfit', sans-serif;">1. Data Pipeline Architecture</h4>
                         <ul class="bullet-list">
                             <li>Collects data from sources like YouTube and Reddit</li>
                             <li>Processes trends on a scheduled basis (every 2 hours)</li>
@@ -638,7 +631,7 @@
                             <li>Designed so failures never affect user experience</li>
                         </ul>
 
-                        <h4 style="font-size: 20px; font-weight: 400; margin-top: 24px; margin-bottom: 12px;">2. User-Facing System</h4>
+                        <h4 style="font-size: 20px; font-weight: 500; margin-top: 24px; margin-bottom: 12px; font-family: 'Outfit', sans-serif;">2. User-Facing System</h4>
                         <ul class="bullet-list">
                             <li>Serves fast, responsive user interactions</li>
                             <li>Queries only processed and stable data</li>
@@ -653,7 +646,7 @@
                         </ul>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">Cost Awareness & Scalability</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 16px;">Cost Awareness & Scalability</h3>
                     <div class="section-content">
                         <p>Through this project, I learned how:</p>
                         <ul class="bullet-list">
@@ -673,7 +666,7 @@
                 <div class="portfolio-section">
                     <h2 class="section-title">My Role & Takeaways</h2>
                     
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 32px; margin-bottom: 16px;">My Contribution</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 32px; margin-bottom: 16px;">My Contribution</h3>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Participated in early UI design and feature definition</li>
@@ -683,7 +676,7 @@
                         </ul>
                     </div>
 
-                    <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 16px;">What I Learned</h3>
+                    <h3 class="section-title" style="font-size: 32px; font-style: italic; margin-top: 48px; margin-bottom: 16px;">What I Learned</h3>
                     <div class="section-content">
                         <ul class="bullet-list">
                             <li>Good UI depends on how data is processed behind the scenes</li>
@@ -697,7 +690,7 @@
 
             <!-- Presentation Slider Section -->
             <section class="presentation-section">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 400;">Presentation</h2>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Instrument Serif', serif; font-size: 48px; font-weight: 400;">Presentation</h2>
                 
                 <div class="slider-container">
                     <button class="slider-btn prev-btn" aria-label="Previous slide">←</button>

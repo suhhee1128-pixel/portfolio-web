@@ -1,13 +1,5 @@
 /* Font loading optimization */
-@font-face {
-    font-family: 'Archivo';
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap');
 
 /* Reset and base styles */
 * {
@@ -21,10 +13,10 @@ html {
 }
 
 body {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    background-color: #fafafa;
     line-height: 1.6;
-    color: #000;
+    color: #1a1a1a;
     min-height: 100vh;
     font-display: swap;
 }
@@ -35,9 +27,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+    background-color: rgba(250, 250, 250, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 1000;
     padding: 20px 0;
 }
@@ -45,19 +38,20 @@ body {
 .header .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 500;
-    font-size: 24px;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 32px;
+    font-style: italic;
     color: #000000;
     margin: 0;
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
 }
 
 .nav ul {
@@ -65,21 +59,21 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 40px;
+    gap: 60px;
 }
 
 .nav a {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #636363;
+    color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
     transition: color 0.3s ease;
     position: relative;
 }
 
 .nav a:hover {
-    color: #FF6B9D;
+    color: #000000;
 }
 
 .nav a::after {
@@ -88,8 +82,8 @@ body {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: #FF6B9D;
+    height: 1px;
+    background-color: #000000;
     transition: width 0.3s ease;
 }
 
@@ -114,17 +108,17 @@ body {
     max-width: 1400px;
     display: flex;
     flex-direction: column;
-    gap: 42px;
-    margin-bottom: 100px;
+    gap: 60px;
+    margin-bottom: 140px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .profile-image {
     width: 140px;
     height: 140px;
-    border-radius: 8px;
+    border-radius: 40px;
     overflow: hidden;
 }
 
@@ -140,31 +134,34 @@ body {
 .intro-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 /* Main Title */
 .main-title h1 {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Instrument Serif', serif;
     font-weight: 400;
-    font-size: 64px;
-    line-height: 1.1;
+    font-size: 96px;
+    line-height: 1;
     color: #000;
     margin: 0;
+    letter-spacing: -0.03em;
 }
 
 .subtitle {
+    font-family: 'Instrument Serif', serif;
     font-weight: 400;
+    font-style: italic;
 }
 
 .typing-text {
     position: relative;
-    color: #fcabc8;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .typing-text::after {
     content: '|';
-    color: #FF6B9D;
+    color: #000;
     font-weight: 300;
     animation: blink 1s infinite;
 }
@@ -176,11 +173,12 @@ body {
 
 /* Description */
 .description {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 24px;
-    line-height: 32px;
-    color: #333333;
-    max-width: 1000px; /* 너비를 충분히 늘려서 원치 않는 줄바꿈 방지 */
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 1000px;
+    font-weight: 300;
 }
 
 .description p {
@@ -188,7 +186,7 @@ body {
 }
 
 .muted {
-    color: #ffabc8;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 /* Desktop Line Break Control */
@@ -198,7 +196,7 @@ body {
 
 @media (max-width: 768px) {
     .desktop-br {
-        display: none !important; /* 모바일에서는 강제 줄바꿈 확실히 숨김 */
+        display: none !important;
     }
 }
 
@@ -214,15 +212,16 @@ body {
 .availability-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 13px 15px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 144, 160, 0.6);
-    border-radius: 400px;
-    box-shadow: 0px 0px 6px 0px rgba(255, 182, 193, 0.8);
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    gap: 12px;
+    padding: 16px 24px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
-    color: #d4255f;
+    font-weight: 500;
+    color: #000;
     cursor: pointer;
     transition: all 0.3s ease;
     width: fit-content;
@@ -230,19 +229,20 @@ body {
 }
 
 .availability-button:hover {
-    box-shadow: 0px 0px 8px 0px rgba(255, 182, 193, 1);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-    border-color: rgba(255, 144, 160, 0.8);
-    color: #c41e5a;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #000;
 }
 
 .heart-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #000;
 }
 
 .heart-icon svg {
@@ -253,36 +253,20 @@ body {
     transform: scale(1.1);
 }
 
-.resume-icon {
-    width: 24px;
-    height: 24px;
+.resume-icon, .linkedin-icon {
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.resume-icon svg {
+.resume-icon svg, .linkedin-icon svg {
     transition: transform 0.2s ease;
 }
 
-.resume-button:hover .resume-icon svg {
-    transform: scale(1.1);
-}
-
-.linkedin-icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.linkedin-icon svg {
-    transition: transform 0.2s ease;
-}
-
+.resume-button:hover .resume-icon svg,
 .linkedin-button:hover .linkedin-icon svg {
     transform: scale(1.1);
 }
@@ -291,14 +275,15 @@ body {
 .linkedin-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 13px 24px;
+    gap: 12px;
+    padding: 16px 24px;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    border-radius: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
     box-shadow: none;
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     color: #000000;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -310,22 +295,24 @@ body {
 .linkedin-button:hover {
     box-shadow: none;
     transform: translateY(-2px);
-    border-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(0, 0, 0, 0.3);
     color: #000000;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 /* View Resume button */
 .resume-button {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 13px 24px;
+    gap: 12px;
+    padding: 16px 24px;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    border-radius: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
     box-shadow: none;
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     color: #000000;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -337,8 +324,9 @@ body {
 .resume-button:hover {
     box-shadow: none;
     transform: translateY(-2px);
-    border-color: rgba(0, 0, 0, 0.8);
+    border-color: rgba(0, 0, 0, 0.3);
     color: #000000;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 /* Social links */
@@ -352,18 +340,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .social-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
@@ -383,7 +371,7 @@ body {
 }
 
 .social-link:hover .social-icon svg {
-    color: #333333;
+    color: #000;
 }
 
 /* Skills Section */
@@ -399,32 +387,32 @@ body {
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 24px;
+    gap: 32px;
     margin-top: 0;
     align-items: stretch;
 }
 
 .skill-card {
     background-color: #ffffff;
-    border: 1px solid rgba(99, 99, 99, 0.2);
-    border-radius: 8px;
-    padding: 32px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    padding: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     height: 100%;
 }
 
 .skill-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .skill-icon {
@@ -435,7 +423,7 @@ body {
 
 .tool-logos {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -447,6 +435,7 @@ body {
     height: 40px;
     border-radius: 8px;
     transition: transform 0.2s ease;
+    opacity: 0.8;
 }
 .tool-logos img[alt="Figma"] {
     width: 46px;
@@ -456,23 +445,25 @@ body {
 .tool-logos svg:hover,
 .tool-logos img:hover {
     transform: scale(1.1);
+    opacity: 1;
 }
 
 .skill-card h3 {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.3;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
     color: #000000;
     margin: 0;
+    font-style: italic;
 }
 
 .skill-card p {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
     font-size: 16px;
-    line-height: 1.5;
-    color: #636363;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
     margin: 0;
     flex-grow: 1;
 }
@@ -481,70 +472,71 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .tag {
-    background-color: rgba(255, 107, 157, 0.1);
-    color: #FF6B9D;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #000;
+    font-family: 'Outfit', sans-serif;
     font-weight: 500;
     font-size: 14px;
-    padding: 4px 12px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 107, 157, 0.2);
+    padding: 6px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.2s ease;
 }
 
 .tag:hover {
-    background-color: rgba(255, 107, 157, 0.2);
-    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.02);
 }
 
 
 /* Projects Section */
 .projects-section {
     position: relative;
-    margin-top: 100px;
+    margin-top: 160px;
     width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 100px;
+    gap: 40px;
+    margin-bottom: 160px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 /* Projects 서브텍스트 */
 .projects-subtitle {
     text-align: left;
-    margin: -30px 0 5px 0;
+    margin: -40px 0 10px 0;
 }
 
 .projects-subtitle p {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 24px;
-    color: #636363;
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.4);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
 }
 
 .section-title {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Instrument Serif', serif;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 64px;
     color: #000;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 60px;
     width: 100%;
 }
 
@@ -574,22 +566,23 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: #f8f9fa;
-    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
     aspect-ratio: 16 / 10;
+    border-radius: 40px;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
+    border-radius: 40px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover .project-image img,
 .about-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .project-overlay {
@@ -604,39 +597,41 @@ body {
 }
 
 .project-title {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 400 !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500 !important;
     font-size: 14px;
-    color: #999;
+    color: rgba(0, 0, 0, 0.4);
     text-align: left;
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
     padding: 0;
     line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .project-date {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 14px;
-    color: #636363;
+    color: rgba(0, 0, 0, 0.4);
     text-align: center;
     margin: 0;
 }
 
 .project-description {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 24px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
     font-weight: 400;
     color: #000;
     text-align: left;
     margin: 0;
     padding: 0;
-    line-height: 1.4;
+    line-height: 1.3;
     max-width: 100%;
 }
 
 
 .project-content {
-    padding: 20px;
+    padding: 20px 0;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -644,34 +639,34 @@ body {
 }
 
 .project-content h3 {
-    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    font-weight: 400;
     color: #000;
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
 }
 
 .project-content p {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-    color: #636363;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /* About Section */
 .about-section {
     position: relative;
-    margin-top: 100px;
+    margin-top: 160px;
     width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 100px;
+    gap: 40px;
+    margin-bottom: 160px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .about-section .section-title {
@@ -681,7 +676,7 @@ body {
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 60px;
 }
 
 .about-card {
@@ -699,15 +694,15 @@ body {
 /* About Me 서브텍스트 */
 .about-subtitle {
     text-align: left;
-    margin: -30px 0 5px 0;
+    margin: -40px 0 10px 0;
 }
 
 .about-subtitle p {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 24px;
-    color: #636363;
+    font-family: 'Instrument Serif', serif;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.4);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
 }
 

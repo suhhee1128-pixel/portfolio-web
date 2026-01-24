@@ -7,62 +7,92 @@
     <link rel="stylesheet" href="character-design.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #000000;
-            color: #FFFFFF;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            font-family: 'Outfit', sans-serif;
         }
 
         .main {
-            background-color: #000000;
+            background-color: #fafafa;
         }
 
         .hero-section {
-            background-color: #000000;
+            background-color: #fafafa;
+            padding: 120px 40px;
         }
 
         .hero-title {
-            color: #FFFFFF;
-            font-weight: 300;
-            font-size: 80px;
+            font-family: 'Instrument Serif', serif;
+            color: #000;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 1;
+            letter-spacing: -0.03em;
         }
 
         .hero-description {
-            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
         .case-study {
-            background-color: #000000;
+            background-color: #fafafa;
         }
 
         .case-study-container {
-            background-color: #000000;
+            background-color: #fafafa;
         }
 
         .section-heading {
-            color: #FFFFFF;
+            font-family: 'Instrument Serif', serif;
+            color: #000;
+            font-weight: 400;
+            font-size: 48px;
         }
 
         .body-text {
-            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.6;
         }
 
         .bullet-list {
-            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            font-weight: 300;
         }
 
         .subsection-heading {
-            color: #FFFFFF;
+            font-family: 'Instrument Serif', serif;
+            color: #000;
+            font-weight: 400;
+            font-size: 32px;
+            font-style: italic;
         }
 
         .back-link {
-            color: #FFFFFF;
+            font-family: 'Outfit', sans-serif;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #000;
         }
 
         .project-nav {
-            background: rgba(0, 0, 0, 0.95);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(250, 250, 250, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .hero-visit-button {
@@ -71,26 +101,37 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 14px 35px;
+            padding: 16px 32px;
             gap: 10px;
             width: fit-content;
             height: auto;
-            background: #FFFFFF;
-            border: 1px solid #000000;
+            background: #000;
+            border: 1px solid #000;
             border-radius: 100px;
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 24px;
-            color: #000000;
-            margin-top: 40px;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 60px;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .hero-visit-button:hover {
-            background: #E73E2D;
-            border-color: #E73E2D;
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-caption {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-top: 16px;
+            text-align: center;
         }
     </style>
 </head>
@@ -103,7 +144,7 @@
         <!-- Hero Section -->
         <div class="hero-section">
             <h1 class="hero-title">4suho god</h1>
-            <p class="hero-description" style="font-size: 32px; font-weight: 300; line-height: 1.2; margin-top: 48px; margin-bottom: 0; max-width: 100%;">
+            <p class="hero-description" style="margin-top: 40px; margin-bottom: 0; max-width: 100%;">
                 This interactive mixed-media exhibition redefined a familiar campus through spatial storytelling, transforming Kookmin University into a legendary landscape.<br>
                 Inspired by traditional Obangsaek colors and their corresponding elements—wood, earth, fire, water, and metal—the exhibition unfolded through four spatial booths, each forming its own narrative based on directional symbolism.<br>
                 <br>
@@ -120,27 +161,27 @@
         </div>
 
         <!-- Images Section -->
-        <div style="width: 100%; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <div style="width: 100%; margin: 0; padding: 0 40px; display: flex; flex-direction: column; align-items: center; gap: 40px;">
             <div style="max-width: 1200px; width: 100%; margin: 0 0 60px 0; padding: 0;">
-                <img src="images/4suhogod/1.png" alt="4suho god Image 1" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-                <p class="image-caption" style="text-align: center; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 20px; color: #FFFFFF; margin-top: 12px; margin-bottom: 0;">AR Filter Applied Exhibition Screen</p>
+                <img src="images/4suhogod/1.png" alt="4suho god Image 1" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+                <p class="image-caption">AR Filter Applied Exhibition Screen</p>
             </div>
             <div style="max-width: 1200px; width: 100%; margin: 0 0 120px 0; padding: 0;">
-                <img src="images/4suhogod/2.png" alt="4suho god Image 2" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-                <p class="image-caption" style="text-align: center; font-family: 'Inter', sans-serif; font-weight: 300; font-size: 20px; color: #FFFFFF; margin-top: 12px; margin-bottom: 0;">Exhibition Scene</p>
+                <img src="images/4suhogod/2.png" alt="4suho god Image 2" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+                <p class="image-caption">Exhibition Scene</p>
             </div>
-            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 0 0 20px 0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 400; font-size: 28px;">AR Character & Sticker & Card</h2>
-            <img src="images/4suhogod/3.png" alt="4suho god Image 3" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/11.png" alt="4suho god Image 11" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/4.png" alt="4suho god Image 4" style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 0 120px 0; padding: 0;" />
-            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 0 0 20px 0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 400; font-size: 28px;">Process</h2>
-            <img src="images/4suhogod/10.png" alt="4suho god Image 10" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/7.png" alt="4suho god Image 7" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/8.png" alt="4suho god Image 8" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/12.png" alt="4suho god Image 12" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <img src="images/4suhogod/13.png" alt="4suho god Image 13" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
-            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 120px 0 20px 0; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 400; font-size: 28px;">Review</h2>
-            <img src="images/4suhogod/review.png" alt="4suho god Review" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0;" />
+            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 0 0 32px 0;">AR Character & Sticker & Card</h2>
+            <img src="images/4suhogod/3.png" alt="4suho god Image 3" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/11.png" alt="4suho god Image 11" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/4.png" alt="4suho god Image 4" style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 0 120px 0; padding: 0; border-radius: 40px;" />
+            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 0 0 32px 0;">Process</h2>
+            <img src="images/4suhogod/10.png" alt="4suho god Image 10" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/7.png" alt="4suho god Image 7" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/8.png" alt="4suho god Image 8" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/12.png" alt="4suho god Image 12" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <img src="images/4suhogod/13.png" alt="4suho god Image 13" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
+            <h2 class="subsection-heading" style="max-width: 1200px; width: 100%; margin: 120px 0 32px 0;">Review</h2>
+            <img src="images/4suhogod/review.png" alt="4suho god Review" style="max-width: 1200px; width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 40px;" />
         </div>
     </div>
 
@@ -156,4 +197,3 @@
     </footer>
 </body>
 </html>
-

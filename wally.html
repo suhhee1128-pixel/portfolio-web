@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        html, body {
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            min-height: 100vh;
             margin: 0;
             padding: 0;
             width: 100%;
@@ -27,7 +24,6 @@
         .wally-page {
             width: 100%;
             min-height: 100vh;
-            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -38,23 +34,25 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 20px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(99, 99, 99, 0.1);
+            padding: 20px 40px;
+            background: rgba(250, 250, 250, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .back-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 20px;
-            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.6);
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            transition: color 0.3s ease;
             letter-spacing: 0.5px;
         }
 
         .back-link:hover {
-            opacity: 0.7;
+            color: #000;
         }
 
         .wally-content {
@@ -65,22 +63,22 @@
 
         /* Hero Section Styles */
         .hero-section {
-            padding: 80px 20px;
-            background-color: #ffffff;
+            padding: 120px 40px;
+            background-color: #fafafa;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .hero-main-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
+            font-size: 96px;
             color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            line-height: 1;
+            letter-spacing: 0em;
             margin: 0;
             margin-bottom: 0;
-            max-width: 1600px;
+            max-width: 100%;
         }
 
         .hero-main-title p {
@@ -88,27 +86,28 @@
         }
 
         .hero-subtitle {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 80px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -1.6px;
+            font-size: 32px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.3;
+            letter-spacing: normal;
             margin: 0;
+            font-style: italic;
         }
 
         .hero-description {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 300;
-            font-size: 26px;
-            color: #000;
-            line-height: normal;
-            letter-spacing: -0.52px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.6;
+            letter-spacing: normal;
             margin: 0;
             margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 29px;
+            gap: 24px;
         }
 
         .hero-description p {
@@ -120,14 +119,7 @@
             grid-template-columns: repeat(3, max-content);
             gap: 49px 213px;
             align-items: start;
-            margin-top: 40px;
-        }
-
-        .hero-info-item-new {
-            display: grid;
-            grid-template-columns: max-content;
-            grid-template-rows: max-content;
-            place-items: start;
+            margin-top: 60px;
         }
 
         .hero-info-item-new {
@@ -138,51 +130,54 @@
         }
 
         .hero-info-label {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            color: #666;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.4);
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: 0.05em;
             margin: 0;
+            text-transform: uppercase;
         }
 
         .hero-info-value {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-weight: 400;
             font-size: 16px;
             color: #000;
             line-height: normal;
-            letter-spacing: -0.32px;
+            letter-spacing: normal;
             margin: 0;
-            margin-top: 20px;
+            margin-top: 12px;
         }
 
         .hero-image-section {
-            margin-top: 60px;
+            margin-top: 80px;
             width: 100%;
         }
 
         .hero-image-wrapper {
             overflow: hidden;
             position: relative;
+            border-radius: 40px;
         }
 
         .hero-image-wrapper img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 40px;
         }
 
         .hero-question {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Instrument Serif', serif;
             font-weight: 400;
-            font-size: 70px;
-            line-height: 85px;
+            font-size: 64px;
+            line-height: 1.1;
             letter-spacing: -0.02em;
             color: #000000;
             margin: 0;
-            margin-top: 60px;
+            margin-top: 80px;
             width: 100%;
             max-width: 1551px;
         }
@@ -197,26 +192,28 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 14px 35px;
+            padding: 16px 32px;
             gap: 10px;
             width: fit-content;
             height: auto;
-            background: #FFFFFF;
-            border: 1px solid #000000;
+            background: #000;
+            border: 1px solid #000;
             border-radius: 100px;
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 28px;
-            color: #000000;
-            margin-top: 40px;
-            transition: background-color 0.2s ease, border-color 0.2s ease;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 60px;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .hero-visit-button:hover {
-            background: #A6FF82;
-            border-color: #A6FF82;
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .hero-visit-button::after {
@@ -229,8 +226,8 @@
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px 80px 20px;
-            background-color: #ffffff;
+            padding: 0 40px 120px 40px;
+            background-color: #fafafa;
         }
 
         .portfolio-image-placeholder {
@@ -242,24 +239,25 @@
             align-items: center;
             justify-content: center;
             color: #666;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 32px;
-            border-radius: 8px;
+            border-radius: 40px;
         }
 
         .portfolio-section {
-            margin-bottom: 120px;
+            margin-bottom: 160px;
         }
 
         .final-ui-section {
-            background-color: #f5f5f5;
+            background-color: #fff;
             width: 100vw;
             position: relative;
             left: 50%;
             margin-left: -50vw;
-            padding: 80px 20px;
+            padding: 120px 40px;
+            border-radius: 40px 40px 0 0;
         }
         
         .final-ui-section .section-title,
@@ -270,30 +268,30 @@
         }
 
         .section-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 44px;
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
             font-weight: 400;
             color: #000;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
 
         .section-content {
-            font-family: 'Inter', sans-serif;
-            font-size: 28px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
             font-weight: 300;
-            color: #333;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.6;
+            margin-bottom: 32px;
         }
 
         .section-content p {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content ul {
             margin-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .section-content li {
@@ -301,52 +299,57 @@
         }
 
         .highlight-box {
-            background-color: #f5f5f5;
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 4px;
+            background-color: #fff;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .highlight-box p {
             margin: 0;
             font-style: italic;
             color: #000;
-            font-weight: 500;
+            font-weight: 400;
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
         }
 
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            margin: 32px 0;
+            gap: 32px;
+            margin: 40px 0;
         }
 
         .metric-item {
-            background-color: #f8f8f8;
-            padding: 24px;
-            border-radius: 8px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 24px;
             text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .metric-value {
-            font-family: 'Inter', sans-serif;
-            font-size: 60px;
+            font-family: 'Instrument Serif', serif;
+            font-size: 80px;
             font-weight: 400;
             color: #000;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            line-height: 1;
         }
 
         .metric-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 18px;
-            color: #666;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
         }
 
         /* Thanks Section */
         .thanks-section {
             width: 100%;
-            padding: 0 20px 100px 20px;
-            background-color: #ffffff;
+            padding: 0 40px 120px 40px;
+            background-color: #fafafa;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -355,9 +358,9 @@
         }
 
         .thanks-title {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            font-size: 28px;
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
+            font-size: 48px;
             color: #000;
             text-align: center;
             line-height: 1.2;
@@ -369,34 +372,34 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 15px 25px;
+            padding: 16px 32px;
             gap: 10px;
-            width: 241px;
-            height: 55px;
-            background: rgba(255, 255, 255, 0.5);
-            border: 0.5px solid #4ACC80;
-            box-shadow: 0px 0px 48.2px rgba(74, 204, 128, 0.15);
-            border-radius: 46px;
+            width: fit-content;
+            height: auto;
+            background: #000;
+            border: 1px solid #000;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 100px;
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
             transition: all 0.3s ease;
             white-space: nowrap;
         }
 
         .thanks-link-button:hover {
-            background: rgba(255, 255, 255, 0.7);
-            box-shadow: 0px 0px 48.2px rgba(74, 204, 128, 0.25);
+            background: #fff;
+            color: #000;
             transform: scale(1.02);
         }
 
         /* Video Section */
         .video-section {
             width: 100%;
-            padding: 0 20px 100px 20px;
-            background-color: #ffffff;
+            padding: 0 40px 120px 40px;
+            background-color: #fafafa;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -405,8 +408,8 @@
         }
 
         .video-header {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
+            font-family: 'Instrument Serif', serif;
+            font-weight: 400;
             font-size: 48px;
             color: #000;
             text-align: center;
@@ -423,24 +426,25 @@
         .wally-video {
             width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         /* Presentation Slider Styles */
         .presentation-section {
             width: 100%;
-            padding: 80px 20px;
-            background-color: #f9f9f9;
+            padding: 120px 40px;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border-radius: 40px 40px 0 0;
         }
 
         .slider-container {
             position: relative;
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -451,8 +455,8 @@
         .slider-wrapper {
             width: 100%;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
             background-color: #fff;
             aspect-ratio: 16/9;
         }
@@ -472,11 +476,11 @@
         }
 
         .slider-btn {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             font-size: 28px;
             cursor: pointer;
@@ -488,15 +492,15 @@
         }
 
         .slider-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
             transform: scale(1.1);
+            background-color: #000;
         }
 
         .slider-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 12px;
+            margin-top: 40px;
             flex-wrap: wrap;
             max-width: 800px;
         }
@@ -504,81 +508,64 @@
         .dot {
             width: 10px;
             height: 10px;
-            background-color: #ccc;
+            background-color: rgba(0, 0, 0, 0.2);
             border-radius: 50%;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .dot.active {
-            background-color: #333;
-            transform: scale(1.2);
+            background-color: #000;
+            transform: scale(1.5);
         }
 
         /* Back to Projects Button */
         .back-section {
             text-align: center;
-            margin: 80px 0 100px 0;
+            margin: 120px 0 160px 0;
         }
 
         .back-button {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 20px 40px;
             background-color: transparent;
-            border: 2px solid #FF6B9D;
-            border-radius: 8px;
-            color: #FF6B9D;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-                font-size: 16px;
+            border: 1px solid #000;
+            border-radius: 100px;
+            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .back-button:hover {
-            background-color: #FF6B9D;
+            background-color: #000;
             color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0px 4px 12px rgba(255, 107, 157, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 1024px) {
             .hero-main-title {
                 font-size: 64px;
-                letter-spacing: -1.28px;
             }
 
             .hero-subtitle {
-                font-size: 64px;
-                letter-spacing: -1.28px;
+                font-size: 24px;
             }
 
             .hero-description {
-                font-size: 32px;
-                letter-spacing: -0.64px;
+                font-size: 18px;
             }
 
             .hero-info-label,
             .hero-info-value {
-                font-size: 20px;
-                letter-spacing: -0.4px;
+                font-size: 14px;
             }
 
             .hero-question {
-                font-size: 49px;
-                line-height: 59px;
-                letter-spacing: -0.02em;
-            }
-
-            .hero-visit-button {
-                width: auto;
-                height: auto;
-                padding: 18px 28px;
-                font-size: 18px;
-            }
-            
-            .hero-visit-button::after {
-                font-size: 18px;
+                font-size: 48px;
             }
         }
 
@@ -597,60 +584,28 @@
 
             .hero-main-title {
                 font-size: 48px;
-                letter-spacing: -0.96px;
             }
 
             .hero-subtitle {
-                font-size: 48px;
-                letter-spacing: -0.96px;
+                font-size: 20px;
             }
 
             .hero-description {
-                font-size: 28px;
-                letter-spacing: -0.48px;
+                font-size: 16px;
             }
 
             .hero-info-row {
                 gap: 30px 40px;
-            }
-
-            .hero-info-label,
-            .hero-info-value {
-                font-size: 18px;
-                letter-spacing: -0.36px;
-            }
-
-            .hero-info-value {
-                margin-top: 20px;
+                grid-template-columns: 1fr;
             }
 
             .hero-image-wrapper {
-                padding: 32px;
-            }
-
-            .hero-image-container {
-                flex-direction: column;
-            }
-
-            .hero-image-left {
-                width: 100%;
+                padding: 0;
             }
 
             .hero-question {
-                font-size: 35px;
-                line-height: 42px;
-                letter-spacing: -0.02em;
-            }
-
-            .hero-visit-button {
-                width: auto;
-                height: auto;
-                padding: 18px 28px;
-                font-size: 18px;
-            }
-            
-            .hero-visit-button::after {
-                font-size: 18px;
+                font-size: 32px;
+                line-height: 1.2;
             }
 
             .portfolio-content {
@@ -658,7 +613,7 @@
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             .section-content {
@@ -667,6 +622,10 @@
 
             .metrics-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .metric-value {
+                font-size: 60px;
             }
 
             .presentation-section {
@@ -706,13 +665,6 @@
             .thanks-title {
                 font-size: 28px;
             }
-
-            .thanks-link-button {
-                width: 200px;
-                height: 48px;
-                padding: 12px 20px;
-                font-size: 16px;
-            }
         }
     </style>
 </head>
@@ -727,8 +679,7 @@
             <!-- Hero Section -->
             <div class="hero-section">
                 <h1 class="hero-main-title">
-                    <p>Wally.</p>
-                    <p class="hero-subtitle">AI-driven personal finance platform</p>
+                    <p>Wally</p>
                 </h1>
 
                 <!-- Info Row -->
@@ -848,23 +799,23 @@
                     </div>
                     <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Goal Setting</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Define target amount and timeframe</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Goal Setting</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Define target amount and timeframe</p>
                             <img src="images/wally/001.png" alt="Report Flow 1" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Daily Tracking</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Monitor daily spending against goal</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Daily Tracking</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Monitor daily spending against goal</p>
                             <img src="images/wally/002.png" alt="Report Flow 2" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Report Page</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Review daily performance and spending patterns</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Report Page</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Review daily performance and spending patterns</p>
                             <img src="images/wally/003.png" alt="Report Flow 3" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                 </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Spending Breakdown</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Visualize spending distribution by category</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Spending Breakdown</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Visualize spending distribution by category</p>
                             <img src="images/wally/004.png" alt="Report Flow 4" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                                 </div>
                             </div>
@@ -909,7 +860,7 @@
                         
                         <p>To evaluate how users perceived Wally after hands-on use, I conducted a user survey focused on clarity, usefulness, and behavioral impact.</p>
                         
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">What Users Valued Most</h4>
+                        <h4 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">What Users Valued Most</h4>
                         <ul class="bullet-list">
                             <li><strong>Actionable, behavior-shaping advice</strong><br>Users consistently praised the app for providing specific and practical spending advice, rather than generic financial tips. This reinforced the decision to position Wally as a behavioral coaching tool, not a passive tracker.</li>
                             <li><strong>Engaging and approachable UI</strong><br>Participants described the UI as "cute" and engaging, noting that the friendly visual tone made the experience feel less judgmental and more motivating—supporting long-term engagement.</li>
@@ -917,14 +868,14 @@
                     </ul>
                         
 
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">Areas for Improvement (Identified Through Survey)</h4>
+                        <h4 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">Areas for Improvement (Identified Through Survey)</h4>
                         <ul class="bullet-list">
                             <li><strong>AI responses lacked clarity at times</strong><br>While users appreciated the tone, several mentioned that AI responses could feel noisy or overly verbose, highlighting the need for more concise, scannable explanations.</li>
                             <li><strong>Desire for more spending categories</strong><br>Users wanted additional and more granular categories, suggesting opportunities for category expansion and customization.</li>
                             <li><strong>Feature usage was not always intuitive</strong><br>Some participants were unsure how to fully use certain features, pointing to the need for lightweight onboarding cues and micro-copy guidance.</li>
                     </ul>
 
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">How These Insights Informed Next Steps</h4>
+                        <h4 style="font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 400; margin-top: 32px; margin-bottom: 16px;">How These Insights Informed Next Steps</h4>
                         <p>Based on the survey findings, I identified clear follow-up actions:</p>
                         <ul class="bullet-list">
                             <li>Enabled users to toggle AI responses on and off</li>
@@ -972,9 +923,9 @@
                             <li>Visual grouping aligned with card-sorting results</li>
                             <li>Reduced noise and improved scanability</li>
                     </ul>
-                    <div style="margin-top: 24px;">
-                        <h4 style="font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 400; margin-bottom: 12px; color: #000;">Impact</h4>
-                        <ul style="font-family: 'Inter', sans-serif; font-size: 28px; color: #333; line-height: 1.6; margin-left: 20px; margin-top: 8px;">
+                    <div style="margin-top: 40px;">
+                        <h4 style="font-family: 'Instrument Serif', serif; font-size: 32px; font-weight: 400; font-style: italic; margin-bottom: 16px; color: #000;">Impact</h4>
+                        <ul style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 300; color: rgba(0, 0, 0, 0.8); line-height: 1.6; margin-left: 20px; margin-top: 8px;">
                             <li style="margin-bottom: 8px;">Reduced report page depth to improve access to the tracker and full spending history</li>
                             <li>+20% increase in feature comprehension after card sorting usability testing</li>
                         </ul>
@@ -986,36 +937,36 @@
                     <h2 class="section-title">Final UI Design</h2>
                     <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Login</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">User authentication and account access</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Login</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">User authentication and account access</p>
                             <img src="images/wally/01.png" alt="Login Screen" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                                 </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Main Home</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Overview of daily goal progress and quick access to insights</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Main Home</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Overview of daily goal progress and quick access to insights</p>
                             <img src="images/wally/02.png" alt="Main Home Screen" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Expense Entry</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Record spending transactions with category and mood</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Expense Entry</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Record spending transactions with category and mood</p>
                             <img src="images/wally/03.png" alt="Expense Entry Screen" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                                 </div>
                             </div>
                     <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 24px;">Mood & AI Chat Page</h3>
                     <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Mood Page</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Track spending patterns by emotional state</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Mood Page</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Track spending patterns by emotional state</p>
                             <img src="images/wally/0001.png" alt="Mood Page" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">AI Chat</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Receive personalized, goal-based guidance</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">AI Chat</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Receive personalized, goal-based guidance</p>
                             <img src="images/wally/00001.png" alt="AI Chat Page 1" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">AI Chat</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Receive personalized, goal-based guidance</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">AI Chat</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Receive personalized, goal-based guidance</p>
                             <img src="images/wally/00002.png" alt="AI Chat Page 2" style="width: 100%; max-width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                     </div>
@@ -1023,18 +974,18 @@
                     <h3 class="section-title" style="font-size: 28px; margin-top: 48px; margin-bottom: 24px;">Web UI</h3>
                     <div style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Goal Setting</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Define target amount and timeframe</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Goal Setting</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Define target amount and timeframe</p>
                             <img src="images/wally/111.png" alt="Web Version 1" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Main Home</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Overview of daily goal progress and quick access to insights</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Main Home</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Overview of daily goal progress and quick access to insights</p>
                             <img src="images/wally/12.png" alt="Web Version 2" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                         </div>
                         <div style="text-align: center;">
-                            <p style="margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 600; color: #333;">Report Page</p>
-                            <p style="margin-bottom: 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Review daily performance and spending patterns</p>
+                            <p style="margin-bottom: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; color: #333;">Report Page</p>
+                            <p style="margin-bottom: 16px; font-family: 'Outfit', sans-serif; font-size: 14px; color: #666; line-height: 1.4;">Review daily performance and spending patterns</p>
                             <img src="images/wally/13.png" alt="Web Version 3" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     </div>
                 </div>
@@ -1095,7 +1046,7 @@
         
         <!-- Presentation Slider Section -->
         <section class="presentation-section">
-                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700;">Presentation</h2>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-family: 'Outfit', sans-serif; font-size: 48px; font-weight: 700;">Presentation</h2>
             
             <div class="slider-container">
                 <button class="slider-btn prev-btn" aria-label="Previous slide">←</button>
