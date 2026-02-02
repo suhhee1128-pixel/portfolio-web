@@ -105,6 +105,18 @@
             <p>Product Designer Portfolio</p>
         </div>
     </footer>
+    <button class="back-to-top is-visible" type="button" aria-label="맨 위로">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.back-to-top');
+            if (!btn) return;
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        });
+    </script>
 </body>
 </html>
 

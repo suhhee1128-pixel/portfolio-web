@@ -540,6 +540,154 @@ body {
     width: 100%;
 }
 
+.project-link--featured {
+    grid-column: 1 / -1;
+}
+
+.case-study-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-study-card__inner {
+    display: grid;
+    /* Give more space to thumbnail column */
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 22px;
+    align-items: stretch;
+    padding: 22px 22px 22px 34px; /* extra left padding */
+}
+
+.case-study-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+    height: 100%;
+    /* Prevent text from stretching too far right */
+    max-width: 560px;
+}
+
+.case-study-card__date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.45);
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.case-study-card__title {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 2.8vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #000;
+    margin: 0;
+    max-width: 18ch;
+}
+
+.case-study-card__desc {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+    max-width: 48ch;
+}
+
+.case-study-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.case-study-card__tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.02);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.case-study-card__cta {
+    margin-top: auto; /* pin CTA to bottom-left */
+    padding-top: 22px;
+}
+
+.case-study-card__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.case-study-card__button svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.case-study-card__media {
+    border-radius: 32px;
+    overflow: hidden;
+    background: #f3f3f3;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    align-self: center;
+    width: 100%;
+    /* Thumbnail ratio (7:5) */
+    aspect-ratio: 7 / 5;
+    height: auto;
+}
+
+.case-study-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Keep hover clean: no card lift/shadow */
+.project-link--featured:hover .case-study-card {
+    transform: none;
+    box-shadow: none;
+}
+
+.project-link--featured:hover .case-study-card__media img {
+    transform: scale(1.05);
+}
+
+.project-link--featured:hover .case-study-card__button {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.18);
+    transform: none;
+}
+
 .project-link {
     text-decoration: none;
     color: inherit;
@@ -896,6 +1044,35 @@ body {
         aspect-ratio: 4/3;
         width: 100%;
     }
+
+    .project-link--featured {
+        grid-column: auto;
+    }
+
+    .case-study-card__inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 22px;
+        min-height: 0;
+    }
+
+    .case-study-card__content {
+        max-width: none;
+    }
+
+    .case-study-card__title {
+        max-width: none;
+    }
+
+    .case-study-card__desc {
+        font-size: 16px;
+    }
+
+    .case-study-card__media {
+        border-radius: 26px;
+        aspect-ratio: 7 / 5;
+        height: auto;
+    }
     
     /* 푸터 */
     .footer {
@@ -1251,6 +1428,31 @@ body {
         width: 100% !important;
     }
 
+    .case-study-card__inner {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        padding: 22px !important;
+        min-height: 0 !important;
+    }
+
+    .case-study-card__content {
+        max-width: none !important;
+    }
+
+    .case-study-card__title {
+        max-width: none !important;
+    }
+
+    .case-study-card__desc {
+        font-size: 16px !important;
+    }
+
+    .case-study-card__media {
+        border-radius: 26px !important;
+        aspect-ratio: 7 / 5 !important;
+        height: auto !important;
+    }
+
     /* Navigation Wrap & Align */
     .nav ul {
         flex-wrap: wrap !important;
@@ -1349,5 +1551,70 @@ body {
         flex-direction: row;
         gap: 12px;
         align-items: center;
+    }
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.86);
+    color: rgba(0, 0, 0, 0.88);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 220ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.back-to-top svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.28);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 18px;
+        bottom: 18px;
+        width: 46px;
+        height: 46px;
+    }
+    .back-to-top svg {
+        width: 20px;
+        height: 20px;
     }
 }
