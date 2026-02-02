@@ -641,7 +641,34 @@ body {
     font-weight: 500;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
     transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.case-study-card__button--live {
+    background: var(--live-bg, rgba(0, 0, 0, 0.92));
+    border-color: var(--live-bg, rgba(0, 0, 0, 0.92));
+    color: var(--live-fg, rgba(255, 255, 255, 0.95));
+}
+
+.case-study-card__button--live:hover {
+    background: var(--live-bg-hover, var(--live-bg, #000));
+    border-color: var(--live-bg-hover, var(--live-bg, #000));
+}
+
+.case-study-card__button--live:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.35);
+    outline-offset: 3px;
+}
+
+.project-link--case {
+    cursor: pointer;
+}
+
+.project-link--case:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.25);
+    outline-offset: 6px;
+    border-radius: 44px;
 }
 
 .case-study-card__button svg {
@@ -682,10 +709,17 @@ body {
     transform: scale(1.05);
 }
 
-.project-link--featured:hover .case-study-card__button {
+.project-link--featured:hover .case-study-card__button:not(.case-study-card__button--live) {
     background: rgba(0, 0, 0, 0.03);
     border-color: rgba(0, 0, 0, 0.18);
     transform: none;
+}
+
+/* Live button should stay in project color (tone-shift only) */
+.project-link--featured:hover .case-study-card__button--live {
+    background: var(--live-bg-hover, var(--live-bg, #000));
+    border-color: var(--live-bg-hover, var(--live-bg, #000));
+    color: var(--live-fg, rgba(255, 255, 255, 0.95));
 }
 
 .project-link {

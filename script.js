@@ -71,8 +71,37 @@ function initSmoothScroll() {
     });
 }
 
+// Featured project cards: click card -> case study, button -> live site
+function initFeaturedProjectCards() {
+    const cards = document.querySelectorAll('.project-link--case[data-href]');
+    if (!cards.length) return;
+
+    const shouldIgnore = (target) => {
+        return Boolean(target && target.closest && target.closest('.case-study-card__button--link'));
+    };
+
+    cards.forEach(card => {
+        const href = card.getAttribute('data-href');
+        if (!href) return;
+
+        card.addEventListener('click', (e) => {
+            if (shouldIgnore(e.target)) return;
+            window.location.href = href;
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (shouldIgnore(e.target)) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.location.href = href;
+            }
+        });
+    });
+}
+
 // 페이지 로드 시 초기화
 document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initSmoothScroll();
+    initFeaturedProjectCards();
 });
