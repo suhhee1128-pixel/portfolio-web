@@ -4,7 +4,7 @@ function initTypingEffect() {
     if (!typingElement) return;
     
     const originalText = typingElement.textContent;
-    const typingTexts = ['Product Designer'];
+    const typingTexts = ['UX/UI Designer'];
     let currentIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
